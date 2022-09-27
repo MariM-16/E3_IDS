@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  webapp:
+    build: ./ruby_app
+    volumes:
+     - ./ruby_app:/ruby_app
+    image: webapp:ruby_app
+    container_name: ruby_web_app
+    environment:
+      - ENV_TEST_VAR=${ENV_TEST}
+    depends_on:
+      - db
+    ports: 
+     - 8000:8000
+  db:
+    image: postgres
+    container_name: postgres_db
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWD}
+    ports:
+      - 5432:5432
