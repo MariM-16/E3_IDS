@@ -13,7 +13,7 @@
     </div>
     
     <div class="input-group py-2">
-      <span class="input-group-text" id="addon-wrapping"> Phone Number: </span>
+      <span class="input-group-text" id="addon-wrapping"> Teléfono: </span>
       <%= f.text_field :phone_number, autofocus: true %>
     </div>
     
@@ -23,17 +23,12 @@
     </div>
 
     <div class="input-group py-2">
-      <span class="input-group-text" id="addon-wrapping"> Location: </span>
-      <%= f.text_field :location, autofocus: true %>
-    </div>
-
-    <div class="input-group py-2">
-      <span class="input-group-text" id="addon-wrapping"> Type: </span>
+      <span class="input-group-text" id="addon-wrapping"> Tipo: </span>
       <%= f.select :user_type, ['Comprador', 'Proveedor', 'Despachador'] %>
     </div>
 
     <div class="input-group py-2">
-      <span class="input-group-text" id="addon-wrapping"> New Password: </span>
+      <span class="input-group-text" id="addon-wrapping"> Nueva Contraseña: </span>
       <%= f.password_field :password, autocomplete: "new-password" %>
       <% if @minimum_password_length %>
         <br />
@@ -42,7 +37,7 @@
     </div>
     
     <div class="input-group py-2">
-      <span class="input-group-text" id="addon-wrapping"> Password Confirmation: </span>
+      <span class="input-group-text" id="addon-wrapping"> Confirmar Contraseña: </span>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 

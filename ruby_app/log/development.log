@@ -4494,3 +4494,2339 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-07 21:29:54.885644"], ["updated_at", "2022-10-07 21:29:54.885644"]]
   [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-10-07 18:41:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 848)
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 521)
+  Rendered layout layouts/application.html.erb (Duration: 436.5ms | Allocations: 36120)
+Completed 200 OK in 517ms (Views: 452.8ms | ActiveRecord: 0.0ms | Allocations: 40412)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-07 18:41:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.2ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 225.6ms | Allocations: 7277)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 240.4ms | Allocations: 9897)
+Completed 200 OK in 320ms (Views: 245.7ms | ActiveRecord: 9.7ms | Allocations: 19800)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 18:41:59 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.6ms | Allocations: 217)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 194.8ms | Allocations: 8115)
+  Rendered layout layouts/application.html.erb (Duration: 195.8ms | Allocations: 8212)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms | Allocations: 9500)
+
+
+  
+ActionView::Template::Error (undefined method `location' for #<User id: nil, email: "", created_at: nil, updated_at: nil, first_name: nil, last_name: nil, user_type: nil, phone_number: nil, RUT: nil>):
+    24: 
+    25:     <div class="input-group py-2">
+    26:       <span class="input-group-text" id="addon-wrapping"> Location: </span>
+    27:       <%= f.text_field :location, autofocus: true %>
+    28:     </div>
+    29: 
+    30:     <div class="input-group py-2">
+  
+app/views/devise/registrations/new.html.erb:27
+app/views/devise/registrations/new.html.erb:7
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-07 18:42:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 1043)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 3555)
+Completed 200 OK in 140ms (Views: 123.3ms | ActiveRecord: 0.0ms | Allocations: 4311)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 18:42:51 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 3.9ms | Allocations: 608)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 54.2ms | Allocations: 12009)
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 15144)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.0ms | Allocations: 16391)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 18:44:31 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 10.3ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 7.2ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 50.3ms | Allocations: 2333)
+  Rendered home/_header.html.erb (Duration: 3.8ms | Allocations: 455)
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 5464)
+Completed 200 OK in 77ms (Views: 73.9ms | ActiveRecord: 0.0ms | Allocations: 6770)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:01:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 18.2ms | Allocations: 259)
+  Rendered devise/shared/_links.html.erb (Duration: 27.8ms | Allocations: 634)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 201.2ms | Allocations: 4011)
+  Rendered home/_header.html.erb (Duration: 9.6ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 661.6ms | Allocations: 39544)
+Completed 200 OK in 1125ms (Views: 743.0ms | ActiveRecord: 8.1ms | Allocations: 51852)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:01:11 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 537)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 3243)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 4109)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:08:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 532)
+  Rendered home/_header.html.erb (Duration: 182.9ms | Allocations: 22684)
+  Rendered layout layouts/application.html.erb (Duration: 298.0ms | Allocations: 25955)
+Completed 200 OK in 333ms (Views: 322.3ms | Allocations: 26823)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:09:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 234)
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 3095)
+Completed 200 OK in 58ms (Views: 52.9ms | Allocations: 3370)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:09:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 556)
+  Rendered home/_header.html.erb (Duration: 14.8ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 4488)
+Completed 200 OK in 59ms (Views: 56.8ms | Allocations: 5321)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:10:09 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 551)
+  Rendered home/_header.html.erb (Duration: 129.7ms | Allocations: 11197)
+  Rendered layout layouts/application.html.erb (Duration: 193.8ms | Allocations: 14505)
+Completed 500 Internal Server Error in 237ms (Allocations: 15359)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag 'logoE3.png' width:'15px' height:'15px'%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag 'logoE3.png' width:'15px' height:'15px'%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:11:11 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 10.6ms | Allocations: 1607)
+  Rendered layout layouts/application.html.erb (Duration: 107.5ms | Allocations: 4908)
+Completed 500 Internal Server Error in 176ms (Allocations: 5732)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag 'logoE3.png' style="width=15px height=15px"%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag 'logoE3.png' style="width=15px height=15px"%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:12:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 15.4ms | Allocations: 1607)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 4909)
+Completed 500 Internal Server Error in 157ms (Allocations: 5739)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag 'logoE3.png' style="width:15px height:15px"%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag 'logoE3.png' style="width:15px height:15px"%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:12:41 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 13.4ms | Allocations: 1606)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 4907)
+Completed 500 Internal Server Error in 103ms (Allocations: 5727)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag 'logoE3.png' style="width:15px; height:15px"%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag 'logoE3.png' style="width:15px; height:15px"%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:13:39 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 49.6ms | Allocations: 1197)
+  Rendered layout layouts/application.html.erb (Duration: 174.4ms | Allocations: 4501)
+Completed 200 OK in 240ms (Views: 236.0ms | Allocations: 5347)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:13:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 529)
+  Rendered home/_header.html.erb (Duration: 6.6ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 4462)
+Completed 200 OK in 98ms (Views: 96.3ms | Allocations: 5314)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:17:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 535)
+  Rendered home/_header.html.erb (Duration: 18.1ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 4469)
+Completed 200 OK in 125ms (Views: 117.1ms | Allocations: 5321)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:17:23 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 565)
+  Rendered home/_header.html.erb (Duration: 27.6ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 170.9ms | Allocations: 4047)
+Completed 200 OK in 360ms (Views: 355.6ms | Allocations: 4897)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:17:38 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 534)
+  Rendered home/_header.html.erb (Duration: 14.9ms | Allocations: 1610)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 4894)
+Completed 500 Internal Server Error in 87ms (Allocations: 5714)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:5px;height:5px">
+        <%img src="assets/img/logoE3.png" alt="" %>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:5px;height:5px">
+10:            <%img src="assets/img/logoE3.png" alt="" %>
+11:          </div>
+12:            <%= link_to 'Home', root_path, class:"nav-link" %>
+13:            <%if user_signed_in?%>
+14:              <div class="collapse navbar-collapse" id="navbarCollapse">
+15:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+16:                <%if current_user.user_type=="Proveedor"%>
+17:                <li class="nav-item">
+18:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+19:                </li>
+20:                <li class="nav-item">
+21:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+22:                </li>
+23:                <%end%>
+24:                <%if current_user.user_type=="Comprador"%>
+25:                <li class="nav-item">
+26:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+30:                </li>
+31:                <%end%>
+32:                 <%if current_user.user_type=="Despachador"%>
+33:                <li class="nav-item">
+34:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+35:                </li>
+36:                <li class="nav-item">
+37:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+38:                </li>
+39:                <%end%> 
+40:              <%end%>
+41:              </ul>
+42:            </div>
+43:            <ul class="navbar-nav">
+44:              <!-- If User is logged in -->
+45:              <% if user_signed_in? %>
+46:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+47:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+48:    
+49:              <!-- If User is not logged in -->
+50:              <% else %>
+51:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+52:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+53:              <% end %>
+54:    
+55:            </ul>
+56:        </div>
+57:      </div>
+58:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting `end'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:17:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 529)
+  Rendered home/_header.html.erb (Duration: 24.8ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 174.9ms | Allocations: 4888)
+Completed 500 Internal Server Error in 218ms (Allocations: 5708)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:5px;height:5px">
+        <%=img src="assets/img/logoE3.png" alt="" %>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:5px;height:5px">
+10:            <%=img src="assets/img/logoE3.png" alt="" %>
+11:          </div>
+12:            <%= link_to 'Home', root_path, class:"nav-link" %>
+13:            <%if user_signed_in?%>
+14:              <div class="collapse navbar-collapse" id="navbarCollapse">
+15:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+16:                <%if current_user.user_type=="Proveedor"%>
+17:                <li class="nav-item">
+18:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+19:                </li>
+20:                <li class="nav-item">
+21:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+22:                </li>
+23:                <%end%>
+24:                <%if current_user.user_type=="Comprador"%>
+25:                <li class="nav-item">
+26:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+30:                </li>
+31:                <%end%>
+32:                 <%if current_user.user_type=="Despachador"%>
+33:                <li class="nav-item">
+34:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+35:                </li>
+36:                <li class="nav-item">
+37:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+38:                </li>
+39:                <%end%> 
+40:              <%end%>
+41:              </ul>
+42:            </div>
+43:            <ul class="navbar-nav">
+44:              <!-- If User is logged in -->
+45:              <% if user_signed_in? %>
+46:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+47:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+48:    
+49:              <!-- If User is not logged in -->
+50:              <% else %>
+51:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+52:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+53:              <% end %>
+54:    
+55:            </ul>
+56:        </div>
+57:      </div>
+58:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:18:04 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 104.8ms | Allocations: 529)
+  Rendered home/_header.html.erb (Duration: 129.7ms | Allocations: 725)
+  Rendered layout layouts/application.html.erb (Duration: 698.7ms | Allocations: 4008)
+Completed 200 OK in 850ms (Views: 847.9ms | Allocations: 4858)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:18:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 553)
+  Rendered home/_header.html.erb (Duration: 15.3ms | Allocations: 726)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 4033)
+Completed 200 OK in 79ms (Views: 76.9ms | Allocations: 4880)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:18:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 234)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 2659)
+Completed 200 OK in 61ms (Views: 59.7ms | Allocations: 2934)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:18:19 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 225)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 9536)
+Completed 200 OK in 41ms (Views: 40.0ms | Allocations: 11351)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:19:02 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 535)
+  Rendered home/_header.html.erb (Duration: 14.4ms | Allocations: 2310)
+  Rendered layout layouts/application.html.erb (Duration: 59.9ms | Allocations: 5596)
+Completed 500 Internal Server Error in 85ms (Allocations: 6400)
+
+
+  
+ActionView::Template::Error (The asset "assets/img/logoE3.png" is not present in the asset pipeline.
+):
+     7:     <div class="collapse navbar-collapse" id="navbarNav">
+     8:       <ul class="navbar-nav">
+     9:       <div style="width:25px;height:25px">
+    10:         <%=image_tag('assets/img/logoE3.png')%>
+    11:       </div>
+    12:         <%= link_to 'Home', root_path, class:"nav-link" %>
+    13:         <%if user_signed_in?%>
+  
+app/views/home/_header.html.erb:10
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:19:16 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 32.6ms | Allocations: 535)
+  Rendered home/_header.html.erb (Duration: 12.6ms | Allocations: 2297)
+  Rendered layout layouts/application.html.erb (Duration: 131.9ms | Allocations: 5583)
+Completed 500 Internal Server Error in 201ms (Allocations: 6402)
+
+
+  
+ActionView::Template::Error (The asset "assets/images/logoE3.png" is not present in the asset pipeline.
+):
+     7:     <div class="collapse navbar-collapse" id="navbarNav">
+     8:       <ul class="navbar-nav">
+     9:       <div style="width:25px;height:25px">
+    10:         <%=image_tag('assets/images/logoE3.png')%>
+    11:       </div>
+    12:         <%= link_to 'Home', root_path, class:"nav-link" %>
+    13:         <%if user_signed_in?%>
+  
+app/views/home/_header.html.erb:10
+app/views/layouts/application.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:19:34 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 535)
+  Rendered home/_header.html.erb (Duration: 13.6ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 4070)
+Completed 200 OK in 82ms (Views: 54.5ms | Allocations: 4916)
+
+
+Started GET "/logoE3.png" for 127.0.0.1 at 2022-10-07 19:19:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/logoE3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:19:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 541)
+  Rendered home/_header.html.erb (Duration: 7.8ms | Allocations: 1197)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 4485)
+Completed 200 OK in 63ms (Views: 42.7ms | Allocations: 5331)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/logoE3.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:20:08 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 12.3ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 172.8ms | Allocations: 4904)
+Completed 500 Internal Server Error in 239ms (Allocations: 5724)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:25px;height:25px">
+        <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:25px;height:25px">
+10:            <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+11:          </div>
+12:            <%= link_to 'Home', root_path, class:"nav-link" %>
+13:            <%if user_signed_in?%>
+14:              <div class="collapse navbar-collapse" id="navbarCollapse">
+15:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+16:                <%if current_user.user_type=="Proveedor"%>
+17:                <li class="nav-item">
+18:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+19:                </li>
+20:                <li class="nav-item">
+21:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+22:                </li>
+23:                <%end%>
+24:                <%if current_user.user_type=="Comprador"%>
+25:                <li class="nav-item">
+26:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+30:                </li>
+31:                <%end%>
+32:                 <%if current_user.user_type=="Despachador"%>
+33:                <li class="nav-item">
+34:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+35:                </li>
+36:                <li class="nav-item">
+37:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+38:                </li>
+39:                <%end%> 
+40:              <%end%>
+41:              </ul>
+42:            </div>
+43:            <ul class="navbar-nav">
+44:              <!-- If User is logged in -->
+45:              <% if user_signed_in? %>
+46:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+47:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+48:    
+49:              <!-- If User is not logged in -->
+50:              <% else %>
+51:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+52:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+53:              <% end %>
+54:    
+55:            </ul>
+56:        </div>
+57:      </div>
+58:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:21:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 14.2ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 45.9ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 98.6ms | Allocations: 2327)
+  Rendered home/_header.html.erb (Duration: 27.0ms | Allocations: 1637)
+  Rendered layout layouts/application.html.erb (Duration: 206.3ms | Allocations: 6390)
+Completed 500 Internal Server Error in 216ms (Allocations: 7445)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:25px;height:25px">
+        <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:25px;height:25px">
+10:            <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+11:          </div>
+12:            <%= link_to 'Home', root_path, class:"nav-link" %>
+13:            <%if user_signed_in?%>
+14:              <div class="collapse navbar-collapse" id="navbarCollapse">
+15:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+16:                <%if current_user.user_type=="Proveedor"%>
+17:                <li class="nav-item">
+18:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+19:                </li>
+20:                <li class="nav-item">
+21:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+22:                </li>
+23:                <%end%>
+24:                <%if current_user.user_type=="Comprador"%>
+25:                <li class="nav-item">
+26:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+27:                </li>
+28:                <li class="nav-item">
+29:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+30:                </li>
+31:                <%end%>
+32:                 <%if current_user.user_type=="Despachador"%>
+33:                <li class="nav-item">
+34:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+35:                </li>
+36:                <li class="nav-item">
+37:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+38:                </li>
+39:                <%end%> 
+40:              <%end%>
+41:              </ul>
+42:            </div>
+43:            <ul class="navbar-nav">
+44:              <!-- If User is logged in -->
+45:              <% if user_signed_in? %>
+46:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+47:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+48:    
+49:              <!-- If User is not logged in -->
+50:              <% else %>
+51:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+52:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+53:              <% end %>
+54:    
+55:            </ul>
+56:        </div>
+57:      </div>
+58:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:22:23 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 34.7ms | Allocations: 2328)
+  Rendered home/_header.html.erb (Duration: 12.2ms | Allocations: 1667)
+  Rendered layout layouts/application.html.erb (Duration: 83.1ms | Allocations: 6688)
+Completed 500 Internal Server Error in 101ms (Allocations: 7981)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:25px;height:25px">
+        <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+        <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:25px;height:25px">
+10:            <%=image_tag('logoE3.png')  style="width:25px;height:25px"%>
+11:            <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+12:          </div>
+13:            <%= link_to 'Home', root_path, class:"nav-link" %>
+14:            <%if user_signed_in?%>
+15:              <div class="collapse navbar-collapse" id="navbarCollapse">
+16:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+17:                <%if current_user.user_type=="Proveedor"%>
+18:                <li class="nav-item">
+19:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+20:                </li>
+21:                <li class="nav-item">
+22:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+23:                </li>
+24:                <%end%>
+25:                <%if current_user.user_type=="Comprador"%>
+26:                <li class="nav-item">
+27:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+28:                </li>
+29:                <li class="nav-item">
+30:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+31:                </li>
+32:                <%end%>
+33:                 <%if current_user.user_type=="Despachador"%>
+34:                <li class="nav-item">
+35:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+36:                </li>
+37:                <li class="nav-item">
+38:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+39:                </li>
+40:                <%end%> 
+41:              <%end%>
+42:              </ul>
+43:            </div>
+44:            <ul class="navbar-nav">
+45:              <!-- If User is logged in -->
+46:              <% if user_signed_in? %>
+47:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+48:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+49:    
+50:              <!-- If User is not logged in -->
+51:              <% else %>
+52:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+53:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+54:              <% end %>
+55:    
+56:            </ul>
+57:        </div>
+58:      </div>
+59:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:22:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 3.7ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 1667)
+  Rendered layout layouts/application.html.erb (Duration: 65.4ms | Allocations: 6686)
+Completed 500 Internal Server Error in 89ms (Allocations: 7971)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:25px;height:25px">
+        <%=image_tag('logoE3.png')  style:"width:25px;height:25px"%>
+        <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:25px;height:25px">
+10:            <%=image_tag('logoE3.png')  style:"width:25px;height:25px"%>
+11:            <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+12:          </div>
+13:            <%= link_to 'Home', root_path, class:"nav-link" %>
+14:            <%if user_signed_in?%>
+15:              <div class="collapse navbar-collapse" id="navbarCollapse">
+16:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+17:                <%if current_user.user_type=="Proveedor"%>
+18:                <li class="nav-item">
+19:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+20:                </li>
+21:                <li class="nav-item">
+22:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+23:                </li>
+24:                <%end%>
+25:                <%if current_user.user_type=="Comprador"%>
+26:                <li class="nav-item">
+27:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+28:                </li>
+29:                <li class="nav-item">
+30:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+31:                </li>
+32:                <%end%>
+33:                 <%if current_user.user_type=="Despachador"%>
+34:                <li class="nav-item">
+35:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+36:                </li>
+37:                <li class="nav-item">
+38:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+39:                </li>
+40:                <%end%> 
+41:              <%end%>
+42:              </ul>
+43:            </div>
+44:            <ul class="navbar-nav">
+45:              <!-- If User is logged in -->
+46:              <% if user_signed_in? %>
+47:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+48:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+49:    
+50:              <!-- If User is not logged in -->
+51:              <% else %>
+52:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+53:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+54:              <% end %>
+55:    
+56:            </ul>
+57:        </div>
+58:      </div>
+59:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:23:06 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 33.7ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 17.5ms | Allocations: 1667)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 6686)
+Completed 500 Internal Server Error in 115ms (Allocations: 7971)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+      <div style="width:25px;height:25px">
+        <%=image_tag('logoE3.png')  style:"width:25px,height:25px"%>
+        <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+      </div>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:          <div style="width:25px;height:25px">
+10:            <%=image_tag('logoE3.png')  style:"width:25px,height:25px"%>
+11:            <%= image_tag('logoE3.png', class: 'profile-image mb-3 rounded-circle mx-auto', alt: 'Close modal') %>
+12:          </div>
+13:            <%= link_to 'Home', root_path, class:"nav-link" %>
+14:            <%if user_signed_in?%>
+15:              <div class="collapse navbar-collapse" id="navbarCollapse">
+16:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+17:                <%if current_user.user_type=="Proveedor"%>
+18:                <li class="nav-item">
+19:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+20:                </li>
+21:                <li class="nav-item">
+22:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+23:                </li>
+24:                <%end%>
+25:                <%if current_user.user_type=="Comprador"%>
+26:                <li class="nav-item">
+27:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+28:                </li>
+29:                <li class="nav-item">
+30:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+31:                </li>
+32:                <%end%>
+33:                 <%if current_user.user_type=="Despachador"%>
+34:                <li class="nav-item">
+35:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+36:                </li>
+37:                <li class="nav-item">
+38:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+39:                </li>
+40:                <%end%> 
+41:              <%end%>
+42:              </ul>
+43:            </div>
+44:            <ul class="navbar-nav">
+45:              <!-- If User is logged in -->
+46:              <% if user_signed_in? %>
+47:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+48:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+49:    
+50:              <!-- If User is not logged in -->
+51:              <% else %>
+52:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+53:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+54:              <% end %>
+55:    
+56:            </ul>
+57:        </div>
+58:      </div>
+59:    </nav>
+  
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:10: syntax error, unexpected label, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:23:31 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.4ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.1ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 19.2ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 6506)
+Completed 200 OK in 117ms (Views: 88.6ms | Allocations: 7816)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:26:04 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 14.2ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 4.7ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.6ms | Allocations: 2328)
+  Rendered home/_header.html.erb (Duration: 13.1ms | Allocations: 1644)
+  Rendered layout layouts/application.html.erb (Duration: 127.0ms | Allocations: 8099)
+Completed 500 Internal Server Error in 164ms (Allocations: 9348)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag('logoE3.png') class:'logo'%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag('logoE3.png') class:'logo'%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:26:56 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 15.4ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 17.6ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 73.1ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 11.4ms | Allocations: 1644)
+  Rendered layout layouts/application.html.erb (Duration: 134.4ms | Allocations: 6674)
+Completed 500 Internal Server Error in 186ms (Allocations: 7945)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag('logoE3.png') class:"logo"%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag('logoE3.png') class:"logo"%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected label, expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:27:09 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 12.2ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 4.2ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 36.2ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 3.7ms | Allocations: 1645)
+  Rendered layout layouts/application.html.erb (Duration: 73.5ms | Allocations: 6664)
+Completed 500 Internal Server Error in 107ms (Allocations: 7935)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E3</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%=image_tag 'logoE3.png' class:"logo"%>
+        <%= link_to 'Home', root_path, class:"nav-link" %>
+        <%if user_signed_in?%>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+            <%if current_user.user_type=="Proveedor"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+            </li>
+            <%end%>
+            <%if current_user.user_type=="Comprador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+            </li>
+            <%end%>
+             <%if current_user.user_type=="Despachador"%>
+            <li class="nav-item">
+              <%= link_to "Encargos", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+            </li>
+            <%end%> 
+          <%end%>
+          </ul>
+        </div>
+        <ul class="navbar-nav">
+          <!-- If User is logged in -->
+          <% if user_signed_in? %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+
+          <!-- If User is not logged in -->
+          <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+              <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+          <% end %>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+2:      <div class="container-fluid">
+3:        <a class="navbar-brand" href="#">E3</a>
+4:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+5:          <span class="navbar-toggler-icon"></span>
+6:        </button>
+7:        <div class="collapse navbar-collapse" id="navbarNav">
+8:          <ul class="navbar-nav">
+9:            <%=image_tag 'logoE3.png' class:"logo"%>
+10:            <%= link_to 'Home', root_path, class:"nav-link" %>
+11:            <%if user_signed_in?%>
+12:              <div class="collapse navbar-collapse" id="navbarCollapse">
+13:                <ul class="navbar-nav me-auto mb-2 mb-md-0"> 
+14:                <%if current_user.user_type=="Proveedor"%>
+15:                <li class="nav-item">
+16:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+20:                </li>
+21:                <%end%>
+22:                <%if current_user.user_type=="Comprador"%>
+23:                <li class="nav-item">
+24:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+25:                </li>
+26:                <li class="nav-item">
+27:                  <%= link_to "Dirección", addresses_path, class: "nav-link" %>
+28:                </li>
+29:                <%end%>
+30:                 <%if current_user.user_type=="Despachador"%>
+31:                <li class="nav-item">
+32:                  <%= link_to "Encargos", orders_path, class: "nav-link" %>
+33:                </li>
+34:                <li class="nav-item">
+35:                  <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+36:                </li>
+37:                <%end%> 
+38:              <%end%>
+39:              </ul>
+40:            </div>
+41:            <ul class="navbar-nav">
+42:              <!-- If User is logged in -->
+43:              <% if user_signed_in? %>
+44:                  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
+45:                  <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+46:    
+47:              <!-- If User is not logged in -->
+48:              <% else %>
+49:                  <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
+50:                  <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link" %>
+51:              <% end %>
+52:    
+53:            </ul>
+54:        </div>
+55:      </div>
+56:    </nav>
+  
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected `class', expecting ')'
+app/views/home/_header.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:58: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:16
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:28:45 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 9.7ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 18.1ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 59.4ms | Allocations: 2326)
+  Rendered home/_header.html.erb (Duration: 17.3ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 111.5ms | Allocations: 6878)
+Completed 200 OK in 150ms (Views: 147.6ms | Allocations: 8167)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:29:12 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1033)
+  Rendered home/_header.html.erb (Duration: 18.8ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 228.9ms | Allocations: 5427)
+Completed 200 OK in 233ms (Views: 230.8ms | Allocations: 6064)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:29:19 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 55.5ms | Allocations: 1033)
+  Rendered home/_header.html.erb (Duration: 28.6ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | Allocations: 5317)
+Completed 200 OK in 217ms (Views: 214.2ms | Allocations: 5874)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:29:30 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 1033)
+  Rendered home/_header.html.erb (Duration: 16.3ms | Allocations: 716)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 5319)
+Completed 200 OK in 134ms (Views: 116.9ms | Allocations: 5869)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:29:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.1ms | Allocations: 1033)
+  Rendered home/_header.html.erb (Duration: 15.9ms | Allocations: 716)
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 5321)
+Completed 200 OK in 112ms (Views: 100.2ms | Allocations: 5865)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:29:59 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 8.8ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.6ms | Allocations: 2329)
+  Rendered home/_header.html.erb (Duration: 21.5ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 65.0ms | Allocations: 6321)
+Completed 200 OK in 109ms (Views: 104.8ms | Allocations: 7528)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-07 19:30:11 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 4.3ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 14.8ms | Allocations: 487)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 45.9ms | Allocations: 2332)
+  Rendered home/_header.html.erb (Duration: 16.8ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 111.6ms | Allocations: 6320)
+Completed 200 OK in 147ms (Views: 132.6ms | Allocations: 7609)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:30:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 555)
+  Rendered home/_header.html.erb (Duration: 15.2ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 3801)
+Completed 200 OK in 61ms (Views: 55.3ms | Allocations: 4456)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 19:30:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 222)
+  Rendered home/_header.html.erb (Duration: 54.5ms | Allocations: 702)
+  Rendered layout layouts/application.html.erb (Duration: 211.9ms | Allocations: 3168)
+Completed 200 OK in 248ms (Views: 247.2ms | Allocations: 3443)
+
+
