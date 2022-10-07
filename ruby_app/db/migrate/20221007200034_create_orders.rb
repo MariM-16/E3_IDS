@@ -6,6 +6,10 @@ class CreateOrders < ActiveRecord::Migration[7.0]
       t.datetime :order_date
       t.string :delivery_key
 
+      t.references :buyer, foreign_key: {to_table: "users"}
+      t.references :provider, foreign_key: {to_table: "users"}
+      t.references :dispatcher, foreign_key: {to_table: "users"}
+
       t.timestamps
     end
   end
