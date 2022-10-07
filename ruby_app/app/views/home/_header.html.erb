@@ -15,7 +15,7 @@
               <%= link_to "Encargos", orders_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <!--<%= link_to "Productos", products_path, class: "nav-link" %>-->
+              <%= link_to "Productos", root_path, class: "nav-link" %>
             </li>
             <%end%>
             <%if current_user.user_type=="Comprador"%>
@@ -31,7 +31,7 @@
               <%= link_to "Encargos", orders_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <!--<%= link_to "Vehículo", vehicle_path, class: "nav-link" %>-->
+              <%= link_to "Vehículo", root_path, class: "nav-link" %>
             </li>
             <%end%> 
           <%end%>
@@ -41,8 +41,10 @@
           <!-- If User is logged in -->
           <% if user_signed_in? %>
               <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"nav-link"  %>
-              <%= link_to 'Profile', user_path(current_user.id), class:"nav-link" %>
+              <%= link_to 'Profile', users_path(current_user.id), class:"nav-link" %>
+        </ul>
 
+        <ul class="navbar-nav">
           <!-- If User is not logged in -->
           <% else %>
               <%= link_to 'Sign In', new_user_session_path, class:"nav-link" %>
