@@ -3,3 +3,71 @@ data
 
 ruby_app\tmp
 ./ruby_app/tmp
+
+*.rbc
+capybara-*.html
+.rspec
+/ruby_app/db/*.sqlite3
+/ruby_app/db/*.sqlite3-journal
+/ruby_app/db/*.sqlite3-[0-9]*
+/ruby_app/public/system
+/ruby_app/coverage/
+/ruby_app/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+# Ignore all logfiles and tempfiles.
+/ruby_app/log/*
+/ruby_app/tmp/*
+!/ruby_app/log/.keep
+!/ruby_app/tmp/.keep
+
+# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
+config/initializers/secret_token.rb
+config/master.key
+
+# Only include if you have production secrets in this file, which is no longer a Rails default
+# config/secrets.yml
+
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+.env
+
+## Environment normalization:
+/.bundle
+/vendor/bundle
+
+# these should all be checked in to normalize the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+# if using bower-rails ignore default bower_components path bower.json files
+/ruby_app/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+# Ignore pow environment settings
+.powenv
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore node_modules
+node_modules/
+
+# Ignore precompiled javascript packs
+/ruby_app/public/packs
+/ruby_app/public/packs-test
+/ruby_app/public/assets
+
+# Ignore yarn files
+/ruby_app/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore uploaded files in development
+/ruby_app/storage/*
+!/ruby_app/storage/.keep
