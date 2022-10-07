@@ -38,7 +38,7 @@
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
     
-    <div class="field"><div class="input-group py-2">
+    <div class="input-group py-2">
       <span class="input-group-text" id="addon-wrapping"> New Password: </span>
       <%= f.password_field :password, autocomplete: "new-password" %>
       <% if @minimum_password_length %>
