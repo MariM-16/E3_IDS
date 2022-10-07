@@ -4227,3 +4227,38 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 284ms (Views: 208.3ms | ActiveRecord: 5.2ms | Allocations: 5387)
 
 
+Started GET "/" for 127.0.0.1 at 2022-10-07 16:24:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 957)
+  Rendered home/_header.html.erb (Duration: 9.6ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 4304.8ms | Allocations: 89606)
+Completed 200 OK in 4478ms (Views: 4332.8ms | ActiveRecord: 0.0ms | Allocations: 95509)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-07 16:25:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 303)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 164)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2764)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 3093)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2022-10-07 16:25:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tasks"):
+  
+Started GET "/users/" for 127.0.0.1 at 2022-10-07 16:25:34 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
