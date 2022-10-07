@@ -1,0 +1,13 @@
+<h1>Home Page</h1>
+
+<% if current_user %>
+    <p> Hello <%= current_user.email %> </p>
+    <p> Type <%= current_user.user_type %> </p>
+
+    <!-- How to check attributes of user:  -->
+    <!-- <% if current_user.user_type == "Despachador" %>
+            <p> Yes </p>
+    <% else %>
+            <p> No </p>
+    <% end %> -->
+<% end %>
