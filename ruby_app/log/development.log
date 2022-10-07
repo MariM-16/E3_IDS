@@ -613,3 +613,156 @@ Processing by Devise::RegistrationsController#create as TURBO_STREAM
 Completed 200 OK in 896ms (Views: 411.3ms | ActiveRecord: 10.4ms | Allocations: 9515)
 
 
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:18:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 149.9ms | Allocations: 330)
+  Rendered home/_header.html.erb (Duration: 143.4ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 5786.5ms | Allocations: 35963)
+Completed 200 OK in 6767ms (Views: 5978.9ms | ActiveRecord: 0.0ms | Allocations: 40244)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-07 06:19:04 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 39.2ms | Allocations: 252)
+  Rendered devise/shared/_links.html.erb (Duration: 39.2ms | Allocations: 617)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 821.7ms | Allocations: 5103)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 1926.0ms | Allocations: 7765)
+Completed 200 OK in 2547ms (Views: 2298.4ms | ActiveRecord: 41.8ms | Allocations: 15387)
+
+
+Started POST "/users" for 172.18.0.1 at 2022-10-07 06:19:20 +0000
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"afmacaya@miuandes.cl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (10.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "afmacaya@miuandes.cl"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.3ms | Allocations: 605)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 141.4ms | Allocations: 2456)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 947.5ms | Allocations: 5038)
+Completed 200 OK in 1929ms (Views: 957.8ms | ActiveRecord: 22.3ms | Allocations: 13411)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-07 06:20:34 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 11.3ms | Allocations: 288)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 327.1ms | Allocations: 2286)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 242)
+  Rendered layout layouts/application.html.erb (Duration: 1469.7ms | Allocations: 5243)
+Completed 200 OK in 1794ms (Views: 1536.5ms | ActiveRecord: 0.0ms | Allocations: 6621)
+
+
+Started POST "/users/sign_in" for 172.18.0.1 at 2022-10-07 06:20:39 +0000
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"afmacaya@miuandes.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "afmacaya@miuandes.cl"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 675ms (ActiveRecord: 10.2ms | Allocations: 2214)
+
+
+Started POST "/users/sign_in" for 172.18.0.1 at 2022-10-07 06:20:44 +0000
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"afmacaya@miuandes.cl", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "afmacaya@miuandes.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1055ms (ActiveRecord: 10.3ms | Allocations: 2642)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:20:47 +0000
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 9)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 228)
+  Rendered layout layouts/application.html.erb (Duration: 407.3ms | Allocations: 2805)
+Completed 200 OK in 554ms (Views: 418.0ms | ActiveRecord: 0.0ms | Allocations: 3127)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:20:57 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 576.2ms | Allocations: 2660)
+Completed 200 OK in 751ms (Views: 592.6ms | ActiveRecord: 0.0ms | Allocations: 2922)
+
+
+Started GET "/users/edit" for 172.18.0.1 at 2022-10-07 06:21:53 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 106.5ms | Allocations: 2255)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 777.3ms | Allocations: 4710)
+Completed 200 OK in 1418ms (Views: 835.5ms | ActiveRecord: 14.3ms | Allocations: 6448)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:22:01 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 2556.0ms | Allocations: 2663)
+Completed 200 OK in 3154ms (Views: 2592.7ms | ActiveRecord: 0.0ms | Allocations: 2926)
+
+
+Started GET "/users/edit" for 172.18.0.1 at 2022-10-07 06:22:11 +0000
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1659)
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 725.9ms | Allocations: 4104)
+Completed 200 OK in 876ms (Views: 734.0ms | ActiveRecord: 5.7ms | Allocations: 5679)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:22:16 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 1608.0ms | Allocations: 2660)
+Completed 200 OK in 1857ms (Views: 1623.3ms | ActiveRecord: 0.0ms | Allocations: 2921)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:26:18 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 124.2ms | Allocations: 125)
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:12
+  Rendered home/_header.html.erb (Duration: 145.2ms | Allocations: 1371)
+  Rendered layout layouts/application.html.erb (Duration: 884.1ms | Allocations: 4496)
+Completed 200 OK in 1379ms (Views: 931.0ms | ActiveRecord: 8.4ms | Allocations: 5330)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 06:29:51 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 150.7ms | Allocations: 124)
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 137.2ms | Allocations: 1377)
+  Rendered layout layouts/application.html.erb (Duration: 866.7ms | Allocations: 4509)
+Completed 200 OK in 1505ms (Views: 914.4ms | ActiveRecord: 8.6ms | Allocations: 5361)
+
+
