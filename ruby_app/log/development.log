@@ -67,3 +67,126 @@ app/models/user.rb:4:in `<class:User>'
 app/models/user.rb:3:in `<main>'
 config/routes.rb:3:in `block in <main>'
 config/routes.rb:1:in `<main>'
+Started GET "/" for 172.18.0.1 at 2022-10-07 04:40:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2022-10-07 04:40:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (77.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  DeviseController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  DeviseController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:07:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:07:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  DeviseController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  DeviseController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/home/index" for 172.18.0.1 at 2022-10-07 05:08:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/home/index"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:08:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant PagesController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  DeviseController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:10:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 13141.9ms | Allocations: 89988)
+Completed 200 OK in 13765ms (Views: 13182.3ms | Allocations: 93913)
+
+
+Started GET "/users" for 172.18.0.1 at 2022-10-07 05:13:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:15:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 340.8ms | Allocations: 2368)
+Completed 200 OK in 440ms (Views: 348.9ms | Allocations: 2646)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:16:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 879.1ms | Allocations: 2952)
+Completed 200 OK in 1040ms (Views: 923.3ms | Allocations: 3786)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:41:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 410.7ms | Allocations: 2977)
+Completed 200 OK in 582ms (Views: 469.4ms | Allocations: 3832)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-07 05:46:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 52.7ms | Allocations: 123)
+  Rendered home/_header.html.erb (Duration: 34.3ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 470.9ms | Allocations: 3198)
+Completed 200 OK in 778ms (Views: 578.1ms | Allocations: 4063)
+
+
