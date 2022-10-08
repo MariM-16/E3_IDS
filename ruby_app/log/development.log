@@ -4227,3 +4227,2788 @@ Processing by Devise::RegistrationsController#edit as HTML
 Completed 200 OK in 284ms (Views: 208.3ms | ActiveRecord: 5.2ms | Allocations: 5387)
 
 
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:40:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 982)
+  Rendered home/_header.html.erb (Duration: 7.0ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 1292.5ms | Allocations: 38760)
+Completed 200 OK in 1562ms (Views: 1359.5ms | ActiveRecord: 0.0ms | Allocations: 44662)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-08 18:40:45 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.6ms | Allocations: 716)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 399.9ms | Allocations: 7400)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 460.3ms | Allocations: 10032)
+Completed 200 OK in 554ms (Views: 472.6ms | ActiveRecord: 9.3ms | Allocations: 21010)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-08 18:40:50 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 949)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 162)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 3343)
+Completed 200 OK in 83ms (Views: 63.4ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-08 18:40:51 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.4ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 41.3ms | Allocations: 2504)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 95.7ms | Allocations: 5127)
+Completed 200 OK in 120ms (Views: 106.0ms | ActiveRecord: 0.0ms | Allocations: 6457)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:51:39 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 556)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 1802)
+Completed 200 OK in 57ms (Views: 29.3ms | Allocations: 2681)
+
+
+Started GET "/fonts/icomoon/style.css" for 172.18.0.1 at 2022-10-08 18:51:39 +0000
+Started GET "/fonts/flaticon/font/flaticon.css" for 172.18.0.1 at 2022-10-08 18:51:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/icomoon/style.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/flaticon/font/flaticon.css"):
+  
+Started GET "/css/tiny-slider.css" for 172.18.0.1 at 2022-10-08 18:51:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/tiny-slider.css"):
+  
+Started GET "/css/style.css" for 172.18.0.1 at 2022-10-08 18:51:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/css/aos.css" for 172.18.0.1 at 2022-10-08 18:51:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/aos.css"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:51:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:51:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/images/hero_bg_3.jpg" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_3.jpg"):
+  
+Started GET "/images/img_1.jpg" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+Started GET "/images/img_2.jpg" for 172.18.0.1 at 2022-10-08 18:51:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+Started GET "/images/img_3.jpg" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+Started GET "/images/img_4.jpg" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_4.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/img_5.jpg" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_5.jpg"):
+  
+Started GET "/images/img_6.jpg" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_6.jpg"):
+  
+Started GET "/images/img_7.jpg" for 172.18.0.1 at 2022-10-08 18:51:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_7.jpg"):
+  
+Started GET "/images/img_8.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_8.jpg"):
+  
+Started GET "/images/person_2-min.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2-min.jpg"):
+  
+Started GET "/images/person_1-min.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_1-min.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/person_3-min.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3-min.jpg"):
+  
+Started GET "/images/person_4-min.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4-min.jpg"):
+  
+Started GET "/images/hero_bg_2.jpg" for 172.18.0.1 at 2022-10-08 18:51:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_2.jpg"):
+  
+Started GET "/images/hero_bg_1.jpg" for 172.18.0.1 at 2022-10-08 18:51:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_1.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:51:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:51:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:51:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:51:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/favicon.png" for 172.18.0.1 at 2022-10-08 18:51:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 570)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1815)
+Completed 200 OK in 35ms (Views: 19.3ms | Allocations: 2670)
+
+
+Started GET "/images/img_1.jpg" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+Started GET "/images/img_2.jpg" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+Started GET "/images/img_4.jpg" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_4.jpg"):
+  
+Started GET "/images/img_3.jpg" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+Started GET "/images/img_5.jpg" for 172.18.0.1 at 2022-10-08 18:53:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_5.jpg"):
+  
+Started GET "/images/img_6.jpg" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_6.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:53:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/fonts/icomoon/style.css" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/icomoon/style.css"):
+  
+Started GET "/fonts/flaticon/font/flaticon.css" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/flaticon/font/flaticon.css"):
+  
+Started GET "/css/tiny-slider.css" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/tiny-slider.css"):
+  
+Started GET "/css/aos.css" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/aos.css"):
+  
+Started GET "/css/style.css" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:53:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/images/img_8.jpg" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_8.jpg"):
+  
+Started GET "/images/person_2-min.jpg" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2-min.jpg"):
+  
+Started GET "/images/person_1-min.jpg" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_1-min.jpg"):
+  
+Started GET "/images/img_7.jpg" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_7.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/person_4-min.jpg" for 172.18.0.1 at 2022-10-08 18:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4-min.jpg"):
+  
+Started GET "/images/hero_bg_3.jpg" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_3.jpg"):
+  
+Started GET "/images/hero_bg_1.jpg" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_1.jpg"):
+  
+Started GET "/images/hero_bg_2.jpg" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_2.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/person_3-min.jpg" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3-min.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:53:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:53:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:53:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:55:30 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 241)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 324)
+Completed 200 OK in 18ms (Views: 3.6ms | Allocations: 601)
+
+
+Started GET "/images/img_1.jpg" for 172.18.0.1 at 2022-10-08 18:55:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+Started GET "/images/img_2.jpg" for 172.18.0.1 at 2022-10-08 18:55:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+Started GET "/images/img_3.jpg" for 172.18.0.1 at 2022-10-08 18:55:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+Started GET "/images/img_5.jpg" for 172.18.0.1 at 2022-10-08 18:55:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_5.jpg"):
+  
+Started GET "/images/img_4.jpg" for 172.18.0.1 at 2022-10-08 18:55:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_4.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/img_6.jpg" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_6.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:55:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/fonts/icomoon/style.css" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/icomoon/style.css"):
+  
+Started GET "/fonts/flaticon/font/flaticon.css" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/flaticon/font/flaticon.css"):
+  
+Started GET "/css/tiny-slider.css" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/tiny-slider.css"):
+  
+Started GET "/css/aos.css" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/aos.css"):
+  
+Started GET "/css/style.css" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:55:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/images/person_3-min.jpg" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3-min.jpg"):
+  
+Started GET "/images/img_7.jpg" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_7.jpg"):
+  
+Started GET "/images/person_2-min.jpg" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2-min.jpg"):
+  
+Started GET "/images/person_4-min.jpg" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4-min.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/hero_bg_3.jpg" for 172.18.0.1 at 2022-10-08 18:55:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_3.jpg"):
+  
+Started GET "/images/img_8.jpg" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_8.jpg"):
+  
+Started GET "/images/person_1-min.jpg" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_1-min.jpg"):
+  
+Started GET "/images/hero_bg_1.jpg" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_1.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/hero_bg_2.jpg" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_2.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:55:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:55:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:55:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:55:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/favicon.png" for 172.18.0.1 at 2022-10-08 18:55:36 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:57:02 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 570)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 745)
+Completed 200 OK in 62ms (Views: 34.1ms | Allocations: 1575)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:57:04 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 342)
+Completed 200 OK in 16ms (Views: 3.1ms | Allocations: 620)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:57:19 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 1798)
+Completed 200 OK in 42ms (Views: 20.1ms | Allocations: 2633)
+
+
+Started GET "/images/img_1.jpg" for 172.18.0.1 at 2022-10-08 18:57:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+Started GET "/images/img_2.jpg" for 172.18.0.1 at 2022-10-08 18:57:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+Started GET "/images/img_5.jpg" for 172.18.0.1 at 2022-10-08 18:57:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_5.jpg"):
+  
+Started GET "/images/img_6.jpg" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_6.jpg"):
+  
+Started GET "/images/img_7.jpg" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_7.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/img_3.jpg" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:57:20 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/fonts/icomoon/style.css" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/icomoon/style.css"):
+  
+Started GET "/fonts/flaticon/font/flaticon.css" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/flaticon/font/flaticon.css"):
+  
+Started GET "/css/tiny-slider.css" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/tiny-slider.css"):
+  
+Started GET "/css/aos.css" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/aos.css"):
+  
+Started GET "/css/style.css" for 172.18.0.1 at 2022-10-08 18:57:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:57:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/images/person_2-min.jpg" for 172.18.0.1 at 2022-10-08 18:57:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2-min.jpg"):
+  
+Started GET "/images/person_1-min.jpg" for 172.18.0.1 at 2022-10-08 18:57:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_1-min.jpg"):
+  
+Started GET "/images/person_4-min.jpg" for 172.18.0.1 at 2022-10-08 18:57:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4-min.jpg"):
+  
+Started GET "/images/person_3-min.jpg" for 172.18.0.1 at 2022-10-08 18:57:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3-min.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:57:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/img_4.jpg" for 172.18.0.1 at 2022-10-08 18:57:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_4.jpg"):
+  
+Started GET "/images/img_8.jpg" for 172.18.0.1 at 2022-10-08 18:57:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_8.jpg"):
+  
+Started GET "/images/hero_bg_2.jpg" for 172.18.0.1 at 2022-10-08 18:57:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_2.jpg"):
+  
+Started GET "/images/hero_bg_1.jpg" for 172.18.0.1 at 2022-10-08 18:57:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_1.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:57:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/hero_bg_3.jpg" for 172.18.0.1 at 2022-10-08 18:57:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_3.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:57:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:57:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:57:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:57:25 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/favicon.png" for 172.18.0.1 at 2022-10-08 18:57:25 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:58:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2282)
+Completed 200 OK in 110ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 6586)
+
+
+Started GET "/images/img_1.jpg" for 172.18.0.1 at 2022-10-08 18:58:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+Started GET "/images/img_2.jpg" for 172.18.0.1 at 2022-10-08 18:58:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+Started GET "/images/img_5.jpg" for 172.18.0.1 at 2022-10-08 18:58:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_5.jpg"):
+  
+Started GET "/images/img_3.jpg" for 172.18.0.1 at 2022-10-08 18:58:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+Started GET "/images/img_6.jpg" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_6.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/images/img_7.jpg" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_7.jpg"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:58:48 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/fonts/icomoon/style.css" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/icomoon/style.css"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/css/tiny-slider.css" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/tiny-slider.css"):
+  
+Started GET "/css/aos.css" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/aos.css"):
+  
+Started GET "/css/style.css" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/fonts/flaticon/font/flaticon.css" for 172.18.0.1 at 2022-10-08 18:58:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/flaticon/font/flaticon.css"):
+  
+Started GET "/images/person_3-min.jpg" for 172.18.0.1 at 2022-10-08 18:58:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3-min.jpg"):
+  
+Started GET "/images/person_2-min.jpg" for 172.18.0.1 at 2022-10-08 18:58:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2-min.jpg"):
+  
+Started GET "/images/hero_bg_3.jpg" for 172.18.0.1 at 2022-10-08 18:58:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_3.jpg"):
+  
+Started GET "/images/img_4.jpg" for 172.18.0.1 at 2022-10-08 18:58:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_4.jpg"):
+  
+Started GET "/images/person_1-min.jpg" for 172.18.0.1 at 2022-10-08 18:58:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_1-min.jpg"):
+  
+Started GET "/js/bootstrap.bundle.min.js" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.bundle.min.js"):
+  
+Started GET "/images/person_4-min.jpg" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4-min.jpg"):
+  
+Started GET "/images/img_8.jpg" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_8.jpg"):
+  
+Started GET "/images/hero_bg_2.jpg" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_2.jpg"):
+  
+Started GET "/images/hero_bg_1.jpg" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_bg_1.jpg"):
+  
+Started GET "/js/tiny-slider.js" for 172.18.0.1 at 2022-10-08 18:58:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/tiny-slider.js"):
+  
+Started GET "/js/aos.js" for 172.18.0.1 at 2022-10-08 18:58:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/aos.js"):
+  
+Started GET "/js/navbar.js" for 172.18.0.1 at 2022-10-08 18:58:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/navbar.js"):
+  
+Started GET "/js/counter.js" for 172.18.0.1 at 2022-10-08 18:58:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/counter.js"):
+  
+Started GET "/js/custom.js" for 172.18.0.1 at 2022-10-08 18:58:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/custom.js"):
+  
+Started GET "/favicon.png" for 172.18.0.1 at 2022-10-08 18:58:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 18:59:01 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 555)
+  Rendered home/_header.html.erb (Duration: 6.1ms | Allocations: 513)
+  Rendered layout layouts/application.html.erb (Duration: 3061.6ms | Allocations: 75663)
+Completed 200 OK in 3088ms (Views: 3069.7ms | ActiveRecord: 0.0ms | Allocations: 76527)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:13:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1035)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 1853)
+Completed 200 OK in 126ms (Views: 53.6ms | ActiveRecord: 0.0ms | Allocations: 6157)
+
+
+Started GET "/css/styles.css" for 172.18.0.1 at 2022-10-08 19:13:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:13:13 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:13:54 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 350)
+Completed 200 OK in 47ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 654)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+Started GET "/css/styles.css" for 172.18.0.1 at 2022-10-08 19:13:57 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:13:57 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:16:37 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 562)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1358)
+Completed 200 OK in 43ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 2197)
+
+
+Started GET "/styles.css" for 172.18.0.1 at 2022-10-08 19:16:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:16:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:18:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1360)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 2222)
+
+
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:18:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:18:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/header-bg.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/map-image.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:19:10 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 1347)
+Completed 200 OK in 64ms (Views: 40.8ms | Allocations: 2196)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:19:11 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:20:23 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 1344)
+Completed 200 OK in 43ms (Views: 23.1ms | Allocations: 2193)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:20:24 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/header-bg.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:20:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/map-image.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:40:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 34.7ms | Allocations: 1137)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 1955)
+Completed 200 OK in 303ms (Views: 104.8ms | ActiveRecord: 0.0ms | Allocations: 7868)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:40:25 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:40:26 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 335)
+Completed 200 OK in 14ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 639)
+
+
+Started GET "/js/scripts.js" for 172.18.0.1 at 2022-10-08 19:40:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/navbar-logo.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/header-bg.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/6.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/4.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/about/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/microsoft.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/team/3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/google.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/facebook.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/logos/ibm.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/close-icon.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/map-image.png"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:41:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 1131.6ms | Allocations: 23003)
+Completed 500 Internal Server Error in 1167ms (ActiveRecord: 0.0ms | Allocations: 24072)
+
+
+  
+ActionView::Template::Error (couldn't find file 'example.css'
+Checked in these paths: 
+  /ruby_app/app/assets/config
+  /ruby_app/app/assets/images
+  /ruby_app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.1.0/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-1.3.0/app/assets/javascripts
+  /usr/local/bundle/gems/importmap-rails-1.1.5/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.4/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.4/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.4/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.4/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.4/lib/assets/compiled
+  /ruby_app/app/javascript
+  /ruby_app/vendor/javascript):
+  
+app/assets/config/manifest.js:5
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:41:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 609.1ms | Allocations: 31758)
+Completed 200 OK in 626ms (Views: 610.2ms | ActiveRecord: 0.0ms | Allocations: 32050)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:42:08 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 238)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 371.1ms | Allocations: 5650)
+Completed 200 OK in 391ms (Views: 372.5ms | ActiveRecord: 0.0ms | Allocations: 5909)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:42:43 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 568)
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 3880)
+Completed 200 OK in 113ms (Views: 94.5ms | ActiveRecord: 0.0ms | Allocations: 4717)
+
+
+Started GET "/css/home.scss" for 172.18.0.1 at 2022-10-08 19:42:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/home.scss"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:42:51 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 558)
+  Rendered home/_header.html.erb (Duration: 6.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 87.1ms | Allocations: 3879)
+Completed 200 OK in 118ms (Views: 97.8ms | ActiveRecord: 0.0ms | Allocations: 4735)
+
+
+Started GET "/css/home.scss" for 172.18.0.1 at 2022-10-08 19:42:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/home.scss"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:43:05 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 558)
+  Rendered home/_header.html.erb (Duration: 6.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 364.7ms | Allocations: 6336)
+Completed 200 OK in 391ms (Views: 373.1ms | ActiveRecord: 0.0ms | Allocations: 7195)
+
+
+Started GET "/css/home.css" for 172.18.0.1 at 2022-10-08 19:43:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/css/home.css"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:43:37 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 558)
+  Rendered home/_header.html.erb (Duration: 5.6ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 291.3ms | Allocations: 6117)
+Completed 200 OK in 324ms (Views: 299.8ms | ActiveRecord: 0.0ms | Allocations: 6973)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:44:08 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 558)
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 425.4ms | Allocations: 25375)
+Completed 200 OK in 454ms (Views: 434.9ms | ActiveRecord: 0.0ms | Allocations: 26237)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:44:27 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 247)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 446.7ms | Allocations: 6483)
+Completed 200 OK in 462ms (Views: 447.6ms | ActiveRecord: 0.0ms | Allocations: 6762)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:44:43 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 244)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 462.8ms | Allocations: 6985)
+Completed 200 OK in 495ms (Views: 469.6ms | ActiveRecord: 0.0ms | Allocations: 7244)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:44:58 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 262)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 442.0ms | Allocations: 6770)
+Completed 200 OK in 460ms (Views: 444.3ms | ActiveRecord: 0.0ms | Allocations: 7029)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:52:40 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 570)
+  Rendered home/_header.html.erb (Duration: 5.3ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 428.4ms | Allocations: 8110)
+Completed 200 OK in 463ms (Views: 442.5ms | Allocations: 8943)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:54:34 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 241)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 389.5ms | Allocations: 6747)
+Completed 200 OK in 408ms (Views: 390.7ms | Allocations: 7022)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:59:33 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 552)
+  Rendered home/_header.html.erb (Duration: 5.6ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 125.1ms | Allocations: 4369)
+Completed 200 OK in 149ms (Views: 134.7ms | Allocations: 5202)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 19:59:48 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 244)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 3188)
+Completed 200 OK in 107ms (Views: 86.4ms | Allocations: 3464)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:00:07 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 235)
+  Rendered home/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 99.8ms | Allocations: 3182)
+Completed 200 OK in 124ms (Views: 101.2ms | Allocations: 3465)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:01:16 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 229)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 395.8ms | Allocations: 6733)
+Completed 200 OK in 409ms (Views: 396.7ms | Allocations: 6989)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:01:25 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 552)
+  Rendered home/_header.html.erb (Duration: 6.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 111.9ms | Allocations: 4503)
+Completed 200 OK in 154ms (Views: 124.0ms | Allocations: 5336)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:05:38 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 560)
+  Rendered home/_header.html.erb (Duration: 4.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 110.7ms | Allocations: 4510)
+Completed 200 OK in 146ms (Views: 120.5ms | Allocations: 5362)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:06:12 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 559)
+  Rendered home/_header.html.erb (Duration: 5.0ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 103.7ms | Allocations: 4508)
+Completed 200 OK in 137ms (Views: 116.9ms | Allocations: 5360)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:06:35 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 563)
+  Rendered home/_header.html.erb (Duration: 7.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | Allocations: 4543)
+Completed 200 OK in 135ms (Views: 114.1ms | Allocations: 5395)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:06:53 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 554)
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 4505)
+Completed 200 OK in 147ms (Views: 119.8ms | Allocations: 5390)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:07:26 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 555)
+  Rendered home/_header.html.erb (Duration: 6.6ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 416.4ms | Allocations: 8088)
+Completed 200 OK in 454ms (Views: 429.6ms | Allocations: 8940)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:07:37 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 551)
+  Rendered home/_header.html.erb (Duration: 5.9ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 81.9ms | Allocations: 4505)
+Completed 200 OK in 108ms (Views: 94.1ms | Allocations: 5358)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:09:05 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 607)
+  Rendered home/_header.html.erb (Duration: 5.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 89.0ms | Allocations: 4554)
+Completed 200 OK in 114ms (Views: 95.4ms | Allocations: 5406)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:10:13 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 649)
+  Rendered home/_header.html.erb (Duration: 5.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 117.5ms | Allocations: 4601)
+Completed 200 OK in 150ms (Views: 128.5ms | Allocations: 5453)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:10:38 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 582)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 4534)
+Completed 200 OK in 108ms (Views: 89.1ms | Allocations: 5386)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:11:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 609)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 101.1ms | Allocations: 4556)
+Completed 200 OK in 134ms (Views: 114.8ms | Allocations: 5408)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:11:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 615)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 113.2ms | Allocations: 4563)
+Completed 200 OK in 144ms (Views: 121.3ms | Allocations: 5415)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:04 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 592)
+  Rendered home/_header.html.erb (Duration: 5.9ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 120.7ms | Allocations: 4545)
+Completed 200 OK in 159ms (Views: 137.7ms | Allocations: 5397)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:10 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 606)
+  Rendered home/_header.html.erb (Duration: 6.9ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 104.3ms | Allocations: 4553)
+Completed 200 OK in 136ms (Views: 112.3ms | Allocations: 5406)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 612)
+  Rendered home/_header.html.erb (Duration: 6.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 107.5ms | Allocations: 4559)
+Completed 200 OK in 139ms (Views: 117.6ms | Allocations: 5411)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:33 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 247)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 359.1ms | Allocations: 6912)
+Completed 200 OK in 379ms (Views: 360.4ms | Allocations: 7187)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:41 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 241)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 3330)
+Completed 200 OK in 95ms (Views: 81.5ms | Allocations: 3586)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:12:45 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 241)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 89.6ms | Allocations: 3371)
+Completed 200 OK in 106ms (Views: 90.6ms | Allocations: 3627)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:14:59 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 610)
+  Rendered home/_header.html.erb (Duration: 6.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 88.8ms | Allocations: 4559)
+Completed 200 OK in 115ms (Views: 96.4ms | Allocations: 5392)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:17:19 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 259)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 101.5ms | Allocations: 3349)
+Completed 200 OK in 124ms (Views: 102.7ms | Allocations: 3624)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:19:13 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 610)
+  Rendered home/_header.html.erb (Duration: 16.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 380.7ms | Allocations: 8126)
+Completed 200 OK in 411ms (Views: 389.2ms | Allocations: 8960)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:19:53 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 426.8ms | Allocations: 6802)
+Completed 200 OK in 442ms (Views: 428.4ms | Allocations: 7077)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:20:13 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 612)
+  Rendered home/_header.html.erb (Duration: 6.8ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 105.0ms | Allocations: 4566)
+Completed 200 OK in 140ms (Views: 121.2ms | Allocations: 5400)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:20:21 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 612)
+  Rendered home/_header.html.erb (Duration: 8.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 103.3ms | Allocations: 4570)
+Completed 200 OK in 140ms (Views: 115.0ms | Allocations: 5422)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:26:03 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1461)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 1550)
+Completed 500 Internal Server Error in 49ms (Allocations: 2380)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="myCarousel" class="carousel slide h-650" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner h-650">
+      <div class="carousel-item active h-650">
+        <%= image_tag "repartidor.jpg", class: "courier-jpg">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-650">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-650">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<% if current_user %>
+    <p> Hello <%= current_user.email %> </p>
+    <p> Type <%= current_user.user_type %> </p>
+
+    <!-- How to check attributes of user:  -->
+    <!-- <% if current_user.user_type == "Despachador" %>
+            <p> Yes </p>
+    <% else %>
+            <p> No </p>
+    <% end %> -->
+<% end %>
+):
+1:    <div id="myCarousel" class="carousel slide h-650" data-bs-ride="carousel">
+2:        <div class="carousel-indicators">
+3:          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+4:          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+5:          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+6:        </div>
+7:        <div class="carousel-inner h-650">
+8:          <div class="carousel-item active h-650">
+9:            <%= image_tag "repartidor.jpg", class: "courier-jpg">
+10:            <div class="container">
+11:              <div class="carousel-caption text-start">
+12:                <h1>Example headline.</h1>
+13:                <p>Some representative placeholder content for the first slide of the carousel.</p>
+14:                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+15:              </div>
+16:            </div>
+17:          </div>
+18:          <div class="carousel-item h-650">
+19:            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+20:    
+21:            <div class="container">
+22:              <div class="carousel-caption">
+23:                <h1>Another example headline.</h1>
+24:                <p>Some representative placeholder content for the second slide of the carousel.</p>
+25:                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+26:              </div>
+27:            </div>
+28:          </div>
+29:          <div class="carousel-item h-650">
+30:            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+31:    
+32:            <div class="container">
+33:              <div class="carousel-caption text-end">
+34:                <h1>One more for good measure.</h1>
+35:                <p>Some representative placeholder content for the third slide of this carousel.</p>
+36:                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+37:              </div>
+38:            </div>
+39:          </div>
+40:        </div>
+41:        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+42:          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+43:          <span class="visually-hidden">Previous</span>
+44:        </button>
+45:        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+46:          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+47:          <span class="visually-hidden">Next</span>
+48:        </button>
+49:      </div>
+50:    
+51:    <% if current_user %>
+52:        <p> Hello <%= current_user.email %> </p>
+53:        <p> Type <%= current_user.user_type %> </p>
+54:    
+55:        <!-- How to check attributes of user:  -->
+56:        <!-- <% if current_user.user_type == "Despachador" %>
+57:                <p> Yes </p>
+58:        <% else %>
+59:                <p> No </p>
+60:        <% end %> -->
+61:    <% end %>
+  
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+app/views/home/index.html.erb:10: syntax error, unexpected '<'
+app/views/home/index.html.erb:11: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected '<'
+app/views/home/index.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected '<'
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:13: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: syntax error, unexpected '<'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:14: unknown regexp option - p
+app/views/home/index.html.erb:15: syntax error, unexpected '<'
+app/views/home/index.html.erb:16: unknown regexp options - dv
+app/views/home/index.html.erb:17: syntax error, unexpected '<'
+app/views/home/index.html.erb:19: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:19: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:19: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:21: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:22: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected '<'
+app/views/home/index.html.erb:23: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected '<'
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:24: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: syntax error, unexpected '<'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:25: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:25: unknown regexp option - p
+app/views/home/index.html.erb:26: syntax error, unexpected '<'
+app/views/home/index.html.erb:27: unknown regexp options - dv
+app/views/home/index.html.erb:28: syntax error, unexpected '<'
+app/views/home/index.html.erb:30: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:30: syntax error, unexpected `true', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected `false', expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:30: syntax error, unexpected integer literal, expecting ')'
+app/views/home/index.html.erb:32: syntax error, unexpected '<', expecting ')'
+app/views/home/index.html.erb:33: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected '<'
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:34: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected '<'
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:35: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: syntax error, unexpected '<'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:36: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/home/index.html.erb:36: unknown regexp option - p
+app/views/home/index.html.erb:37: syntax error, unexpected '<'
+app/views/home/index.html.erb:38: unknown regexp options - dv
+app/views/home/index.html.erb:39: syntax error, unexpected '<'
+app/views/home/index.html.erb:40: unknown regexp options - dv
+app/views/home/index.html.erb:41: syntax error, unexpected '<'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:41: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:42: syntax error, unexpected local variable or method, expecting ')'
+app/views/home/index.html.erb:42: syntax error, unexpected '<'
+app/views/home/index.html.erb:43: unknown regexp options - pa
+app/views/home/index.html.erb:44: syntax error, unexpected '<'
+app/views/home/index.html.erb:46: unknown regexp options - pa
+app/views/home/index.html.erb:47: syntax error, unexpected '<'
+app/views/home/index.html.erb:48: unknown regexp options - btt
+app/views/home/index.html.erb:49: syntax error, unexpected '<'
+app/views/home/index.html.erb:52: unknown regexp option - p
+app/views/home/index.html.erb:52: unmatched close parenthesis: /div>
+app/views/home/index.html.erb:53: syntax error, unexpected '<'
+app/views/home/index.html.erb:53: syntax error, unexpected string literal, expecting `do' or '{' or '('
+app/views/home/index.html.erb:57: unknown regexp option - p
+app/views/home/index.html.erb:63: unterminated regexp meets end of file
+app/views/home/index.html.erb:63: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:26:29 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 796.4ms | Allocations: 26738)
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 876.3ms | Allocations: 30463)
+Completed 200 OK in 901ms (Views: 885.1ms | Allocations: 31316)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:33:05 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 505.9ms | Allocations: 23133)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 587.1ms | Allocations: 26852)
+Completed 200 OK in 629ms (Views: 599.7ms | Allocations: 27704)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:34:24 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 616.0ms | Allocations: 23527)
+  Rendered home/_header.html.erb (Duration: 6.3ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 694.6ms | Allocations: 27267)
+Completed 200 OK in 731ms (Views: 703.7ms | Allocations: 28120)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:37:26 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 599.7ms | Allocations: 24038)
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 689.0ms | Allocations: 27776)
+Completed 200 OK in 723ms (Views: 698.9ms | Allocations: 28628)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 20:40:58 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 1338)
+  Rendered home/_header.html.erb (Duration: 5.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 491.5ms | Allocations: 8655)
+Completed 200 OK in 544ms (Views: 506.9ms | Allocations: 9507)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:36:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 72.8ms | Allocations: 5956)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 6066)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 0.0ms | Allocations: 11912)
+
+
+  
+ActionView::Template::Error (undefined method `inline_svg_tag' for #<ActionView::Base:0x0000000000c4e0>
+
+        '.freeze;@output_buffer.append=( inline_svg_tag("flat-mountains.svg") );@output_buffer.safe_append='
+                                         ^^^^^^^^^^^^^^):
+     6:     </div>
+     7:     <div class="carousel-inner h-900">
+     8:       <div class="carousel-item active h-900">
+     9:         <%= inline_svg_tag("flat-mountains.svg") %>
+    10:         <div class="container">
+    11:           <div class="carousel-caption text-start">
+    12:             <h1>Example headline.</h1>
+  
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:39:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1572.4ms | Allocations: 4834)
+  Rendered home/_header.html.erb (Duration: 24.0ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 3105.2ms | Allocations: 48812)
+Completed 200 OK in 3454ms (Views: 3199.4ms | ActiveRecord: 0.0ms | Allocations: 54713)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:40:57 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 36.2ms | Allocations: 1314)
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 426.9ms | Allocations: 8917)
+Completed 200 OK in 454ms (Views: 435.2ms | ActiveRecord: 0.0ms | Allocations: 9822)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:42:43 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 106.8ms | Allocations: 1592)
+  Rendered home/_header.html.erb (Duration: 4.1ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 185.1ms | Allocations: 5513)
+Completed 200 OK in 211ms (Views: 195.7ms | ActiveRecord: 0.0ms | Allocations: 6385)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:42:54 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 1285)
+  Rendered home/_header.html.erb (Duration: 4.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 123.4ms | Allocations: 5211)
+Completed 200 OK in 158ms (Views: 131.8ms | ActiveRecord: 0.0ms | Allocations: 6084)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:44:06 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 35.1ms | Allocations: 1544)
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 430.7ms | Allocations: 9032)
+Completed 200 OK in 456ms (Views: 439.8ms | ActiveRecord: 0.0ms | Allocations: 9904)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:45:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 927)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 140.8ms | Allocations: 4053)
+Completed 200 OK in 161ms (Views: 144.0ms | ActiveRecord: 0.0ms | Allocations: 4333)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:45:18 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 894)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 391.2ms | Allocations: 7466)
+Completed 200 OK in 410ms (Views: 392.0ms | Allocations: 7722)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:46:19 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 1440)
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 123.6ms | Allocations: 5354)
+Completed 200 OK in 149ms (Views: 130.8ms | Allocations: 6188)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:46:30 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 1290)
+  Rendered home/_header.html.erb (Duration: 3.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 5195)
+Completed 200 OK in 134ms (Views: 117.1ms | Allocations: 6047)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:46:32 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 791)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 93.4ms | Allocations: 3918)
+Completed 200 OK in 106ms (Views: 94.3ms | Allocations: 4195)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:46:36 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 777)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 99.9ms | Allocations: 3903)
+Completed 200 OK in 118ms (Views: 100.7ms | Allocations: 4159)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:47:01 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 601)
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 119.6ms | Allocations: 4584)
+Completed 200 OK in 147ms (Views: 127.5ms | Allocations: 5417)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:48:12 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 265)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 440.9ms | Allocations: 8094)
+Completed 200 OK in 458ms (Views: 442.2ms | Allocations: 8369)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:48:35 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 235)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 397.1ms | Allocations: 7948)
+Completed 200 OK in 413ms (Views: 398.1ms | Allocations: 8205)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:48:43 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 238)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 144.1ms | Allocations: 3869)
+Completed 200 OK in 159ms (Views: 145.5ms | Allocations: 4126)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:53:09 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 550)
+  Rendered home/_header.html.erb (Duration: 6.0ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 407.2ms | Allocations: 9276)
+Completed 200 OK in 437ms (Views: 414.7ms | Allocations: 10109)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:53:36 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 223)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 446.7ms | Allocations: 8543)
+Completed 200 OK in 460ms (Views: 447.6ms | Allocations: 8818)
+
+
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:37 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:53:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:54:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:54:00 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:54:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/repartidor2.svg" for 172.18.0.1 at 2022-10-08 21:54:01 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/repartidor2.svg"):
+  
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:54:13 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 261)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 408.7ms | Allocations: 8346)
+Completed 200 OK in 423ms (Views: 409.7ms | Allocations: 8639)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:57:22 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 578.7ms | Allocations: 8366)
+Completed 200 OK in 597ms (Views: 579.6ms | Allocations: 8625)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 21:58:37 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 247)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 547.4ms | Allocations: 8373)
+Completed 200 OK in 559ms (Views: 548.2ms | Allocations: 8629)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:00:28 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 552)
+  Rendered home/_header.html.erb (Duration: 3.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 4857)
+Completed 200 OK in 108ms (Views: 92.0ms | Allocations: 5684)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:01:28 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 238)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 335.6ms | Allocations: 8219)
+Completed 200 OK in 347ms (Views: 336.3ms | Allocations: 8494)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:01:48 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 404.4ms | Allocations: 8027)
+Completed 200 OK in 418ms (Views: 405.7ms | Allocations: 8283)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:02:06 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 329.9ms | Allocations: 7973)
+Completed 200 OK in 343ms (Views: 330.6ms | Allocations: 8229)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:02:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 250)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 376.7ms | Allocations: 7977)
+Completed 200 OK in 393ms (Views: 378.4ms | Allocations: 8233)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:02:26 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 232)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 426.2ms | Allocations: 7958)
+Completed 200 OK in 441ms (Views: 427.6ms | Allocations: 8214)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:05:48 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 244)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 554.7ms | Allocations: 8254)
+Completed 200 OK in 573ms (Views: 555.6ms | Allocations: 8510)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:08:30 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 232)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 546.1ms | Allocations: 8407)
+Completed 200 OK in 564ms (Views: 546.9ms | Allocations: 8663)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:15:41 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 575)
+  Rendered home/_header.html.erb (Duration: 4.9ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 4886)
+Completed 200 OK in 137ms (Views: 119.0ms | Allocations: 5720)
+
+
