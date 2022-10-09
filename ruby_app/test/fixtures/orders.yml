@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stattus_order: MyString
+  order_delivery_date: 2022-10-09 18:32:18
+  order_date: 2022-10-09 18:32:18
+  delivery_key: MyString
+
+two:
+  stattus_order: MyString
+  order_delivery_date: 2022-10-09 18:32:18
+  order_date: 2022-10-09 18:32:18
+  delivery_key: MyString
