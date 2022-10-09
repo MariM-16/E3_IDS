@@ -17,6 +17,16 @@
   color: white;
 }
 
+.marketing {
+  padding-top: 64px;
+}
+
+.marketing-item {
+  @media (max-width: 1024px) {
+    margin-top: 64px !important;
+  }
+}
+
 .home-img-content {
   padding-left: 16px;
   padding-right: 16px;
@@ -24,4 +34,8 @@
 .home-image {
   @media (max-width: 1800px) {
   }
+}
+
+footer {
+  background-color: #212529;
 }

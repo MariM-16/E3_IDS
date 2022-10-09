@@ -1,8 +1,82 @@
 <div class="home-image">
-<div class="home-img-content">
-  Rapido, sencillo y en menos de 24 horas!
+  <div class="home-img-content">
+    E3 sistema de reparto
+  </div>
 </div>
-</div>
+
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-center flex-column">
+
+        <%= inline_svg_tag("icons/fast-delivery.svg", width: "140", height:"140", class:"bd-placeholder-img") %>
+
+        <h2>En menos de 24hrs</h2>
+        <p class="d-flex text-center">Si llega en mas de 24hrs te devolvemos el 50% del costo del envio!</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 d-flex align-items-center flex-column marketing-item">
+        <%= inline_svg_tag("icons/24-hours_7.svg", width: "140", height:"140", class:"bd-placeholder-img") %>
+        <h2>Atención 24/7</h2>
+        <p class="d-flex text-center">Nuestras operadoras estaran disponibles 24/7!</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 d-flex align-items-center flex-column marketing-item">
+        <%= inline_svg_tag("icons/easy-to-use.svg", width: "140", height:"140", class:"bd-placeholder-img") %>
+        <h2>Sencillo</h2>
+        <p class="d-flex text-center">En menos de 3 clicks puedes realizar tu encargo!</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Como todo, <span class="">Súper Viernes.</span></h2>
+        <p class="lead">
+          recuerda que si realizas un envío<br>
+          paquete sucursal o un envío paquete<br>
+          domicilio desde sucursal física o nuestra Sucursal Virtual, <strong><span class="c-red-1" style="font-size: 22px;"> tienes 15%<br>
+          de descuento.</span></strong></p></p>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag "post-office.jpg", width: "500", height: "500" %>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading"> Tenemos servicio al cliente <span class=""> 24/7! </span></h2>
+        <p class="lead"> Llame al sigiente numero si necesita soporte: 600 900 8000</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <%= image_tag "call-center.jpg", width: "500", height: "500"%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Conoce los <span class=""> Emprendedores del Mes!</span></h2>
+        <p class="lead"> Tu tambíen puedes ser parte, registrate <%= link_to "Aquí", new_user_session_path %></p>
+      </div>
+      <div class="col-md-5">
+        <%= image_tag "emprendedora.jpg", width: "500", height: "500"%>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+
 <% if current_user %>
     <p> Hello <%= current_user.email %> </p>
     <p> Type <%= current_user.user_type %> </p>
@@ -14,3 +88,14 @@
             <p> No </p>
     <% end %> -->
 <% end %>
+
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is © Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>

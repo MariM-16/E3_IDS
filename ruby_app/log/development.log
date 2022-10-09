@@ -7012,3 +7012,926 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 137ms (Views: 119.0ms | Allocations: 5720)
 
 
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:21:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 30.9ms | Allocations: 1139)
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 3180.6ms | Allocations: 52983)
+Completed 200 OK in 3521ms (Views: 3260.7ms | ActiveRecord: 0.0ms | Allocations: 58885)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:23:44 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 304)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 435.0ms | Allocations: 8213)
+Completed 200 OK in 450ms (Views: 435.8ms | ActiveRecord: 0.0ms | Allocations: 8539)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:32:17 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 226)
+  Rendered layout layouts/application.html.erb (Duration: 290.1ms | Allocations: 13183)
+Completed 500 Internal Server Error in 309ms (Allocations: 13465)
+
+
+  
+ActionView::Template::Error (Error: Incompatible units: 'vw' and 'rem'.
+        on line 4:29 of app/assets/stylesheets/home.scss
+>>   font-size: clamp(1.25rem, -1.5rem + 5.5vw, 6.75rem);
+
+   ----------------------------^
+):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10: 
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:     <%= javascript_importmap_tags %>
+    13:     <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    14:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+app/assets/stylesheets/home.scss:4
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:33:12 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 165.1ms | Allocations: 4681)
+Completed 500 Internal Server Error in 186ms (Allocations: 4955)
+
+
+  
+ActionView::Template::Error (Error: Incompatible units: 'vw' and 'rem'.
+        on line 5:29 of app/assets/stylesheets/home.scss
+>>   font-size: clamp(1.25rem, -1.5rem + 5.5vw, 6.75rem);
+
+   ----------------------------^
+):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10: 
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:     <%= javascript_importmap_tags %>
+    13:     <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    14:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+app/assets/stylesheets/home.scss:5
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:33:50 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 226)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 410.8ms | Allocations: 7950)
+Completed 200 OK in 431ms (Views: 412.0ms | Allocations: 8214)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:34:28 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 232)
+  Rendered layout layouts/application.html.erb (Duration: 194.0ms | Allocations: 4358)
+Completed 500 Internal Server Error in 208ms (Allocations: 4590)
+
+
+  
+ActionView::Template::Error (Error: Incompatible units: 'rem' and 'vw'.
+        on line 5:27 of app/assets/stylesheets/home.scss
+>>   font-size: clamp(20rem, 1vw + 15rem, 104rem);
+
+   --------------------------^
+):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10: 
+    11:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:     <%= javascript_importmap_tags %>
+    13:     <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    14:     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+app/assets/stylesheets/home.scss:5
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:36:42 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 232)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 412.1ms | Allocations: 7911)
+Completed 200 OK in 427ms (Views: 413.7ms | Allocations: 8170)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:37:06 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 235)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 448.7ms | Allocations: 7896)
+Completed 200 OK in 463ms (Views: 449.8ms | Allocations: 8152)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:39:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 569)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 427.0ms | Allocations: 9249)
+Completed 200 OK in 462ms (Views: 435.1ms | Allocations: 10080)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:50:20 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 647)
+  Rendered home/_header.html.erb (Duration: 5.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 108.8ms | Allocations: 4898)
+Completed 200 OK in 137ms (Views: 115.8ms | Allocations: 5750)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:51:27 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 629)
+  Rendered home/_header.html.erb (Duration: 6.0ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 120.4ms | Allocations: 4887)
+Completed 200 OK in 159ms (Views: 134.0ms | Allocations: 5781)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:54:12 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 235)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 468.7ms | Allocations: 8052)
+Completed 200 OK in 484ms (Views: 469.6ms | Allocations: 8327)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:55:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 626)
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 4892)
+Completed 200 OK in 134ms (Views: 117.1ms | Allocations: 5726)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:55:37 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 638)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 4889)
+Completed 200 OK in 130ms (Views: 114.1ms | Allocations: 5741)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 22:59:47 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1444)
+Completed 500 Internal Server Error in 32ms (Allocations: 2274)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="home-image">
+  <div class="home-img-content">
+    E3 sistema de reparto
+  </div>
+</div>
+
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+
+      <%= inline_svg_tag("fast-delivery.svg", width: "140", height="140") %>
+
+        <h2>En menos de 24hrs</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+
+<% if current_user %>
+    <p> Hello <%= current_user.email %> </p>
+    <p> Type <%= current_user.user_type %> </p>
+
+    <!-- How to check attributes of user:  -->
+    <!-- <% if current_user.user_type == "Despachador" %>
+            <p> Yes </p>
+    <% else %>
+            <p> No </p>
+    <% end %> -->
+<% end %>
+):
+1:    <div class="home-image">
+2:      <div class="home-img-content">
+3:        E3 sistema de reparto
+4:      </div>
+5:    </div>
+6:    
+7:    
+8:    <div class="container marketing">
+9:    
+10:        <!-- Three columns of text below the carousel -->
+11:        <div class="row">
+12:          <div class="col-lg-4">
+13:    
+14:          <%= inline_svg_tag("fast-delivery.svg", width: "140", height="140") %>
+15:    
+16:            <h2>En menos de 24hrs</h2>
+17:            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+18:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+19:          </div><!-- /.col-lg-4 -->
+20:          <div class="col-lg-4">
+21:            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+22:    
+23:            <h2>Heading</h2>
+24:            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+25:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+26:          </div><!-- /.col-lg-4 -->
+27:          <div class="col-lg-4">
+28:            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+29:    
+30:            <h2>Heading</h2>
+31:            <p>And lastly this, the third column of representative placeholder content.</p>
+32:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+33:          </div><!-- /.col-lg-4 -->
+34:        </div><!-- /.row -->
+35:    
+36:    
+37:        <!-- START THE FEATURETTES -->
+38:    
+39:        <hr class="featurette-divider">
+40:    
+41:        <div class="row featurette">
+42:          <div class="col-md-7">
+43:            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+44:            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+45:          </div>
+46:          <div class="col-md-5">
+47:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+48:    
+49:          </div>
+50:        </div>
+51:    
+52:        <hr class="featurette-divider">
+53:    
+54:        <div class="row featurette">
+55:          <div class="col-md-7 order-md-2">
+56:            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+57:            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+58:          </div>
+59:          <div class="col-md-5 order-md-1">
+60:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+61:    
+62:          </div>
+63:        </div>
+64:    
+65:        <hr class="featurette-divider">
+66:    
+67:        <div class="row featurette">
+68:          <div class="col-md-7">
+69:            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+70:            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+71:          </div>
+72:          <div class="col-md-5">
+73:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+74:    
+75:          </div>
+76:        </div>
+77:    
+78:        <hr class="featurette-divider">
+79:    
+80:        <!-- /END THE FEATURETTES -->
+81:    
+82:      </div>
+83:    
+84:    <% if current_user %>
+85:        <p> Hello <%= current_user.email %> </p>
+86:        <p> Type <%= current_user.user_type %> </p>
+87:    
+88:        <!-- How to check attributes of user:  -->
+89:        <!-- <% if current_user.user_type == "Despachador" %>
+90:                <p> Yes </p>
+91:        <% else %>
+92:                <p> No </p>
+93:        <% end %> -->
+94:    <% end %>
+  
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:00:03 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 101.0ms | Allocations: 1650)
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 481.2ms | Allocations: 9700)
+Completed 200 OK in 521ms (Views: 488.6ms | Allocations: 10546)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:00:38 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1348)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1437)
+Completed 500 Internal Server Error in 34ms (Allocations: 2263)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="home-image">
+  <div class="home-img-content">
+    E3 sistema de reparto
+  </div>
+</div>
+
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+
+      <%= inline_svg_tag("fast-delivery.svg", width: "140", height:"140" class:"rounded-circle bd-placeholder-img") %>
+
+        <h2>En menos de 24hrs</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div>
+
+<% if current_user %>
+    <p> Hello <%= current_user.email %> </p>
+    <p> Type <%= current_user.user_type %> </p>
+
+    <!-- How to check attributes of user:  -->
+    <!-- <% if current_user.user_type == "Despachador" %>
+            <p> Yes </p>
+    <% else %>
+            <p> No </p>
+    <% end %> -->
+<% end %>
+):
+1:    <div class="home-image">
+2:      <div class="home-img-content">
+3:        E3 sistema de reparto
+4:      </div>
+5:    </div>
+6:    
+7:    
+8:    <div class="container marketing">
+9:    
+10:        <!-- Three columns of text below the carousel -->
+11:        <div class="row">
+12:          <div class="col-lg-4">
+13:    
+14:          <%= inline_svg_tag("fast-delivery.svg", width: "140", height:"140" class:"rounded-circle bd-placeholder-img") %>
+15:    
+16:            <h2>En menos de 24hrs</h2>
+17:            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+18:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+19:          </div><!-- /.col-lg-4 -->
+20:          <div class="col-lg-4">
+21:            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+22:    
+23:            <h2>Heading</h2>
+24:            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+25:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+26:          </div><!-- /.col-lg-4 -->
+27:          <div class="col-lg-4">
+28:            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+29:    
+30:            <h2>Heading</h2>
+31:            <p>And lastly this, the third column of representative placeholder content.</p>
+32:            <p><a class="btn btn-secondary" href="#">View details »</a></p>
+33:          </div><!-- /.col-lg-4 -->
+34:        </div><!-- /.row -->
+35:    
+36:    
+37:        <!-- START THE FEATURETTES -->
+38:    
+39:        <hr class="featurette-divider">
+40:    
+41:        <div class="row featurette">
+42:          <div class="col-md-7">
+43:            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+44:            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+45:          </div>
+46:          <div class="col-md-5">
+47:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+48:    
+49:          </div>
+50:        </div>
+51:    
+52:        <hr class="featurette-divider">
+53:    
+54:        <div class="row featurette">
+55:          <div class="col-md-7 order-md-2">
+56:            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+57:            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+58:          </div>
+59:          <div class="col-md-5 order-md-1">
+60:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+61:    
+62:          </div>
+63:        </div>
+64:    
+65:        <hr class="featurette-divider">
+66:    
+67:        <div class="row featurette">
+68:          <div class="col-md-7">
+69:            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+70:            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+71:          </div>
+72:          <div class="col-md-5">
+73:            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+74:    
+75:          </div>
+76:        </div>
+77:    
+78:        <hr class="featurette-divider">
+79:    
+80:        <!-- /END THE FEATURETTES -->
+81:    
+82:      </div>
+83:    
+84:    <% if current_user %>
+85:        <p> Hello <%= current_user.email %> </p>
+86:        <p> Type <%= current_user.user_type %> </p>
+87:    
+88:        <!-- How to check attributes of user:  -->
+89:        <!-- <% if current_user.user_type == "Despachador" %>
+90:                <p> Yes </p>
+91:        <% else %>
+92:                <p> No </p>
+93:        <% end %> -->
+94:    <% end %>
+  
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected `class', expecting ')'
+app/views/home/index.html.erb:14: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/index.html.erb:96: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:00:47 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 34.1ms | Allocations: 1692)
+  Rendered home/_header.html.erb (Duration: 4.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 129.6ms | Allocations: 5932)
+Completed 200 OK in 157ms (Views: 137.8ms | Allocations: 6779)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:01:10 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 36.2ms | Allocations: 1575)
+  Rendered home/_header.html.erb (Duration: 4.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 150.2ms | Allocations: 5758)
+Completed 200 OK in 176ms (Views: 157.8ms | Allocations: 6610)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:02:43 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 158.8ms | Allocations: 1847)
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 557.1ms | Allocations: 9990)
+Completed 200 OK in 595ms (Views: 570.3ms | Allocations: 10842)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:03:32 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 1560)
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 126.8ms | Allocations: 5792)
+Completed 200 OK in 152ms (Views: 134.2ms | Allocations: 6644)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:05:09 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 147.6ms | Allocations: 2628)
+  Rendered home/_header.html.erb (Duration: 6.8ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 255.3ms | Allocations: 6814)
+Completed 200 OK in 280ms (Views: 262.5ms | Allocations: 7666)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:08:05 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 170.6ms | Allocations: 3422)
+  Rendered home/_header.html.erb (Duration: 4.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 272.8ms | Allocations: 7608)
+Completed 200 OK in 299ms (Views: 279.4ms | Allocations: 8460)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:08:14 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 92.9ms | Allocations: 3123)
+  Rendered home/_header.html.erb (Duration: 4.4ms | Allocations: 463)
+  Rendered layout layouts/application.html.erb (Duration: 194.2ms | Allocations: 7326)
+Completed 200 OK in 224ms (Views: 201.6ms | Allocations: 8179)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-08 23:09:17 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 87.6ms | Allocations: 3131)
+  Rendered home/_header.html.erb (Duration: 10.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 196.2ms | Allocations: 7328)
+Completed 200 OK in 229ms (Views: 205.5ms | Allocations: 8181)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:28:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 319.7ms | Allocations: 4105)
+  Rendered home/_header.html.erb (Duration: 25.7ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 3587.3ms | Allocations: 52080)
+Completed 200 OK in 3754ms (Views: 3633.8ms | ActiveRecord: 0.0ms | Allocations: 56371)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-09 15:29:34 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 49.8ms | Allocations: 721)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 529.7ms | Allocations: 7002)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 614.4ms | Allocations: 10654)
+Completed 200 OK in 710ms (Views: 627.1ms | ActiveRecord: 6.4ms | Allocations: 21622)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-09 15:29:42 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 15.8ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 183)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 89.2ms | Allocations: 2504)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 173.1ms | Allocations: 6137)
+Completed 200 OK in 200ms (Views: 183.1ms | ActiveRecord: 0.0ms | Allocations: 7468)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:31:07 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 74.6ms | Allocations: 2596)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 141.6ms | Allocations: 6003)
+Completed 200 OK in 154ms (Views: 142.5ms | ActiveRecord: 0.0ms | Allocations: 6300)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:34:07 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 89.0ms | Allocations: 3112)
+  Rendered home/_header.html.erb (Duration: 7.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 185.7ms | Allocations: 7306)
+Completed 200 OK in 212ms (Views: 196.0ms | ActiveRecord: 0.0ms | Allocations: 8180)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:36:31 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 75.2ms | Allocations: 2478)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 459.2ms | Allocations: 10468)
+Completed 200 OK in 473ms (Views: 459.9ms | Allocations: 10743)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:40:06 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 95.6ms | Allocations: 3137)
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 190.3ms | Allocations: 7328)
+Completed 200 OK in 222ms (Views: 198.6ms | Allocations: 8172)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:40:39 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 88.4ms | Allocations: 3111)
+  Rendered home/_header.html.erb (Duration: 4.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 187.1ms | Allocations: 7293)
+Completed 200 OK in 210ms (Views: 194.1ms | Allocations: 8145)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:41:38 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 97.6ms | Allocations: 3135)
+  Rendered home/_header.html.erb (Duration: 4.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 204.8ms | Allocations: 7320)
+Completed 200 OK in 235ms (Views: 214.5ms | Allocations: 8172)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:43:11 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 95.8ms | Allocations: 3125)
+  Rendered home/_header.html.erb (Duration: 5.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 198.6ms | Allocations: 7307)
+Completed 200 OK in 231ms (Views: 206.3ms | Allocations: 8159)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:47:12 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 137.3ms | Allocations: 3136)
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 649.9ms | Allocations: 11754)
+Completed 200 OK in 681ms (Views: 660.8ms | Allocations: 12606)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:48:20 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 96.0ms | Allocations: 2481)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 507.6ms | Allocations: 10195)
+Completed 200 OK in 524ms (Views: 508.4ms | Allocations: 10470)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:48:58 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 81.1ms | Allocations: 2492)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 438.7ms | Allocations: 10186)
+Completed 200 OK in 454ms (Views: 440.0ms | Allocations: 10442)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:52:38 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 87.3ms | Allocations: 2482)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 549.7ms | Allocations: 10188)
+Completed 200 OK in 571ms (Views: 550.7ms | Allocations: 10444)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:53:22 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 99.4ms | Allocations: 3125)
+  Rendered home/_header.html.erb (Duration: 4.9ms | Allocations: 459)
+  Rendered layout layouts/application.html.erb (Duration: 204.8ms | Allocations: 7308)
+Completed 200 OK in 238ms (Views: 214.1ms | Allocations: 8141)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:53:56 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 113.2ms | Allocations: 3119)
+  Rendered home/_header.html.erb (Duration: 7.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 241.1ms | Allocations: 7301)
+Completed 200 OK in 275ms (Views: 250.5ms | Allocations: 8154)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 15:57:51 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 99.2ms | Allocations: 2476)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered layout layouts/application.html.erb (Duration: 189.3ms | Allocations: 5877)
+Completed 200 OK in 213ms (Views: 190.2ms | Allocations: 6152)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 16:04:45 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1030.8ms | Allocations: 31568)
+  Rendered home/_header.html.erb (Duration: 7.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 1123.0ms | Allocations: 35594)
+Completed 200 OK in 1149ms (Views: 1131.1ms | Allocations: 36428)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 16:04:54 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 135.1ms | Allocations: 3789)
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 231.8ms | Allocations: 7805)
+Completed 200 OK in 266ms (Views: 244.0ms | Allocations: 8657)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 16:11:11 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 151.1ms | Allocations: 3792)
+  Rendered home/_header.html.erb (Duration: 8.4ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 252.8ms | Allocations: 7799)
+Completed 200 OK in 295ms (Views: 263.8ms | Allocations: 8651)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-09 16:11:30 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 172.5ms | Allocations: 3776)
+  Rendered home/_header.html.erb (Duration: 5.7ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 273.1ms | Allocations: 7787)
+Completed 200 OK in 312ms (Views: 285.7ms | Allocations: 8639)
+
+
