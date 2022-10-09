@@ -11,5 +11,14 @@ Rails.application.routes.draw do
   root "home#index"
 
   resource :users
+  resource :addresses
+  resource :orders
 
+  resources :users do
+    resources :addresses
+  end
+
+  resources :users do
+    resources :orders
+  end
 end
