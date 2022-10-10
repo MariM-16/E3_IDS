@@ -8910,3 +8910,791 @@ FOREIGN KEY ("dispatcher_id")
   [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-10 17:41:47.129763"], ["updated_at", "2022-10-10 17:41:47.129763"]]
   [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (10.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "addresses"[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "commune" varchar, "street" varchar, "number_address" varchar, "extra_information" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[35m (12.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status_order" varchar, "order_delivery_date" datetime(6), "order_date" datetime(6), "delivery_key" varchar, "buyer_id" integer, "provider_id" integer, "dispatcher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (14.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "first_name" varchar, "last_name" varchar, "user_type" varchar, "phone_number" varchar, "RUT" varchar)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "commune" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "number_address" varchar DEFAULT NULL, "extra_information" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aaddresses_on_user_id" ON "aaddresses" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","commune","street","number_address","extra_information","user_id","created_at","updated_at")
+                     SELECT "id","commune","street","number_address","extra_information","user_id","created_at","updated_at" FROM "addresses"[0m
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "commune" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "number_address" varchar DEFAULT NULL, "extra_information" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "addresses" ("id","commune","street","number_address","extra_information","user_id","created_at","updated_at")
+                     SELECT "id","commune","street","number_address","extra_information","user_id","created_at","updated_at" FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (6.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (6.9ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2019e3ba74"
+FOREIGN KEY ("dispatcher_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (5.9ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2019e3ba74"
+FOREIGN KEY ("dispatcher_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3ac4eccb23"
+FOREIGN KEY ("provider_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "db3c2758dccbedc85816293d5a11201892354eeb"], ["created_at", "2022-10-10 21:57:11.726997"], ["updated_at", "2022-10-10 21:57:11.726997"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "addresses"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "commune" varchar, "street" varchar, "number_address" varchar, "extra_information" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status_order" varchar, "order_delivery_date" datetime(6), "order_date" datetime(6), "delivery_key" varchar, "buyer_id" integer, "provider_id" integer, "dispatcher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "first_name" varchar, "last_name" varchar, "user_type" varchar, "phone_number" varchar, "RUT" varchar)[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "commune" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "number_address" varchar DEFAULT NULL, "extra_information" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aaddresses_on_user_id" ON "aaddresses" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","commune","street","number_address","extra_information","user_id","created_at","updated_at")
+                     SELECT "id","commune","street","number_address","extra_information","user_id","created_at","updated_at" FROM "addresses"[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "commune" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "number_address" varchar DEFAULT NULL, "extra_information" varchar DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "addresses" ("id","commune","street","number_address","extra_information","user_id","created_at","updated_at")
+                     SELECT "id","commune","street","number_address","extra_information","user_id","created_at","updated_at" FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (6.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (8.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2019e3ba74"
+FOREIGN KEY ("dispatcher_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_provider_id" ON "aorders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_dispatcher_id" ON "aorders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_buyer_id" ON "aorders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "orders"[0m
+  [1m[35m (6.4ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "status_order" varchar DEFAULT NULL, "order_delivery_date" datetime(6) DEFAULT NULL, "order_date" datetime(6) DEFAULT NULL, "delivery_key" varchar DEFAULT NULL, "buyer_id" integer DEFAULT NULL, "provider_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2019e3ba74"
+FOREIGN KEY ("dispatcher_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3ac4eccb23"
+FOREIGN KEY ("provider_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at")
+                     SELECT "id","status_order","order_delivery_date","order_date","delivery_key","buyer_id","provider_id","dispatcher_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221009213218)[0m
+  [1m[35m (13.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20221007035501),
+(20221007065426),
+(20221009213111);
+
+[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-10 21:57:12.137149"], ["updated_at", "2022-10-10 21:57:12.137149"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (4.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2022-10-10 21:57:12.158635"], ["key", "environment"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "db3c2758dccbedc85816293d5a11201892354eeb"], ["created_at", "2022-10-10 21:57:12.180082"], ["updated_at", "2022-10-10 21:57:12.180082"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "comprador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "comprador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "12121-comprador"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "comprador@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-10 21:57:12.566333"], ["updated_at", "2022-10-10 21:57:12.566333"], ["first_name", "Comprador"], ["last_name", "C"], ["user_type", "Comprador"], ["phone_number", "99999"], ["RUT", "12121-comprador"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "proveedor@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "proveedor@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "2313-proveedor"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "proveedor@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-10 21:57:12.794109"], ["updated_at", "2022-10-10 21:57:12.794109"], ["first_name", "Proveedor"], ["last_name", "P"], ["user_type", "Proveedor"], ["phone_number", "99999"], ["RUT", "2313-proveedor"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "11-despachador"], ["LIMIT", 1]]
+  [1m[36mUser Create (7.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "despachador@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-10 21:57:13.026596"], ["updated_at", "2022-10-10 21:57:13.026596"], ["first_name", "Despachador"], ["last_name", "D"], ["user_type", "Despachador"], ["phone_number", "99999"], ["RUT", "11-despachador"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 172.18.0.1 at 2022-10-10 21:57:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 6738.0ms | Allocations: 52433)
+  Rendered home/_header.html.erb (Duration: 24.0ms | Allocations: 2218)
+  Rendered layout layouts/application.html.erb (Duration: 7014.2ms | Allocations: 69727)
+Completed 200 OK in 7296ms (Views: 7087.5ms | ActiveRecord: 10.4ms | Allocations: 75329)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-10 21:57:52 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.9ms | Allocations: 256)
+  Rendered devise/shared/_links.html.erb (Duration: 6.6ms | Allocations: 628)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 50.4ms | Allocations: 3868)
+  Rendered home/_header.html.erb (Duration: 22.9ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 160.5ms | Allocations: 8151)
+Completed 200 OK in 187ms (Views: 170.1ms | ActiveRecord: 0.0ms | Allocations: 9781)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-10 21:57:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 276)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.9ms | Allocations: 3245)
+  Rendered home/_header.html.erb (Duration: 13.4ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 127.6ms | Allocations: 7491)
+Completed 200 OK in 145ms (Views: 133.9ms | ActiveRecord: 0.0ms | Allocations: 8932)
+
+
+Started POST "/users/sign_in" for 172.18.0.1 at 2022-10-10 21:58:05 +0000
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matias.bustosa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matias.bustosa@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 47ms (ActiveRecord: 2.8ms | Allocations: 2120)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matias.bustosa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 133)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1058)
+  Rendered home/_header.html.erb (Duration: 18.9ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 143.6ms | Allocations: 5139)
+Completed 200 OK in 375ms (Views: 147.0ms | ActiveRecord: 0.0ms | Allocations: 6446)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-10 21:58:08 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1179)
+  Rendered home/_header.html.erb (Duration: 29.2ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 173.9ms | Allocations: 5180)
+Completed 200 OK in 198ms (Views: 175.9ms | ActiveRecord: 0.0ms | Allocations: 5830)
+
+
+Started POST "/users" for 172.18.0.1 at 2022-10-10 21:58:36 +0000
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matias.bustosa@gmail.com", "first_name"=>"Matías", "last_name"=>"Bustos", "phone_number"=>"982035187", "RUT"=>"199932020", "user_type"=>"Proveedor", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matias.bustosa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matias.bustosa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "199932020"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "matias.bustosa@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-10 21:58:36.663523"], ["updated_at", "2022-10-10 21:58:36.663523"], ["first_name", "Matías"], ["last_name", "Bustos"], ["user_type", "Proveedor"], ["phone_number", "982035187"], ["RUT", "199932020"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 301ms (ActiveRecord: 15.6ms | Allocations: 18696)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 21:58:36 +0000
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 130.0ms | Allocations: 5088)
+  Rendered home/_header.html.erb (Duration: 22.8ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 237.4ms | Allocations: 9119)
+Completed 200 OK in 250ms (Views: 236.7ms | ActiveRecord: 1.5ms | Allocations: 9478)
+
+
+Started GET "/orders" for 172.18.0.1 at 2022-10-10 21:58:39 +0000
+Processing by OrdersController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1636)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1733)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 2524)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @order %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this order", edit_order_path(@order) %> |
+  
+app/views/orders/show.html.erb:3
+Started GET "/orders" for 172.18.0.1 at 2022-10-10 21:58:52 +0000
+Processing by OrdersController#show as HTML
+Completed 404 Not Found in 49ms (ActiveRecord: 4.5ms | Allocations: 3499)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order without an ID):
+  
+app/controllers/orders_controller.rb:63:in `set_order'
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:01:40 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 155.5ms | Allocations: 9402)
+  Rendered home/_header.html.erb (Duration: 22.1ms | Allocations: 2204)
+  Rendered layout layouts/application.html.erb (Duration: 392.4ms | Allocations: 26361)
+Completed 200 OK in 422ms (Views: 398.1ms | ActiveRecord: 5.8ms | Allocations: 27404)
+
+
+Started GET "/users/sign_out" for 172.18.0.1 at 2022-10-10 22:02:50 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 1.3ms | Allocations: 3207)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:02:50 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 132.6ms | Allocations: 4252)
+  Rendered home/_header.html.erb (Duration: 16.6ms | Allocations: 717)
+  Rendered layout layouts/application.html.erb (Duration: 215.3ms | Allocations: 8155)
+Completed 200 OK in 234ms (Views: 216.2ms | ActiveRecord: 0.0ms | Allocations: 8459)
+
+
+Started GET "/users/sign_up" for 172.18.0.1 at 2022-10-10 22:02:52 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.2ms | Allocations: 215)
+  Rendered devise/shared/_links.html.erb (Duration: 6.0ms | Allocations: 503)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 29.1ms | Allocations: 2608)
+  Rendered home/_header.html.erb (Duration: 16.0ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 117.9ms | Allocations: 6845)
+Completed 200 OK in 140ms (Views: 127.4ms | ActiveRecord: 0.0ms | Allocations: 8276)
+
+
+Started POST "/users" for 172.18.0.1 at 2022-10-10 22:03:23 +0000
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matias.bustosa@hotmail.com", "first_name"=>"Matías", "last_name"=>"Bustos", "phone_number"=>"982035187", "RUT"=>"123432425", "user_type"=>"Comprador", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matias.bustosa@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matias.bustosa@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "123432425"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "matias.bustosa@hotmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-10 22:03:23.854731"], ["updated_at", "2022-10-10 22:03:23.854731"], ["first_name", "Matías"], ["last_name", "Bustos"], ["user_type", "Comprador"], ["phone_number", "982035187"], ["RUT", "123432425"]]
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 21.5ms | Allocations: 8995)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:03:24 +0000
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 152.4ms | Allocations: 4817)
+  Rendered home/_header.html.erb (Duration: 17.6ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 243.0ms | Allocations: 8824)
+Completed 200 OK in 260ms (Views: 241.9ms | ActiveRecord: 1.9ms | Allocations: 9134)
+
+
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:03:25 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1358)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 20.5ms | Allocations: 1687)
+  Rendered layout layouts/application.html.erb (Duration: 114.8ms | Allocations: 6544)
+Completed 200 OK in 136ms (Views: 115.9ms | ActiveRecord: 2.8ms | Allocations: 7278)
+
+
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:03:36 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 5.7ms | Allocations: 971)
+  Rendered orders/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1277)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.9ms | Allocations: 1555)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 6124)
+Completed 200 OK in 147ms (Views: 115.8ms | ActiveRecord: 3.3ms | Allocations: 11489)
+
+
+Started POST "/orders" for 172.18.0.1 at 2022-10-10 22:05:05 +0000
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Order"}
+Completed 400 Bad Request in 13ms (ActiveRecord: 0.0ms | Allocations: 820)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:68:in `order_params'
+app/controllers/orders_controller.rb:24:in `create'
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:05:05 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.0ms | Allocations: 570)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 676)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.6ms | Allocations: 1563)
+  Rendered layout layouts/application.html.erb (Duration: 99.0ms | Allocations: 5534)
+Completed 200 OK in 113ms (Views: 98.7ms | ActiveRecord: 1.1ms | Allocations: 5812)
+
+
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:05:07 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 802)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.3ms | Allocations: 1553)
+  Rendered layout layouts/application.html.erb (Duration: 100.1ms | Allocations: 5631)
+Completed 200 OK in 113ms (Views: 98.7ms | ActiveRecord: 2.3ms | Allocations: 5905)
+
+
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:05:09 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.7ms | Allocations: 543)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 649)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.4ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 117.0ms | Allocations: 5479)
+Completed 200 OK in 134ms (Views: 117.2ms | ActiveRecord: 1.0ms | Allocations: 5759)
+
+
+Started POST "/orders" for 172.18.0.1 at 2022-10-10 22:05:10 +0000
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Order"}
+Completed 400 Bad Request in 14ms (ActiveRecord: 0.0ms | Allocations: 742)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:68:in `order_params'
+app/controllers/orders_controller.rb:24:in `create'
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:05:10 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 0.9ms | Allocations: 564)
+  Rendered orders/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 670)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 22.0ms | Allocations: 1562)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 5527)
+Completed 200 OK in 110ms (Views: 96.7ms | ActiveRecord: 1.2ms | Allocations: 5805)
+
+
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:05:11 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 790)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 17.9ms | Allocations: 1555)
+  Rendered layout layouts/application.html.erb (Duration: 97.7ms | Allocations: 5637)
+Completed 200 OK in 112ms (Views: 96.2ms | ActiveRecord: 2.6ms | Allocations: 5911)
+
+
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:05:15 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.4ms | Allocations: 564)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 670)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.4ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 95.7ms | Allocations: 5501)
+Completed 200 OK in 110ms (Views: 95.8ms | ActiveRecord: 1.0ms | Allocations: 5781)
+
+
+Started POST "/orders" for 172.18.0.1 at 2022-10-10 22:05:15 +0000
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Order"}
+Completed 400 Bad Request in 12ms (ActiveRecord: 0.0ms | Allocations: 739)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:68:in `order_params'
+app/controllers/orders_controller.rb:24:in `create'
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:05:16 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.1ms | Allocations: 561)
+  Rendered orders/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 667)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.9ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | Allocations: 5519)
+Completed 200 OK in 108ms (Views: 94.9ms | ActiveRecord: 1.1ms | Allocations: 5797)
+
+
+Started POST "/orders" for 172.18.0.1 at 2022-10-10 22:05:22 +0000
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Order"}
+Completed 400 Bad Request in 14ms (ActiveRecord: 0.0ms | Allocations: 742)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:68:in `order_params'
+app/controllers/orders_controller.rb:24:in `create'
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:06:08 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1250)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 33.1ms | Allocations: 6240)
+  Rendered layout layouts/application.html.erb (Duration: 263.7ms | Allocations: 22174)
+Completed 200 OK in 298ms (Views: 265.6ms | ActiveRecord: 11.2ms | Allocations: 24959)
+
+
+Started GET "/users/5/orders/new" for 172.18.0.1 at 2022-10-10 22:06:10 +0000
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.4ms | Allocations: 657)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 766)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.1ms | Allocations: 1553)
+  Rendered layout layouts/application.html.erb (Duration: 94.4ms | Allocations: 5596)
+Completed 200 OK in 116ms (Views: 94.3ms | ActiveRecord: 6.1ms | Allocations: 8439)
+
+
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:06:11 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 799)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 20.8ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 107.5ms | Allocations: 5629)
+Completed 200 OK in 123ms (Views: 106.2ms | ActiveRecord: 2.4ms | Allocations: 5901)
+
+
+Started GET "/users/5/orders" for 172.18.0.1 at 2022-10-10 22:06:12 +0000
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 775)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 18.8ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 97.6ms | Allocations: 5605)
+Completed 200 OK in 112ms (Views: 96.0ms | ActiveRecord: 2.5ms | Allocations: 5878)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:06:13 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 141.6ms | Allocations: 5171)
+  Rendered home/_header.html.erb (Duration: 23.9ms | Allocations: 831)
+  Rendered layout layouts/application.html.erb (Duration: 270.3ms | Allocations: 9250)
+Completed 200 OK in 298ms (Views: 276.5ms | ActiveRecord: 1.0ms | Allocations: 9947)
+
+
+Started GET "/users/sign_out" for 172.18.0.1 at 2022-10-10 22:06:17 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 1.6ms | Allocations: 2552)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:06:17 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 140.4ms | Allocations: 4215)
+  Rendered home/_header.html.erb (Duration: 15.2ms | Allocations: 719)
+  Rendered layout layouts/application.html.erb (Duration: 220.8ms | Allocations: 8127)
+Completed 200 OK in 234ms (Views: 221.6ms | ActiveRecord: 0.0ms | Allocations: 8425)
+
+
+Started GET "/users/sign_in" for 172.18.0.1 at 2022-10-10 22:06:20 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1535)
+  Rendered home/_header.html.erb (Duration: 15.0ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 97.1ms | Allocations: 5778)
+Completed 200 OK in 118ms (Views: 105.8ms | ActiveRecord: 0.0ms | Allocations: 6917)
+
+
+Started POST "/users/sign_in" for 172.18.0.1 at 2022-10-10 22:06:31 +0000
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matias.bustosa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matias.bustosa@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 1.2ms | Allocations: 2803)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-10 22:06:31 +0000
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 137.6ms | Allocations: 4782)
+  Rendered home/_header.html.erb (Duration: 21.1ms | Allocations: 778)
+  Rendered layout layouts/application.html.erb (Duration: 241.3ms | Allocations: 8719)
+Completed 200 OK in 254ms (Views: 241.3ms | ActiveRecord: 1.0ms | Allocations: 8985)
+
+
+Started GET "/orders" for 172.18.0.1 at 2022-10-10 22:06:33 +0000
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:6
+  Rendered orders/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2006)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2085)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms | Allocations: 2348)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"orders"}, missing required keys: [:user_id]
+Did you mean?  new_user_order_url):
+    11:   <% end %>
+    12: </div>
+    13: 
+    14: <%= link_to "New order", new_user_order_path %>
+  
+app/views/orders/index.html.erb:14

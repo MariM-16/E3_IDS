@@ -11,4 +11,5 @@
   <% end %>
 </div>
 
-<%= link_to "New order", new_user_order_path %>
+<%= link_to "New order", new_user_order_path(current_user.id) %> 
+
