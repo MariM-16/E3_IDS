@@ -1,9 +1,7 @@
 <tr>
-  <th scope="row"><%=order.id %></th>
-  <td><%=order. %></td>
-  <td>Otto</td>
-  <td>@mdo</td>
+  <th scope="row"><%= link_to order.id, order%></th>
+  <td><%= order.buyer.email %></td>
+  <td><%= order.provider.email %></td>
+  <td><%= order.dispatcher.email %></td>
 </tr>
 
-
-<%= link_to "Show this order", order %>
