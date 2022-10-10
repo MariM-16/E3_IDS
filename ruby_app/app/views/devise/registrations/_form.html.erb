@@ -6,6 +6,16 @@
 </div>
 
 <div class="input-group py-2">
+  <span class="input-group-text" id="addon-wrapping"> First Name: </span>
+  <%= f.text_field :first_name, autofocus: true %>
+</div>
+
+<div class="input-group py-2">
+  <span class="input-group-text" id="addon-wrapping"> Last Name: </span>
+  <%= f.text_field :last_name, autofocus: true %>
+</div>
+
+<div class="input-group py-2">
   <span class="input-group-text" id="addon-wrapping"> Phone Number: </span>
   <%= f.text_field :phone_number, autofocus: true %>
 </div>

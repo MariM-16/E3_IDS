@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   devise_for :users
+  #resources :users, only: [:show]
+
   devise_scope :user do  
       get '/users/sign_out' => 'devise/sessions#destroy'     
   end
@@ -10,9 +12,8 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resource :users
   resource :addresses
-  resource :orders
+  resources :orders
 
   resources :users do
     resources :addresses

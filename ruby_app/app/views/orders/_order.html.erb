@@ -1,2 +1,7 @@
-<div id="<%= dom_id order %>">
-</div>
+<tr>
+  <th scope="row"><%= link_to order.id, order%></th>
+  <td><%= order.buyer.email %></td>
+  <td><%= order.provider.email %></td>
+  <td><%= order.dispatcher.email %></td>
+</tr>
+
