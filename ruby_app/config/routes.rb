@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resource :addresses
+  resources :addresses
   resources :orders
 
   resources :users do

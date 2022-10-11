@@ -3,12 +3,27 @@
 <h1>Addresses</h1>
 
 <div id="addresses">
-  <% @addresses.each do |address| %>
-    <%= render address %>
-    <p>
-      <%= link_to "Show this address", address %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-dark table-striped" id="order-table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">comuna</th>
+      <th scope="col">calle</th>
+      <th scope="col">numero</th>
+      <th scope="col">cliente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @addresses.each do |address| %>
+    <tr>
+      <td> <%= address.id %> </td>
+      <td> <%= address.commune %> </dt>
+      <td> <%= address.street %> </dt>
+      <td> <%= address.number_address %> </dt>
+      <td> <%= User.find(address.user_id).first_name %> </dt>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New address", new_addresses_path %>
+<%= link_to "New address", new_address_path %>
