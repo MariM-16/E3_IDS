@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @order %>
+        <h5><strong>Encargo id: </strong><%=@order.id%></h5>
+        <h5><strong>Comprador: </strong><%=User.where(id:@order.buyer_id).first.first_name%><%=" "%><%=User.where(id:@order.buyer_id).first.last_name%></h5>        
+        <h5><strong>Proveedor: </strong><%=User.where(id:@order.provider_id).first.first_name%><%=" "%><%=User.where(id:@order.provider_id).first.last_name%></h5>        
+        <h5><strong>Despachador: </strong><%="-"%></h5>        
+
+        <ul class="list-unstyled">
+        <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
+        <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
+        <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
 
 <div>
   <%= link_to "Edit this order", edit_order_path(@order) %> |
