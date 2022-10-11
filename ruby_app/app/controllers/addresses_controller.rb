@@ -13,6 +13,7 @@ class AddressesController < ApplicationController
   # GET /addresses/new
   def new
     @address = Address.new
+    @users = User.all()
   end
 
   # GET /addresses/1/edit
@@ -21,7 +22,14 @@ class AddressesController < ApplicationController
 
   # POST /addresses or /addresses.json
   def create
-    @address = Address.new(address_params)
+    #@address = Address.new(address_params)
+    puts(address_params)
+
+    @address = Address.new(user_id: address_params[:user_id].to_i,
+                           commune: address_params[:commune],
+                           street: address_params[:street],
+                           number_address: address_params[:number_address],
+                           extra_information: address_params[:extra_information])
 
     respond_to do |format|
       if @address.save

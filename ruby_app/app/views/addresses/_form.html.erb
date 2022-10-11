@@ -11,6 +11,30 @@
     </div>
   <% end %>
 
+  <div class="card-body">
+    <ul>
+      <li>
+        <%= form.collection_select :user_id, @users, :id, :email, include_blank: false %>
+      </li>
+      <li> 
+        <%= form.label :commune, "Commune:" %>
+        <%= form.text_field :commune %>
+      </li>
+      <li> 
+        <%= form.label :street, "Street:" %>
+        <%= form.text_field :street %>
+      </li>
+      <li> 
+        <%= form.label :number_address, "Number address:" %>
+        <%= form.text_field :number_address %>
+      </li>
+      <li> 
+        <%= form.label :extra_information, "Extra information:" %>
+        <%= form.text_field :extra_information %>
+      </li>
+    </ul>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
