@@ -10392,3 +10392,1302 @@ FOREIGN KEY ("provider_id")
   [1m[36mOrder Load (1.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
 >>>>>>> origin/matiasba8
+Started GET "/" for 127.0.0.1 at 2022-10-11 11:16:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 184.9ms | Allocations: 32552)
+  Rendered home/_header.html.erb (Duration: 7.7ms | Allocations: 2203)
+  Rendered layout layouts/application.html.erb (Duration: 250.6ms | Allocations: 51085)
+Completed 200 OK in 278ms (Views: 255.7ms | ActiveRecord: 2.4ms | Allocations: 55406)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-10-11 11:16:25 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.3ms | Allocations: 252)
+  Rendered devise/shared/_links.html.erb (Duration: 7.9ms | Allocations: 628)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 60.6ms | Allocations: 3841)
+  Rendered home/_header.html.erb (Duration: 6.4ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 144.8ms | Allocations: 8810)
+Completed 200 OK in 196ms (Views: 150.5ms | ActiveRecord: 0.0ms | Allocations: 17289)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (24.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20221007035501)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007035501"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttsToUsers (20221007065426)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" varchar[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "user_type" varchar[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "phone_number" varchar[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "RUT" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221007065426"]]
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddresses (20221009213111)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "commune" varchar, "street" varchar, "number_address" varchar, "extra_information" varchar, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221009213111"]]
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOrders (20221009213218)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "status_order" varchar, "order_delivery_date" datetime(6), "order_date" datetime(6), "delivery_key" varchar, "buyer_id" integer, "provider_id" integer, "dispatcher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d3775977e3"
+FOREIGN KEY ("buyer_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_3ac4eccb23"
+FOREIGN KEY ("provider_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_2019e3ba74"
+FOREIGN KEY ("dispatcher_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_orders_on_buyer_id" ON "orders" ("buyer_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_orders_on_provider_id" ON "orders" ("provider_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_orders_on_dispatcher_id" ON "orders" ("dispatcher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221009213218"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-11 14:17:20.378965"], ["updated_at", "2022-10-11 14:17:20.378965"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "comprador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "comprador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "12121-comprador"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "comprador@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-11 14:17:34.801446"], ["updated_at", "2022-10-11 14:17:34.801446"], ["first_name", "Comprador"], ["last_name", "C"], ["user_type", "Comprador"], ["phone_number", "99999"], ["RUT", "12121-comprador"]]
+  [1m[36mTRANSACTION (392.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "proveedor@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "proveedor@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "2313-proveedor"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "proveedor@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-11 14:17:36.175301"], ["updated_at", "2022-10-11 14:17:36.175301"], ["first_name", "Proveedor"], ["last_name", "P"], ["user_type", "Proveedor"], ["phone_number", "99999"], ["RUT", "2313-proveedor"]]
+  [1m[36mTRANSACTION (70.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."RUT" = ? LIMIT ?[0m  [["RUT", "11-despachador"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "first_name", "last_name", "user_type", "phone_number", "RUT") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "despachador@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-10-11 14:17:37.166214"], ["updated_at", "2022-10-11 14:17:37.166214"], ["first_name", "Despachador"], ["last_name", "D"], ["user_type", "Despachador"], ["phone_number", "99999"], ["RUT", "11-despachador"]]
+  [1m[36mTRANSACTION (24.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.4ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "En transito"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.327502"], ["updated_at", "2022-10-11 14:17:37.327502"]]
+  [1m[36mTRANSACTION (56.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.3ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "Completada"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.418437"], ["updated_at", "2022-10-11 14:17:37.418437"]]
+  [1m[36mTRANSACTION (32.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.2ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "Recepción en sistema de logistica"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.480286"], ["updated_at", "2022-10-11 14:17:37.480286"]]
+  [1m[36mTRANSACTION (25.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.2ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "Recepción en sistema de logistica"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 2], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.533749"], ["updated_at", "2022-10-11 14:17:37.533749"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Create (1.1ms)[0m  [1m[32mINSERT INTO "addresses" ("commune", "street", "number_address", "extra_information", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["commune", "Vitacura"], ["street", "vitacura"], ["number_address", "8890"], ["extra_information", "None"], ["user_id", 1], ["created_at", "2022-10-11 14:17:37.589323"], ["updated_at", "2022-10-11 14:17:37.589323"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAddress Create (0.9ms)[0m  [1m[32mINSERT INTO "addresses" ("commune", "street", "number_address", "extra_information", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["commune", "Las Condes"], ["street", "alcantara"], ["number_address", "1111"], ["extra_information", "I like trains"], ["user_id", 1], ["created_at", "2022-10-11 14:17:37.621700"], ["updated_at", "2022-10-11 14:17:37.621700"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAddress Create (1.0ms)[0m  [1m[32mINSERT INTO "addresses" ("commune", "street", "number_address", "extra_information", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["commune", "La Reina"], ["street", "hamburgo"], ["number_address", "0909"], ["extra_information", "I like turtles"], ["user_id", 2], ["created_at", "2022-10-11 14:17:37.685018"], ["updated_at", "2022-10-11 14:17:37.685018"]]
+  [1m[36mTRANSACTION (35.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.2ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "En transito"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.749179"], ["updated_at", "2022-10-11 14:17:37.749179"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.3ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "Completada"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.814502"], ["updated_at", "2022-10-11 14:17:37.814502"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.2ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "Recepción en sistema de logistica"], ["order_delivery_date", "1998-10-04 10:10:10"], ["order_date", "1998-09-04 10:10:10"], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:17:37.852999"], ["updated_at", "2022-10-11 14:17:37.852999"]]
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-10-11 11:17:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 238.6ms | Allocations: 28732)
+  Rendered home/_header.html.erb (Duration: 9.8ms | Allocations: 2191)
+  Rendered layout layouts/application.html.erb (Duration: 317.4ms | Allocations: 47130)
+Completed 200 OK in 377ms (Views: 330.4ms | ActiveRecord: 0.0ms | Allocations: 51452)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-11 11:17:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.0ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 75.4ms | Allocations: 4502)
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 143.7ms | Allocations: 9431)
+Completed 200 OK in 216ms (Views: 149.7ms | ActiveRecord: 1.8ms | Allocations: 19082)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-10-11 11:18:00 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"proveedor@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "proveedor@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1360ms (ActiveRecord: 0.6ms | Allocations: 5926)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-11 11:18:02 -0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 133.7ms | Allocations: 5144)
+  Rendered home/_header.html.erb (Duration: 3.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 186.2ms | Allocations: 9841)
+Completed 200 OK in 191ms (Views: 184.2ms | ActiveRecord: 4.9ms | Allocations: 10200)
+
+
+Started GET "/orders" for 127.0.0.1 at 2022-10-11 11:18:04 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 45.5ms | Allocations: 6353)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 12.0ms | Allocations: 1963)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 16.3ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 15.3ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 19.8ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 23.8ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 18.8ms | Allocations: 1928)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:34
+  Rendered orders/index.html.erb within layouts/application (Duration: 354.8ms | Allocations: 37030)
+  Rendered home/_header.html.erb (Duration: 11.3ms | Allocations: 823)
+  Rendered layout layouts/application.html.erb (Duration: 387.4ms | Allocations: 42033)
+Completed 200 OK in 407ms (Views: 377.3ms | ActiveRecord: 14.9ms | Allocations: 44583)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:18:16 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 75.8ms | Allocations: 2905)
+  Rendered orders/new.html.erb within layouts/application (Duration: 87.9ms | Allocations: 3247)
+  Rendered home/_header.html.erb (Duration: 23.9ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 185.5ms | Allocations: 8095)
+Completed 200 OK in 189ms (Views: 177.8ms | ActiveRecord: 9.5ms | Allocations: 8528)
+
+
+Started GET "/orders" for 127.0.0.1 at 2022-10-11 11:19:40 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 23.4ms | Allocations: 2113)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 26.5ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 55.3ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 15.0ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 13.4ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 26.1ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 11.0ms | Allocations: 1928)
+  Rendered orders/index.html.erb within layouts/application (Duration: 352.2ms | Allocations: 26383)
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 1363)
+  Rendered layout layouts/application.html.erb (Duration: 387.2ms | Allocations: 32219)
+Completed 200 OK in 405ms (Views: 393.9ms | ActiveRecord: 3.8ms | Allocations: 33137)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:19:44 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 51.0ms | Allocations: 2378)
+  Rendered orders/new.html.erb within layouts/application (Duration: 60.0ms | Allocations: 2662)
+  Rendered home/_header.html.erb (Duration: 14.8ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 177.1ms | Allocations: 7371)
+Completed 200 OK in 183ms (Views: 181.6ms | ActiveRecord: 0.3ms | Allocations: 7728)
+
+
+Started GET "/orders" for 127.0.0.1 at 2022-10-11 11:20:15 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  Rendered orders/index.html.erb within layouts/application (Duration: 252.3ms | Allocations: 12132)
+  Rendered home/_header.html.erb (Duration: 37.4ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 333.8ms | Allocations: 17946)
+Completed 200 OK in 360ms (Views: 355.4ms | ActiveRecord: 2.0ms | Allocations: 18820)
+
+
+Started GET "/orders" for 127.0.0.1 at 2022-10-11 11:20:24 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 19.5ms | Allocations: 2265)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 24.4ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 19.4ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 22.7ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 47.2ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 26.7ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 17.5ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  Rendered orders/index.html.erb within layouts/application (Duration: 353.8ms | Allocations: 26365)
+  Rendered home/_header.html.erb (Duration: 12.7ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 430.1ms | Allocations: 32206)
+Completed 200 OK in 450ms (Views: 444.3ms | ActiveRecord: 3.4ms | Allocations: 33099)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:20:30 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 16.0ms | Allocations: 2399)
+  Rendered orders/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 2686)
+  Rendered home/_header.html.erb (Duration: 4.9ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 7400)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.2ms | Allocations: 7768)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:34:24 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 28.5ms | Allocations: 2865)
+  Rendered orders/new.html.erb within layouts/application (Duration: 85.1ms | Allocations: 8975)
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 9060)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.0ms | Allocations: 9902)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order' for #<ActionView::Base:0x000000000101a8>
+
+'.freeze;   if order.errors.any? 
+               ^^^^^
+Did you mean?  @order):
+    2: 
+    3: <%= render "form", order: @order %>
+    4: <%= form_with(model: @order) do |form| %>
+    5:   <% if order.errors.any? %>
+    6:     <div style="color: red">
+    7:       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+    8: 
+  
+app/views/orders/new.html.erb:5
+app/views/orders/new.html.erb:4
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:34:37 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 50.3ms | Allocations: 2644)
+  Rendered orders/new.html.erb within layouts/application (Duration: 97.0ms | Allocations: 9446)
+  Rendered layout layouts/application.html.erb (Duration: 98.2ms | Allocations: 9531)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.3ms | Allocations: 10383)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x000000000104c8>
+
+      '.freeze;@output_buffer.append=( f.select :user_type, ['Comprador', 'Proveedor', 'Despachador'] );@output_buffer.safe_append='
+                                       ^):
+    33:     </div>
+    34:      <div class="input-group py-2">
+    35:       <span class="input-group-text" id="addon-wrapping"> Tipo: </span>
+    36:       <%= f.select :user_type, ['Comprador', 'Proveedor', 'Despachador'] %>
+    37:     </div>
+    38: 
+    39:     <%= form.hidden_field :status_order, value: "En proceso" %>
+  
+app/views/orders/new.html.erb:36
+app/views/orders/new.html.erb:4
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:34:52 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 28.5ms | Allocations: 2644)
+  Rendered orders/new.html.erb within layouts/application (Duration: 75.2ms | Allocations: 7182)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 7279)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.3ms | Allocations: 8135)
+
+
+  
+ActionView::Template::Error (undefined method `where' for nil:NilClass
+
+        <h5><strong>Comprador: </strong>'.freeze;@output_buffer.append=(@User.where(user_type:"Comprador").first);@output_buffer.safe_append='</h5>
+                                                                             ^^^^^^):
+    48:     <%end%>
+    49:     <%if current_user.user_type=="Proveedor"%>
+    50:       <div class="col">
+    51:         <h5><strong>Comprador: </strong><%=@User.where(user_type:"Comprador").first%></h5>
+    52:         <%= form.hidden_field :provider_id, value: current_user.id %>
+    53:         <%= form.hidden_field :buyer_id, value: current_user.id %>
+    54:       </div>
+  
+app/views/orders/new.html.erb:51
+app/views/orders/new.html.erb:4
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:35:07 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 16.1ms | Allocations: 2646)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:51
+  Rendered orders/new.html.erb within layouts/application (Duration: 43.8ms | Allocations: 5679)
+  Rendered home/_header.html.erb (Duration: 6.0ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 83.9ms | Allocations: 11501)
+Completed 200 OK in 105ms (Views: 102.4ms | ActiveRecord: 0.8ms | Allocations: 12377)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:35:22 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1638)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1727)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 2592)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>New order</h1>
+
+<%= render "form", order: @order %>
+<%= form_with(model: @order) do |form| %>
+  <% if @order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% @order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  
+<div class="card-body">
+    <div class="col">
+      <h5><strong>Fecha de pedido: </strong><%=DateTime.now() + 1.day%></h5>
+
+    </div>
+    <div class="col">
+      <h5><strong>Fecha de pedido: </strong><%=DateTime.now() + 1.day%></h5>
+      <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
+    </div>
+    <div class="col">
+        <h5><strong>Clave de entrega </strong></h5>
+        <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+    </div>
+    <div class="col">
+        <h5><strong>Clave de entrega </strong></h5>
+        <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+    </div>
+     <div class="input-group py-2">
+      <span class="input-group-text" id="addon-wrapping"> Tipo: </span>
+      <%= form.select :user_type, ['Comprador', 'Proveedor', 'Despachador'] %>
+    </div>
+
+    <%= form.hidden_field :status_order, value: "En proceso" %>
+    <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
+    <%= form.hidden_field :order_date, value: DateTime.now() %>
+    <%if current_user.user_type=="Comprador"%>
+      <div class="col">
+        <h5><strong>Proveedor: </strong><%=User.where(user_type:"Proveedor").first%></h5>
+        <%= form.hidden_field :buyer_id, value: current_user.id %>
+        <%= form.hidden_field :provider_id, value: current_user.id %>
+      </div>
+    <%end%>
+    <%if current_user.user_type=="Proveedor"%>
+      <div class="col">
+        <h5><strong>Comprador: </strong><%=User.where(user_type:"Comprador").first%></h5>
+        <%= form.hidden_field :provider_id, value: current_user.id %>
+        <%= form.hidden_field :buyer_id, value: current_user.id %>
+      </div>
+    <%end%>
+
+    <%= form.hidden_field :dispatcher_id, value: 3 %>
+
+</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to orders", user_orders_path(current_user.id) %>
+</div>
+
+):
+1:    <h1>New order</h1>
+2:    
+3:    <%= render "form", order: @order %>
+4:    <%= form_with(model: @order) do |form| %>
+5:      <% if @order.errors.any? %>
+6:        <div style="color: red">
+7:          <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+8:    
+9:          <ul>
+10:            <% @order.errors.each do |error| %>
+11:              <li><%= error.full_message %></li>
+12:            <% end %>
+13:          </ul>
+14:        </div>
+15:      
+16:    <div class="card-body">
+17:        <div class="col">
+18:          <h5><strong>Fecha de pedido: </strong><%=DateTime.now() + 1.day%></h5>
+19:    
+20:        </div>
+21:        <div class="col">
+22:          <h5><strong>Fecha de pedido: </strong><%=DateTime.now() + 1.day%></h5>
+23:          <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
+24:        </div>
+25:        <div class="col">
+26:            <h5><strong>Clave de entrega </strong></h5>
+27:            <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+28:        </div>
+29:        <div class="col">
+30:            <h5><strong>Clave de entrega </strong></h5>
+31:            <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+32:        </div>
+33:         <div class="input-group py-2">
+34:          <span class="input-group-text" id="addon-wrapping"> Tipo: </span>
+35:          <%= form.select :user_type, ['Comprador', 'Proveedor', 'Despachador'] %>
+36:        </div>
+37:    
+38:        <%= form.hidden_field :status_order, value: "En proceso" %>
+39:        <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
+40:        <%= form.hidden_field :order_date, value: DateTime.now() %>
+41:        <%if current_user.user_type=="Comprador"%>
+42:          <div class="col">
+43:            <h5><strong>Proveedor: </strong><%=User.where(user_type:"Proveedor").first%></h5>
+44:            <%= form.hidden_field :buyer_id, value: current_user.id %>
+45:            <%= form.hidden_field :provider_id, value: current_user.id %>
+46:          </div>
+47:        <%end%>
+48:        <%if current_user.user_type=="Proveedor"%>
+49:          <div class="col">
+50:            <h5><strong>Comprador: </strong><%=User.where(user_type:"Comprador").first%></h5>
+51:            <%= form.hidden_field :provider_id, value: current_user.id %>
+52:            <%= form.hidden_field :buyer_id, value: current_user.id %>
+53:          </div>
+54:        <%end%>
+55:    
+56:        <%= form.hidden_field :dispatcher_id, value: 3 %>
+57:    
+58:    </div>
+59:    
+60:      <div>
+61:        <%= form.submit %>
+62:      </div>
+63:    <% end %>
+64:    
+65:    <br>
+66:    
+67:    <div>
+68:      <%= link_to "Back to orders", user_orders_path(current_user.id) %>
+69:    </div>
+  
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+app/views/orders/new.html.erb:72: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:35:33 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 54.3ms | Allocations: 2647)
+  Rendered orders/new.html.erb within layouts/application (Duration: 94.2ms | Allocations: 3684)
+  Rendered home/_header.html.erb (Duration: 13.1ms | Allocations: 1366)
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 9509)
+Completed 200 OK in 146ms (Views: 144.0ms | ActiveRecord: 0.4ms | Allocations: 10385)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:35:38 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 19.2ms | Allocations: 2641)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:51
+  Rendered orders/new.html.erb within layouts/application (Duration: 44.4ms | Allocations: 5609)
+  Rendered home/_header.html.erb (Duration: 9.3ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 89.8ms | Allocations: 11396)
+Completed 200 OK in 108ms (Views: 104.3ms | ActiveRecord: 1.6ms | Allocations: 12276)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:36:19 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 30.3ms | Allocations: 2646)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:51
+  Rendered orders/new.html.erb within layouts/application (Duration: 50.9ms | Allocations: 5617)
+  Rendered home/_header.html.erb (Duration: 11.9ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 118.6ms | Allocations: 11439)
+Completed 200 OK in 196ms (Views: 190.1ms | ActiveRecord: 1.0ms | Allocations: 12320)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:41:14 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 44.4ms | Allocations: 2674)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:42
+  Rendered orders/new.html.erb within layouts/application (Duration: 92.2ms | Allocations: 5402)
+  Rendered home/_header.html.erb (Duration: 16.2ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 183.7ms | Allocations: 11190)
+Completed 200 OK in 228ms (Views: 209.5ms | ActiveRecord: 0.7ms | Allocations: 12071)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:42:26 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 41.9ms | Allocations: 2641)
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 70.5ms | Allocations: 5397)
+  Rendered home/_header.html.erb (Duration: 9.9ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 11219)
+Completed 200 OK in 134ms (Views: 124.4ms | ActiveRecord: 6.3ms | Allocations: 12099)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:42:41 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 33.9ms | Allocations: 2656)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 58.1ms | Allocations: 5408)
+  Rendered home/_header.html.erb (Duration: 87.9ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 495.9ms | Allocations: 11196)
+Completed 200 OK in 515ms (Views: 505.0ms | ActiveRecord: 0.7ms | Allocations: 12076)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:42:43 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 23.3ms | Allocations: 1925)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 52.1ms | Allocations: 3892)
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 87.9ms | Allocations: 8634)
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 0.5ms | Allocations: 8939)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:43:03 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 20.6ms | Allocations: 2659)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 58.1ms | Allocations: 5416)
+  Rendered home/_header.html.erb (Duration: 13.2ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 11204)
+Completed 200 OK in 115ms (Views: 99.3ms | ActiveRecord: 2.9ms | Allocations: 12058)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:44:55 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 28.9ms | Allocations: 2665)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 45.5ms | Allocations: 5321)
+  Rendered home/_header.html.erb (Duration: 9.1ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 11109)
+Completed 200 OK in 102ms (Views: 98.6ms | ActiveRecord: 0.7ms | Allocations: 11990)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:45:05 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 18.8ms | Allocations: 2641)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  Rendered orders/new.html.erb within layouts/application (Duration: 72.8ms | Allocations: 5194)
+  Rendered home/_header.html.erb (Duration: 7.9ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 157.3ms | Allocations: 10985)
+Completed 200 OK in 190ms (Views: 173.4ms | ActiveRecord: 2.2ms | Allocations: 11865)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:46:58 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 24.6ms | Allocations: 2653)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Comprador"], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:29
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:34
+  Rendered orders/new.html.erb within layouts/application (Duration: 74.4ms | Allocations: 6092)
+  Rendered home/_header.html.erb (Duration: 13.7ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 117.5ms | Allocations: 11917)
+Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 1.6ms | Allocations: 12798)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:47:39 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 38.1ms | Allocations: 2653)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:33
+  Rendered orders/new.html.erb within layouts/application (Duration: 56.7ms | Allocations: 5336)
+  Rendered home/_header.html.erb (Duration: 13.7ms | Allocations: 1366)
+  Rendered layout layouts/application.html.erb (Duration: 98.9ms | Allocations: 11158)
+Completed 200 OK in 128ms (Views: 125.6ms | ActiveRecord: 0.7ms | Allocations: 12039)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:48:04 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 21.2ms | Allocations: 2632)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:34
+  Rendered orders/new.html.erb within layouts/application (Duration: 60.7ms | Allocations: 5319)
+  Rendered home/_header.html.erb (Duration: 16.7ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 162.1ms | Allocations: 11106)
+Completed 200 OK in 200ms (Views: 187.1ms | ActiveRecord: 0.6ms | Allocations: 11986)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:49:26 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 23.9ms | Allocations: 2665)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:34
+  Rendered orders/new.html.erb within layouts/application (Duration: 47.7ms | Allocations: 5352)
+  Rendered home/_header.html.erb (Duration: 6.4ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 11171)
+Completed 200 OK in 128ms (Views: 111.5ms | ActiveRecord: 4.2ms | Allocations: 12052)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:49:45 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 25.0ms | Allocations: 2659)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:34
+  Rendered orders/new.html.erb within layouts/application (Duration: 43.9ms | Allocations: 5344)
+  Rendered home/_header.html.erb (Duration: 12.0ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 11157)
+Completed 200 OK in 156ms (Views: 142.5ms | ActiveRecord: 0.5ms | Allocations: 12038)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:51:25 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 22.5ms | Allocations: 2659)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:42
+  Rendered orders/new.html.erb within layouts/application (Duration: 49.5ms | Allocations: 5456)
+  Rendered home/_header.html.erb (Duration: 8.0ms | Allocations: 1363)
+  Rendered layout layouts/application.html.erb (Duration: 98.5ms | Allocations: 11272)
+Completed 200 OK in 126ms (Views: 110.3ms | ActiveRecord: 0.6ms | Allocations: 12153)
+
+
+Started POST "/orders" for 127.0.0.1 at 2022-10-11 11:51:32 -0300
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"provider_id"=>"2", "buyer_id"=>"1", "dispatcher_id"=>"3", "order_delivery_date"=>"2022-10-11T11:51:25-03:00", "delivery_key"=>"[FILTERED]", "status_order"=>"En proceso"}, "commit"=>"Create Order"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 788)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/orders_controller.rb:24:in `create'
+Started GET "/orders" for 127.0.0.1 at 2022-10-11 11:52:30 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 36.4ms | Allocations: 5413)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 19.3ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 21.5ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 23.8ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 26.9ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 27.8ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 19.4ms | Allocations: 1928)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  Rendered orders/index.html.erb within layouts/application (Duration: 684.5ms | Allocations: 36702)
+  Rendered home/_header.html.erb (Duration: 6.6ms | Allocations: 1635)
+  Rendered layout layouts/application.html.erb (Duration: 757.6ms | Allocations: 54180)
+Completed 200 OK in 826ms (Views: 799.9ms | ActiveRecord: 23.4ms | Allocations: 57059)
+
+
+Started GET "/users/2/orders/new" for 127.0.0.1 at 2022-10-11 11:52:33 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:20
+  Rendered orders/_form.html.erb (Duration: 12.1ms | Allocations: 2020)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Comprador"]]
+  ↳ app/views/orders/new.html.erb:42
+  Rendered orders/new.html.erb within layouts/application (Duration: 31.5ms | Allocations: 3945)
+  Rendered home/_header.html.erb (Duration: 6.7ms | Allocations: 780)
+  Rendered layout layouts/application.html.erb (Duration: 82.6ms | Allocations: 8654)
+Completed 200 OK in 87ms (Views: 84.6ms | ActiveRecord: 1.4ms | Allocations: 8972)
+
+
+Started POST "/orders" for 127.0.0.1 at 2022-10-11 11:52:38 -0300
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"provider_id"=>"2", "buyer_id"=>"1", "dispatcher_id"=>"3", "order_delivery_date"=>"2022-10-11T11:52:33-03:00", "delivery_key"=>"[FILTERED]", "status_order"=>"En proceso"}, "commit"=>"Create Order"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mOrder Create (1.4ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "En proceso"], ["order_delivery_date", "2022-10-11 14:52:33"], ["order_date", nil], ["delivery_key", "[FILTERED]"], ["buyer_id", 1], ["provider_id", 2], ["dispatcher_id", 3], ["created_at", "2022-10-11 14:52:38.710561"], ["updated_at", "2022-10-11 14:52:38.710561"]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1979.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/orders/8
+Completed 302 Found in 2056ms (ActiveRecord: 1982.1ms | Allocations: 6797)
+
+
+Started GET "/orders/8" for 127.0.0.1 at 2022-10-11 11:52:40 -0300
+Processing by OrdersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:5
+  Rendered orders/_order.html.erb (Duration: 99.4ms | Allocations: 2080)
+  Rendered orders/show.html.erb within layouts/application (Duration: 116.0ms | Allocations: 2868)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 44.7ms | Allocations: 1542)
+  Rendered layout layouts/application.html.erb (Duration: 233.8ms | Allocations: 8331)
+Completed 200 OK in 303ms (Views: 241.5ms | ActiveRecord: 1.5ms | Allocations: 9830)
+
+

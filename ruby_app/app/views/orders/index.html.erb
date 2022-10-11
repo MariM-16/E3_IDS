@@ -1,6 +1,7 @@
 
 <p style="color: green"><%= notice %></p>
 
+<button type="button" class="btn btn-outline-info btn-m " ><%= link_to "Crear Nueva Entrega", new_user_order_path(current_user.id) %> </button>
 
 
 <div id="orders">
@@ -17,6 +18,7 @@
   </thead>
   <tbody>
     <% @orders.each do |order| %>
+      <%= render order %>
 
     <tr>
       <td> <%= order.id %> </td>
@@ -25,13 +27,11 @@
       <td> <%= User.find(order.dispatcher_id).first_name %> </td>
     </tr>
 
-      <%= render order %>
 
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "New order", new_user_order_path(current_user.id) %> 
 
 </div>
 
