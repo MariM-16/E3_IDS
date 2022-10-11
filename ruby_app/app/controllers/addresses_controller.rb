@@ -18,6 +18,8 @@ class AddressesController < ApplicationController
 
   # GET /addresses/1/edit
   def edit
+    @addres = Address.find_by(id: params[:id])
+    @user = @addres.user
   end
 
   # POST /addresses or /addresses.json
@@ -44,8 +46,14 @@ class AddressesController < ApplicationController
 
   # PATCH/PUT /addresses/1 or /addresses/1.json
   def update
+    address_update = @address.update(user_id: address_params[:user_id].to_i,
+                           commune: address_params[:commune],
+                           street: address_params[:street],
+                           number_address: address_params[:number_address],
+                           extra_information: address_params[:extra_information])
+
     respond_to do |format|
-      if @address.update(address_params)
+      if address_update
         format.html { redirect_to address_url(@address), notice: "Address was successfully updated." }
         format.json { render :show, status: :ok, location: @address }
       else
