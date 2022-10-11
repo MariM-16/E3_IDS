@@ -65,6 +65,6 @@ class AddressesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def address_params
-      params.require(:address).permit(:commune, :street, :number_address, :extra_information, :user_id)
+      params.fetch(:address, {})
     end
 end

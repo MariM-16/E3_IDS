@@ -17,12 +17,16 @@
   </thead>
   <tbody>
     <% @orders.each do |order| %>
+
     <tr>
       <td> <%= order.id %> </td>
       <td> <%= User.find(order.buyer_id).first_name %> </td>
       <td> <%= User.find(order.provider_id).first_name %> </td>
       <td> <%= User.find(order.dispatcher_id).first_name %> </td>
     </tr>
+
+      <%= render order %>
+
     <% end %>
   </tbody>
 </table>
