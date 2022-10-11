@@ -2,9 +2,22 @@
 
 <%= render @user %>
 
+<h1> Welcome </h1>
+
+<div>
+<%= current_user.email %>
+</div>
+
+<div>
+<%= current_user.first_name %>
+</div>
+
+<div>
+<%= current_user.last_name %>
+</div>
+
+----------------------
+
 <div>
   <%= link_to "Edit account", edit_user_path(@user) %> 
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
 </div>

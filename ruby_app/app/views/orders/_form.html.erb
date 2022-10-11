@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+<div class="card-body">
+
+    <%= form.hidden_field :status_order, value: "In Progress" %>
+    <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
+    <%= form.hidden_field :order_date, value: DateTime.now() %>
+    <%= form.hidden_field :delivery_key, value: "TO DO" %>
+    <%= form.hidden_field :buyer_id, value: current_user.id %>
+    <%= form.hidden_field :provider_id, value: 2 %>
+    <%= form.hidden_field :dispatcher_id, value: 3 %>
+
+</div>
+
   <div>
     <%= form.submit %>
   </div>
