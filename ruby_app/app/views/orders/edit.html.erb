@@ -1,10 +1,36 @@
 <h1>Editing order</h1>
-
+<br>
+<%= form_with(model: @order) do |form| %>
+  <% if @order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+      <ul>
+        <% @order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <%else%>
+<p style="color: green"><%= notice %></p>
 <%= render "form", order: @order %>
 
-<br>
+    <h5><strong>Encargo id: </strong><%=@order.id%></h5>
+    <h5><strong>Comprador: </strong><%=User.where(id:@order.buyer_id).first.first_name%><%=" "%><%=User.where(id:@order.buyer_id).first.last_name%></h5>        
+    <h5><strong>Proveedor: </strong><%=User.where(id:@order.provider_id).first.first_name%><%=" "%><%=User.where(id:@order.provider_id).first.last_name%></h5>        
+    <h5><strong>Despachador: </strong><%="-"%></h5>        
 
+    <ul class="list-unstyled">
+    <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
+    <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
+    <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
+    <div class="input-group py-2">
+      <h5><strong> Estado del pedido </strong></h5>
+      <%= form.select :status_order, ['En proceso', 'Aceptado', 'Pagado','Enviado','Entregado'] %>
+    </div>
+<br>
+<%end%>
+<%end%>
 <div>
-  <%= link_to "Show this order", @order %> |
-  <%= link_to "Back to orders", orders_path %>
+   <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Show this order", @order %> | </button>
+   <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
 </div>
