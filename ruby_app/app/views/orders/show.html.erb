@@ -1,5 +1,7 @@
 <p style="color: green"><%= notice %></p>
-
+<div class="container-fluid" style="margin:2rem">
+<div class="row">
+<div class="col-6">
         <h5><strong>Encargo id: </strong><%=@order.id%></h5>
         <h5><strong>Comprador: </strong><%=User.where(id:@order.buyer_id).first.first_name%><%=" "%><%=User.where(id:@order.buyer_id).first.last_name%></h5>        
         <h5><strong>Proveedor: </strong><%=User.where(id:@order.provider_id).first.first_name%><%=" "%><%=User.where(id:@order.provider_id).first.last_name%></h5>        
@@ -11,9 +13,67 @@
         <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
         <h5><strong>Fecha de entrega de pedido: </strong><%="-"%></h5>
 
-<div>
- <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
- <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
+        <div>
+        <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
+        <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
+        <hr>
+        <%= form_with(model: @order) do |form| %>
+        <%= form.select :status_order, [['En proceso','En proceso'], ['Aceptado','Aceptado'], ['Pagado','Pagado'],['Enviado','Enviado'],['Entregado','Entregado']] %>
+        <%= form.submit%>
+        <%end%>
+        <hr>
+        <%= button_to "Destroy this order", @order, method: :delete %> 
+        
+        </div>
+</div>
+<div class="col-6" style="padding-right:5rem;">
+        <div id='columna5'>
+        <body>
+        <table class="table">
+                <thead class="bg-info">
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                </thead>
+                <tbody>
+                        <% @order.order_products.each do |resp| %>
+                        <tr>
+                                <td><%=resp.id%></td>
+                                <td><%=resp.product.description%></td>
+                                <td><%=resp.product.price%></td>
+                                <td><%=resp.quantity%></td>
 
-<%= button_to "Destroy this order", @order, method: :delete %> 
+                        <tr>
+                </tbody>
+                        <%end%>
+        </table>
+        </body>
+        </div>
+  <hr>
+        <div>
+        <body>
+        <table class="table">
+                <thead class="bg-info">
+                        <th>ID</th>
+                        <th>Comentario</th>
+                        <th>Comprador</th>
+                        <th>Fecha</th>
+                </thead>
+                <tbody>
+                <% @order.comments.each do |comment| %>
+                <tr>
+                        <td><%=comment.id%></td>
+                        <td><%=comment.message%></td>
+                        <td><%=comment.buyer.first_name%><%=" "%><%=comment.buyer.last_name%></td>
+                        <td><%=comment.created_at%></td>
+                        <tr>
+                </tbody>
+        </table>        
+        <%end%>
+  
+        </body>
+        </div>
+
+</div>
 </div>

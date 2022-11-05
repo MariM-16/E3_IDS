@@ -26,3 +26,11 @@ o5 = Order.create(status_order: "En transito", order_delivery_date: '1998-10-04 
 o6 = Order.create(status_order: "Completada", order_delivery_date: '1998-10-04 10:10:10', order_date: '1998-09-04 10:10:10', buyer_id: u1.id, provider_id: u2.id, dispatcher_id: u3.id)
 o7 = Order.create(status_order: "Recepción en sistema de logistica", order_delivery_date: '1998-10-04 10:10:10', order_date: '1998-09-04 10:10:10', buyer_id: u1.id, provider_id: u2.id, dispatcher_id: u3.id)
 
+co1= Comment.create(message:"Todo llegó en buen estado",order_id:o1.id, buyer_id:u1.id)
+co2= Comment.create(message:"Tardó mucho el delivery",order_id:o2.id, buyer_id:u1.id)
+
+p1= Product.create(price:200.00, description:"Estuche 50x50")
+
+op1= OrderProduct.create(quantity:2,order_id:o1.id, product_id:p1.id)
+
+v1= Vehicle.create(patente:"AB32-32",information:"Gris, dos puertas", vehicle_type:"BMW",dispatcher_id:u3.id)
