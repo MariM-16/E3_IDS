@@ -13,6 +13,30 @@
 
 <div class="card-body">
 
+  <h1>New order</h1>
+
+  <div class="col">
+    
+    <div class="col" style="width:400px">
+      <h5><strong> Proveedores Disponibles </strong></h5>
+      <%= form.collection_select :provider_id, User.where(user_type:"Proveedor"), :id, :email %>
+
+      <h5><strong>Proveedor: </strong><%=User.where(user_type:"Proveedor").first.email%></h5>
+      <%= form.hidden_field :buyer_id, value: current_user.id %>
+      <%= form.hidden_field :provider_id, value: current_user.id %>  
+      <%= form.hidden_field :dispatcher_id, value: 3 %>
+      <h5><strong>Fecha de pedido: </strong><%=Date.today%></h5>
+      <%= form.hidden_field :order_delivery_date, value: DateTime.now() %>
+      <h5><strong>Clave de entrega: </strong></h5>
+      <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+
+    </div>
+
+  <div class="input-group py-2">
+    <h5><strong> Estado de la orden: </strong><%="En proceso"%></h5>
+    <%= form.hidden_field :status_order, value: "En proceso" %>
+    <!--<%= form.select :status_order, ['En proceso', 'Aceptado', 'Pagado','Enviado','Entregado'] %>-->
+  </div>
 
 </div>
 

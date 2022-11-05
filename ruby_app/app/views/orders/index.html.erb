@@ -10,28 +10,25 @@
   <table class="table table-dark table-striped" id="order-table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Compradores</th>
-      <th scope="col">Proveedores</th>
-      <th scope="col">Despachadores</th>
+      <th>Compradores</th>
+      <th>Proveedores</th>
+      <th>Despachadores</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @orders.each do |order| %>
-      <%= render order %>
-
-    <tr>
-      <td> <%= order.id %> </td>
-      <td> <%= User.find(order.buyer_id).first_name %> </td>
-      <td> <%= User.find(order.provider_id).first_name %> </td>
-      <td> <%= User.find(order.dispatcher_id).first_name %> </td>
-    </tr>
-
-
+      <% if order.buyer_id == current_user.id || order.provider_id == current_user.id %>
+        <tr>
+          <td><%= User.find(order.buyer_id).email%></td>
+          <td><%= User.find(order.provider_id).email%></td>
+          <td><%= User.find(order.dispatcher_id).email%></td>
+          <td><%= link_to "Check", order_path(order)%></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
-</table>
-
+  </table>
 
 </div>
 
