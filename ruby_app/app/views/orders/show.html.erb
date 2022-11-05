@@ -9,10 +9,11 @@
         <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
         <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
         <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
+        <h5><strong>Fecha de entrega de pedido: </strong><%="-"%></h5>
 
 <div>
-  <%= link_to "Edit this order", edit_order_path(@order) %> |
-  <%= link_to "Back to orders", orders_path %>
+ <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
+ <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
 
-  <%= button_to "Destroy this order", @order, method: :delete %>
+<%= button_to "Destroy this order", @order, method: :delete %> 
 </div>
