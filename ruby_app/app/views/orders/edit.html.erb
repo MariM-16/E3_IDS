@@ -22,10 +22,9 @@
     <ul class="list-unstyled">
     <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
     <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
-    <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
     <div class="input-group py-2">
       <h5><strong> Estado del pedido </strong></h5>
-      <%= form.select :status_order, ['En proceso', 'Aceptado', 'Pagado','Enviado','Entregado'] %>
+      <%= form.select :status_order, [['En proceso','En proceso'], ['Aceptado','Aceptado'], ['Pagado','Pagado'],['Enviado','Enviado'],['Entregado','Entregado']] %>
     </div>
 <br>
 <%end%>
