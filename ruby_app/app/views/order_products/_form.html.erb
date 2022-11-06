@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+  <% form.hidden_field :product_id, product.id %>
+  <%= form.number_field :quantity %>
+
   <div>
     <%= form.submit %>
   </div>

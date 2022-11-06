@@ -28526,3 +28526,978 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.3ms | Allocations: 6706)
 
 
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:49:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_form.html.erb (Duration: 24.8ms | Allocations: 6164)
+  Rendered products/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 12190)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 12286)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.2ms | Allocations: 18620)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000011a08>
+
+            @virtual_path = "products/_form";order_product = local_assigns[:order_product]; order_product = order_product;;@output_buffer.append=  form_with(model: product) do |form| @output_buffer.safe_append='
+                                                                                                                                                                    ^^^^^^^
+Did you mean?  @products):
+    1: <%= form_with(model: product) do |form| %>
+    2:   <% if product.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+  
+app/views/products/_form.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/users/1" for 127.0.0.1 at 2022-11-06 01:50:27 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1708)
+  Rendered home/_header.html.erb (Duration: 5.8ms | Allocations: 2731)
+  Rendered layout layouts/application.html.erb (Duration: 191.7ms | Allocations: 43822)
+Completed 200 OK in 243ms (Views: 194.7ms | ActiveRecord: 1.9ms | Allocations: 53970)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:50:29 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_form.html.erb (Duration: 19.5ms | Allocations: 5412)
+  Rendered products/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 6284)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 6364)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms | Allocations: 6647)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000012110>
+
+            @virtual_path = "products/_form";order_product = local_assigns[:order_product]; order_product = order_product;;@output_buffer.append=  form_with(model: product) do |form| @output_buffer.safe_append='
+                                                                                                                                                                    ^^^^^^^
+Did you mean?  @products):
+    1: <%= form_with(model: product) do |form| %>
+    2:   <% if product.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+  
+app/views/products/_form.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:50:46 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_form.html.erb (Duration: 31.4ms | Allocations: 5728)
+  Rendered products/index.html.erb within layouts/application (Duration: 51.7ms | Allocations: 7166)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 7252)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.2ms | Allocations: 8105)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products' for #<ActionView::Base:0x00000000012458>
+
+            @virtual_path = "products/_form";order_product = local_assigns[:order_product]; order_product = order_product;;@output_buffer.append=  form_with(model: products) do |form| @output_buffer.safe_append='
+                                                                                                                                                                    ^^^^^^^^
+Did you mean?  @products):
+    1: <%= form_with(model: products) do |form| %>
+    2:   <% if product.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+  
+app/views/products/_form.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:51:10 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:29
+  Rendered products/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2169)
+  Rendered home/_header.html.erb (Duration: 5.6ms | Allocations: 1469)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 8133)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.4ms | Allocations: 9050)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:53:24 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 48.2ms | Allocations: 6707)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 6792)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.2ms | Allocations: 7659)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000012868>
+
+            '.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                              ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:             
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_with(model: order_product) do |form| %>
+    19:               <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:               <% form.hidden_field :product_id, product.id %>
+    21:               <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:54:26 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 8164)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 8250)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.8ms | Allocations: 11254)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x0000000001de20>
+
+            '.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                              ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:             
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_with(model: order_product) do |form| %>
+    19:               <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:               <% form.hidden_field :product_id, product.id %>
+    21:               <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/users/1" for 127.0.0.1 at 2022-11-06 01:54:30 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1682)
+  Rendered home/_header.html.erb (Duration: 14.2ms | Allocations: 2719)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 20470)
+Completed 200 OK in 114ms (Views: 73.8ms | ActiveRecord: 1.7ms | Allocations: 26069)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:54:32 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 6128)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 6207)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.1ms | Allocations: 6481)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x0000000001e1b8>
+
+            '.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                              ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:             
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_with(model: order_product) do |form| %>
+    19:               <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:               <% form.hidden_field :product_id, product.id %>
+    21:               <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:54:51 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 41.7ms | Allocations: 8179)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 8264)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.7ms | Allocations: 11268)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000029720>
+
+            '.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                              ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:             
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_with(model: order_product) do |form| %>
+    19:               <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:               <% form.hidden_field :product_id, product.id %>
+    21:               <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:56:11 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 46.2ms | Allocations: 6090)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 6169)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.2ms | Allocations: 6439)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000029a18>
+
+            '.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                              ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:             
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_with(model: order_product) do |form| %>
+    19:               <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:               <% form.hidden_field :product_id, product.id %>
+    21:               <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/users/1" for 127.0.0.1 at 2022-11-06 01:56:29 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1451)
+  Rendered home/_header.html.erb (Duration: 20.2ms | Allocations: 2148)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 19373)
+Completed 200 OK in 116ms (Views: 82.8ms | ActiveRecord: 1.4ms | Allocations: 24780)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 01:56:40 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:30
+  Rendered products/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2156)
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 8101)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.3ms | Allocations: 9030)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2022-11-06 01:56:42 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 179)
+  Rendered products/show.html.erb within layouts/application (Duration: 24.6ms | Allocations: 1315)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 12.8ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 92.9ms | Allocations: 7117)
+Completed 200 OK in 128ms (Views: 100.1ms | ActiveRecord: 0.5ms | Allocations: 8606)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2022-11-06 01:57:13 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 3.4ms | Allocations: 132)
+  Rendered products/show.html.erb within layouts/application (Duration: 57.3ms | Allocations: 6065)
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 6150)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.2ms | Allocations: 7505)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000029ec8>
+
+'.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                  ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    2: 
+    3: <%= render @product %>
+    4: 
+    5: <%= form_with(model: order_product) do |form| %>
+    6:   <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    7:   <% form.hidden_field :product_id, product.id %>
+    8:   <%= form.number_field :quantity %>
+  
+app/views/products/show.html.erb:5
+Started GET "/products/1" for 127.0.0.1 at 2022-11-06 01:57:41 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered products/show.html.erb within layouts/application (Duration: 34.0ms | Allocations: 5551)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 5636)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.9ms | Allocations: 11618)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x000000000351b0>
+
+'.freeze;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                  ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    2: 
+    3: <%= render @product %>
+    4: 
+    5: <%= form_with(model: order_product) do |form| %>
+    6:   <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    7:   <% form.hidden_field :product_id, product.id %>
+    8:   <%= form.number_field :quantity %>
+  
+app/views/products/show.html.erb:5
+Started GET "/products/1" for 127.0.0.1 at 2022-11-06 02:01:19 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1171)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 33.4ms | Allocations: 7303)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 24498)
+Completed 200 OK in 106ms (Views: 88.6ms | ActiveRecord: 1.3ms | Allocations: 25913)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 02:01:23 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1432)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1789)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+            
+            <!-- Add form to add product to order -->
+            
+            <%= form_for :order_product |form| %>
+              <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+              <% form.hidden_field :product_id, product.id %>
+              <%= form.number_field :quantity %>
+
+              <div>
+                <%= form.submit %>
+              </div>
+            <% end %>
+         
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:                
+17:                <!-- Add form to add product to order -->
+18:                
+19:                <%= form_for :order_product |form| %>
+20:                  <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+21:                  <% form.hidden_field :product_id, product.id %>
+22:                  <%= form.number_field :quantity %>
+23:    
+24:                  <div>
+25:                    <%= form.submit %>
+26:                  </div>
+27:                <% end %>
+28:             
+29:                
+30:                </div>
+31:              </div>
+32:            </div>
+33:          </div>
+34:        </div>
+35:    
+36:      <% end %>
+37:    </div>
+38:    
+39:    <% if current_user.user_type == "Proveedor"%>
+40:      <%= link_to "New product", new_product_path %>
+41:    <%end%>
+  
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+Started GET "/products" for 127.0.0.1 at 2022-11-06 02:04:11 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1371)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1460)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2310)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+            
+            <!-- Add form to add product to order -->
+            
+            <%= form_with model: @order_product |form| %>
+              <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+              <% form.hidden_field :product_id, product.id %>
+              <%= form.number_field :quantity %>
+
+              <div>
+                <%= form.submit %>
+              </div>
+            <% end %>
+         
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:                
+17:                <!-- Add form to add product to order -->
+18:                
+19:                <%= form_with model: @order_product |form| %>
+20:                  <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+21:                  <% form.hidden_field :product_id, product.id %>
+22:                  <%= form.number_field :quantity %>
+23:    
+24:                  <div>
+25:                    <%= form.submit %>
+26:                  </div>
+27:                <% end %>
+28:             
+29:                
+30:                </div>
+31:              </div>
+32:            </div>
+33:          </div>
+34:        </div>
+35:    
+36:      <% end %>
+37:    </div>
+38:    
+39:    <% if current_user.user_type == "Proveedor"%>
+40:      <%= link_to "New product", new_product_path %>
+41:    <%end%>
+  
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+Started GET "/products/1" for 127.0.0.1 at 2022-11-06 02:04:23 -0300
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 5.7ms | Allocations: 130)
+  Rendered products/show.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1050)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 12.2ms | Allocations: 2313)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 7798)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.5ms | Allocations: 8697)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 02:04:24 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1407)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1655)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+            
+            <!-- Add form to add product to order -->
+            
+            <%= form_with model: @order_product |form| %>
+              <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+              <% form.hidden_field :product_id, product.id %>
+              <%= form.number_field :quantity %>
+
+              <div>
+                <%= form.submit %>
+              </div>
+            <% end %>
+         
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:                
+17:                <!-- Add form to add product to order -->
+18:                
+19:                <%= form_with model: @order_product |form| %>
+20:                  <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+21:                  <% form.hidden_field :product_id, product.id %>
+22:                  <%= form.number_field :quantity %>
+23:    
+24:                  <div>
+25:                    <%= form.submit %>
+26:                  </div>
+27:                <% end %>
+28:             
+29:                
+30:                </div>
+31:              </div>
+32:            </div>
+33:          </div>
+34:        </div>
+35:    
+36:      <% end %>
+37:    </div>
+38:    
+39:    <% if current_user.user_type == "Proveedor"%>
+40:      <%= link_to "New product", new_product_path %>
+41:    <%end%>
+  
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+Started GET "/users/1" for 127.0.0.1 at 2022-11-06 02:04:29 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1493)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 918)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 6581)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.6ms | Allocations: 8624)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 02:04:30 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 5919)
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 872)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 10694)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.2ms | Allocations: 11539)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2022-11-06 02:04:31 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  Rendered orders/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 11858)
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 888)
+  Rendered layout layouts/application.html.erb (Duration: 54.3ms | Allocations: 16896)
+Completed 200 OK in 66ms (Views: 54.9ms | ActiveRecord: 1.9ms | Allocations: 20049)
+
+
+Started GET "/users/1/addresses" for 127.0.0.1 at 2022-11-06 02:04:34 -0300
+Processing by AddressesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/addresses/index.html.erb:23
+  Rendered addresses/index.html.erb within layouts/application (Duration: 22.5ms | Allocations: 6020)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 13.0ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 11883)
+Completed 200 OK in 52ms (Views: 46.0ms | ActiveRecord: 1.5ms | Allocations: 13763)
+
+
+Started GET "/users/1/addresses" for 127.0.0.1 at 2022-11-06 02:06:07 -0300
+Processing by AddressesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/addresses/index.html.erb:23
+  Rendered addresses/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1829)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 13.4ms | Allocations: 2299)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 8575)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.6ms | Allocations: 9483)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 02:06:08 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1461)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2139)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+            
+            <!-- Add form to add product to order -->
+            
+            <%= form_with model: @order_products |form| %>
+              <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+              <% form.hidden_field :product_id, product.id %>
+              <%= form.number_field :quantity %>
+
+              <div>
+                <%= form.submit %>
+              </div>
+            <% end %>
+         
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:                
+17:                <!-- Add form to add product to order -->
+18:                
+19:                <%= form_with model: @order_products |form| %>
+20:                  <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+21:                  <% form.hidden_field :product_id, product.id %>
+22:                  <%= form.number_field :quantity %>
+23:    
+24:                  <div>
+25:                    <%= form.submit %>
+26:                  </div>
+27:                <% end %>
+28:             
+29:                
+30:                </div>
+31:              </div>
+32:            </div>
+33:          </div>
+34:        </div>
+35:    
+36:      <% end %>
+37:    </div>
+38:    
+39:    <% if current_user.user_type == "Proveedor"%>
+40:      <%= link_to "New product", new_product_path %>
+41:    <%end%>
+  
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:19: syntax error, unexpected ')'
+app/views/products/index.html.erb:27: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+app/views/products/index.html.erb:43: syntax error, unexpected `end', expecting ')'
+Started GET "/products" for 127.0.0.1 at 2022-11-06 02:09:23 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 43.1ms | Allocations: 2205)
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 84.4ms | Allocations: 8166)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.5ms | Allocations: 9059)
+
+
