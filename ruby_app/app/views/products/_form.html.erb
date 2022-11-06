@@ -12,6 +12,16 @@
   <% end %>
 
   <div>
+  <%= form.label :price, "Select a price:" %>
+  <%= form.number_field :price %>
+  </div>
+
+  <div>
+  <%= form.label :description, "Write a brief description of the product:" %>
+  </div>
+  <%= form.text_area :description %>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
