@@ -15,7 +15,7 @@
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
         
-        <% if current_user.user_type == "Proveedor"%>
+        <% if current_user.user_type == "Proveedor" || current_user.user_type == "Despachador"%>
                 <hr>
                 <%= form_with(model: @order) do |form| %>
                 <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>

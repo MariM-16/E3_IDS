@@ -32165,3 +32165,117 @@ Processing by VehiclesController#index as HTML
 Completed 200 OK in 136ms (Views: 125.4ms | ActiveRecord: 10.4ms | Allocations: 6592)
 
 
+Started GET "/orders" for 127.0.0.1 at 2022-11-06 17:09:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:21
+  Rendered orders/index.html.erb within layouts/application (Duration: 83.6ms | Allocations: 17803)
+  Rendered home/_header.html.erb (Duration: 6.1ms | Allocations: 2798)
+  Rendered layout layouts/application.html.erb (Duration: 240.0ms | Allocations: 59751)
+Completed 200 OK in 273ms (Views: 247.4ms | ActiveRecord: 3.0ms | Allocations: 66570)
+
+
+Started GET "/users/3/orders/new" for 127.0.0.1 at 2022-11-06 17:09:53 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 25.0ms | Allocations: 6277)
+  Rendered orders/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 6617)
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 807)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 11478)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 1.2ms | Allocations: 11961)
+
+
+Started POST "/orders" for 127.0.0.1 at 2022-11-06 17:09:59 -0300
+Processing by OrdersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"provider_id"=>"3", "buyer_id"=>"3", "dispatcher_id"=>"3", "order_delivery_date"=>"2022-11-06T17:09:53-03:00", "delivery_key"=>"[FILTERED]", "status_order"=>"En proceso"}, "commit"=>"Create Order"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mOrder Create (1.2ms)[0m  [1m[32mINSERT INTO "orders" ("status_order", "order_delivery_date", "order_date", "delivery_key", "buyer_id", "provider_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["status_order", "En proceso"], ["order_delivery_date", "2022-11-06 20:09:53"], ["order_date", nil], ["delivery_key", "[FILTERED]"], ["buyer_id", 3], ["provider_id", 3], ["dispatcher_id", 3], ["created_at", "2022-11-06 20:09:59.180099"], ["updated_at", "2022-11-06 20:09:59.180099"]]
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/orders/5
+Completed 302 Found in 62ms (ActiveRecord: 7.4ms | Allocations: 11136)
+
+
+Started GET "/orders/5" for 127.0.0.1 at 2022-11-06 17:09:59 -0300
+Processing by OrdersController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.3ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 5]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 5]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 43.7ms | Allocations: 13317)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 814)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 18247)
+Completed 200 OK in 64ms (Views: 57.9ms | ActiveRecord: 2.4ms | Allocations: 19845)
+
+
+Started GET "/orders/5" for 127.0.0.1 at 2022-11-06 17:11:07 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 5]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 5]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 64.7ms | Allocations: 7235)
+  Rendered home/_header.html.erb (Duration: 21.8ms | Allocations: 1421)
+  Rendered layout layouts/application.html.erb (Duration: 122.4ms | Allocations: 13086)
+Completed 200 OK in 133ms (Views: 125.0ms | ActiveRecord: 1.1ms | Allocations: 14503)
+
+
