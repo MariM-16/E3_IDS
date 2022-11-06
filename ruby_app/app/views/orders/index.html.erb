@@ -10,6 +10,7 @@
   <table class="table table-dark table-striped" id="order-table">
   <thead>
     <tr>
+      <th> Order </th>
       <th>Compradores</th>
       <th>Proveedores</th>
       <th>Despachadores</th>
@@ -20,6 +21,7 @@
     <% @orders.each do |order| %>
       <% if order.buyer_id == current_user.id || order.provider_id == current_user.id %>
         <tr>
+          <td><%= order.delivery_key %></td>
           <td><%= User.find(order.buyer_id).email%></td>
           <td><%= User.find(order.provider_id).email%></td>
           <td><%= User.find(order.dispatcher_id).email%></td>

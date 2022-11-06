@@ -15,6 +15,13 @@
             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
           
             <!-- Add form to add product to order -->
+            <%= form_for OrderProduct.new do |form| %>
+            <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+            <%= form.hidden_field :product_id, value: product.id %>
+            <%= form.number_field :quantity , in: 1.0..20.0 %>
+            <%= form.submit %>
+            <%end%>
+            
             
             </div>
           </div>

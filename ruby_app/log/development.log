@@ -29501,3 +29501,2285 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.5ms | Allocations: 9059)
 
 
+Started GET "/users/3" for 127.0.0.1 at 2022-11-06 15:55:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 39.1ms | Allocations: 2921)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 3031)
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 20.2ms | Allocations: 17920)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass
+
+'.freeze;@output_buffer.append=( current_user.email );@output_buffer.safe_append='
+                                             ^^^^^^):
+    3: <h1> Welcome </h1>
+    4: 
+    5: <div>
+    6: <%= current_user.email %>
+    7: </div>
+    8: 
+    9: <div>
+  
+app/views/users/show.html.erb:6
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:28 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 448.0ms | Allocations: 28374)
+  Rendered home/_header.html.erb (Duration: 47.9ms | Allocations: 2619)
+  Rendered layout layouts/application.html.erb (Duration: 736.6ms | Allocations: 47064)
+Completed 200 OK in 755ms (Views: 753.7ms | ActiveRecord: 0.0ms | Allocations: 47956)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-06 15:55:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.1ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 91.3ms | Allocations: 4499)
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 103.3ms | Allocations: 9393)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 0.0ms | Allocations: 11114)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-11-06 15:55:40 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"despachador@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 535ms (ActiveRecord: 8.2ms | Allocations: 4221)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:41 -0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 5096)
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 9789)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.3ms | Allocations: 10120)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-11-06 15:55:43 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1055)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5919)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.4ms | Allocations: 6683)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 131.2ms | Allocations: 4740)
+  Rendered home/_header.html.erb (Duration: 7.8ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 176.6ms | Allocations: 9312)
+Completed 200 OK in 194ms (Views: 191.3ms | ActiveRecord: 0.2ms | Allocations: 9579)
+
+
+Started GET "/orders" for 127.0.0.1 at 2022-11-06 15:55:49 -0300
+Processing by OrdersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (5.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  Rendered orders/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 7434)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 12440)
+Completed 200 OK in 66ms (Views: 49.4ms | ActiveRecord: 6.3ms | Allocations: 15694)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 90.2ms | Allocations: 4767)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 139.7ms | Allocations: 9340)
+Completed 200 OK in 143ms (Views: 142.3ms | ActiveRecord: 0.2ms | Allocations: 9621)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:52 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 59.1ms | Allocations: 4717)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 116.3ms | Allocations: 9290)
+Completed 200 OK in 122ms (Views: 121.7ms | ActiveRecord: 0.2ms | Allocations: 9552)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2022-11-06 15:55:54 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.2ms | Allocations: 2809)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:55:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4208)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 8759)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 9065)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-06 15:55:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 970)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 725)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5616)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 6273)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-11-06 15:56:02 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"comprador@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "comprador@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 390ms (ActiveRecord: 0.2ms | Allocations: 2481)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 15:56:02 -0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 4698)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 9338)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 9603)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 15:56:04 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (14.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 76.8ms | Allocations: 9558)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 9643)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 15.1ms | Allocations: 12298)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000013560>
+
+            '.freeze;@output_buffer.append=  form_for order_product.new do |form| @output_buffer.safe_append='
+                                                      ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for order_product.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 15:56:21 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3625)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 3710)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.2ms | Allocations: 4574)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fc7edbb4da8>::Order_product
+
+            '.freeze;@output_buffer.append=  form_for Order_product.new do |form| @output_buffer.safe_append='
+                                                      ^^^^^^^^^^^^^):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for Order_product.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 15:59:03 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2400)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2485)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 3355)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for @order_product do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:00:11 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3616)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3701)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.2ms | Allocations: 4565)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fc7edb58a58>::Order_product
+
+            '.freeze;@output_buffer.append=  form_for Order_product.new do |form| @output_buffer.safe_append='
+                                                      ^^^^^^^^^^^^^):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for Order_product.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:00:21 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3617)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3702)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 4566)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fc7ef98f3a0>::Order_products
+
+            '.freeze;@output_buffer.append=  form_for Order_products.new do |form| @output_buffer.safe_append='
+                                                      ^^^^^^^^^^^^^^):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for Order_products.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:01:30 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 3617)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3702)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms | Allocations: 4566)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fc7ef700bc0>::Order_Product
+
+            '.freeze;@output_buffer.append=  form_for Order_Product.new do |form| @output_buffer.safe_append='
+                                                      ^^^^^^^^^^^^^):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for Order_Product.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:03:55 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1449)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2327)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+          
+            <!-- Add form to add product to order -->
+            <%= render :partial => 'order_products/order_product', :object => @order_product %>
+            <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+            <% form.hidden_field :product_id, product.id %>
+            <%= form.number_field :quantity %>
+            <%end%>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:              
+17:                <!-- Add form to add product to order -->
+18:                <%= render :partial => 'order_products/order_product', :object => @order_product %>
+19:                <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+20:                <% form.hidden_field :product_id, product.id %>
+21:                <%= form.number_field :quantity %>
+22:                <%end%>
+23:                
+24:                </div>
+25:              </div>
+26:            </div>
+27:          </div>
+28:        </div>
+29:    
+30:      <% end %>
+31:    </div>
+32:    
+33:    <% if current_user.user_type == "Proveedor"%>
+34:      <%= link_to "New product", new_product_path %>
+35:    <%end%>
+  
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:37: syntax error, unexpected `end', expecting end-of-input
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:04:13 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered order_products/_order_product.html.erb (Duration: 20.5ms | Allocations: 2240)
+  Rendered products/index.html.erb within layouts/application (Duration: 89.9ms | Allocations: 12923)
+  Rendered layout layouts/application.html.erb (Duration: 90.4ms | Allocations: 13008)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.2ms | Allocations: 13881)
+
+
+  
+ActionView::Template::Error (undefined method `to_key' for nil:NilClass
+
+      key = convert_to_model(record).to_key
+                                    ^^^^^^^
+Did you mean?  to_query):
+    1: <div id="<%= dom_id order_product %>">
+    2: </div>
+  
+app/views/order_products/_order_product.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:05:09 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 31.2ms | Allocations: 5668)
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 1462)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 11378)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.3ms | Allocations: 12038)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2022-11-06 16:05:11 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  Rendered orders/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 6620)
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 887)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 11643)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.9ms | Allocations: 12343)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:05:16 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 81.5ms | Allocations: 14797)
+  Rendered orders/new.html.erb within layouts/application (Duration: 119.7ms | Allocations: 15104)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 20001)
+Completed 200 OK in 135ms (Views: 131.9ms | ActiveRecord: 1.6ms | Allocations: 20413)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:05:27 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4946)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5031)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 5929)
+
+
+  
+ActionView::Template::Error (Missing partial order_products/_new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/webtech/Desktop/E3_IDS/ruby_app/app/views"
+  * "/home/webtech/.rvm/gems/ruby-3.1.2/gems/devise-4.8.1/app/views"
+  * "/home/webtech/.rvm/gems/ruby-3.1.2/gems/actiontext-7.0.4/app/views"
+  * "/home/webtech/.rvm/gems/ruby-3.1.2/gems/actionmailbox-7.0.4/app/views"
+
+Did you mean?  order_products/order_product
+               order_products/form
+               orders/order
+               products/form
+               products/product
+               action_text/contents/content):
+    15:             <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+    16:           
+    17:             <!-- Add form to add product to order -->
+    18:             <%= render :partial => 'order_products/new', :object => @order_product %>
+    19:             
+    20:             
+    21:             </div>
+  
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:05:50 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered order_products/_form.html.erb (Duration: 74.1ms | Allocations: 5745)
+  Rendered products/index.html.erb within layouts/application (Duration: 79.5ms | Allocations: 7182)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 7267)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.2ms | Allocations: 8131)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x00000000015298>
+
+            @virtual_path = "order_products/_form";form = local_assigns[:form]; form = form;;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                                                                                                      ^^^^^^^^^^^^^
+Did you mean?  order_product_url):
+    1: <%= form_with(model: order_product) do |form| %>
+    2:   <% if order_product.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(order_product.errors.count, "error") %> prohibited this order_product from being saved:</h2>
+  
+app/views/order_products/_form.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:06:47 -0300
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 40ms (Allocations: 5243)
+
+
+  
+NameError (uninitialized constant ProductsController::Order_product
+
+    @order_product = Order_product.new
+                     ^^^^^^^^^^^^^
+Did you mean?  OrderProduct):
+  
+app/controllers/products_controller.rb:7:in `index'
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:07:07 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered order_products/_form.html.erb (Duration: 27.9ms | Allocations: 5477)
+  Rendered products/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 8121)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 8206)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 2.6ms | Allocations: 15746)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `order_product' for #<ActionView::Base:0x0000000002b818>
+
+            @virtual_path = "order_products/_form";form = local_assigns[:form]; form = form;;@output_buffer.append=  form_with(model: order_product) do |form| @output_buffer.safe_append='
+                                                                                                                                      ^^^^^^^^^^^^^
+Did you mean?  @order_product
+               order_product_url):
+    1: <%= form_with(model: order_product) do |form| %>
+    2:   <% if order_product.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(order_product.errors.count, "error") %> prohibited this order_product from being saved:</h2>
+  
+app/views/order_products/_form.html.erb:1
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:08:10 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (10.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 110.7ms | Allocations: 17164)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 17252)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 14.7ms | Allocations: 20626)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%end%>
+    23:             
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:09:08 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 4202)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4287)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 5149)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id.to_i %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%end%>
+    23:             
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:09:53 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4200)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 4285)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms | Allocations: 5146)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, (product.id).to_i %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%end%>
+    23:             
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:10:23 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 116.5ms | Allocations: 14075)
+  Rendered home/_header.html.erb (Duration: 12.7ms | Allocations: 2693)
+  Rendered layout layouts/application.html.erb (Duration: 181.7ms | Allocations: 32873)
+Completed 200 OK in 187ms (Views: 184.5ms | ActiveRecord: 0.6ms | Allocations: 33773)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:11:43 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 5557)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 5642)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.5ms | Allocations: 6513)
+
+
+  
+ActionView::Template::Error (undefined method `hiden_field' for #<ActionView::Helpers::FormBuilder:0x00007fc7ed45c380 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :html=>{:class=>"new_order_product", :id=>"new_order_product"}, :local=>true}, @template=#<ActionView::Base:0x00000000037550>, @object=#<OrderProduct id: nil, quantity: nil, order_id: nil, product_id: nil, created_at: nil, updated_at: nil>, @object_name="order_product", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>
+
+'.freeze;             form.hiden_field :product_id, product.id
+                          ^^^^^^^^^^^^
+Did you mean?  hidden_field
+               time_field
+               file_field):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hiden_field :product_id, product.id%>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:11:53 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 27.6ms | Allocations: 4224)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 4309)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.6ms | Allocations: 5170)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id%>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:12:33 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 4224)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4309)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.6ms | Allocations: 5170)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, 5%>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:12:59 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 4226)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 4311)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms | Allocations: 5172)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id.to_s%>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:14:08 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 4258)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 4343)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.7ms | Allocations: 5204)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Product into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:14:55 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 3487)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 3566)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms | Allocations: 3833)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Product into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:17:17 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 4224)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4309)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.7ms | Allocations: 5149)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:18:48 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 4224)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 4309)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 4.9ms | Allocations: 5170)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id.to_i %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:19:21 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 4955)
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 10875)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.7ms | Allocations: 11765)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:19:29 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"2"}, "commit"=>"Create Order product"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 941)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/order_products_controller.rb:24:in `create'
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:21:07 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 53.0ms | Allocations: 8124)
+  Rendered orders/new.html.erb within layouts/application (Duration: 54.6ms | Allocations: 8476)
+  Rendered home/_header.html.erb (Duration: 3.3ms | Allocations: 2104)
+  Rendered layout layouts/application.html.erb (Duration: 89.6ms | Allocations: 26302)
+Completed 200 OK in 119ms (Views: 90.3ms | ActiveRecord: 4.7ms | Allocations: 32768)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:21:10 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 36.6ms | Allocations: 9195)
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 885)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 14213)
+Completed 200 OK in 58ms (Views: 49.4ms | ActiveRecord: 2.6ms | Allocations: 16527)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:21:14 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"1"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/order_products/_form.html.erb:14
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/order_products/_form.html.erb:14
+  Rendered order_products/_form.html.erb (Duration: 63.4ms | Allocations: 8245)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 77.0ms | Allocations: 8534)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 8619)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 1.1ms | Allocations: 15613)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000044318>
+
+'.freeze;   form.hidden_field :product_id, product.id 
+                                           ^^^^^^^
+Did you mean?  product_url):
+    12:   <% end %>
+    13: 
+    14:   <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    15:   <% form.hidden_field :product_id, product.id %>
+    16:   <%= form.number_field :quantity %>
+    17: 
+    18:   <div>
+  
+app/views/order_products/_form.html.erb:15
+app/views/order_products/_form.html.erb:1
+app/views/order_products/new.html.erb:3
+app/controllers/order_products_controller.rb:31:in `block (2 levels) in create'
+app/controllers/order_products_controller.rb:26:in `create'
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:22:12 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 4937)
+  Rendered home/_header.html.erb (Duration: 7.4ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 10857)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.7ms | Allocations: 11748)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:22:19 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"1"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 4.5ms | Allocations: 1163)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1492)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 1818)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 7417)
+Completed 422 Unprocessable Entity in 54ms (Views: 34.6ms | ActiveRecord: 0.7ms | Allocations: 10986)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:22:22 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 15.8ms | Allocations: 4345)
+  Rendered orders/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 4691)
+  Rendered home/_header.html.erb (Duration: 3.2ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 9681)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.6ms | Allocations: 10367)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:22:25 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 89.7ms | Allocations: 4175)
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 822)
+  Rendered layout layouts/application.html.erb (Duration: 177.3ms | Allocations: 8927)
+Completed 200 OK in 183ms (Views: 181.9ms | ActiveRecord: 0.7ms | Allocations: 9222)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:23:01 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 4222)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 4307)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.7ms | Allocations: 5160)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:24:24 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4221)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 4306)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms | Allocations: 5167)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, 5 %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:25:28 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 4223)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 4309)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.7ms | Allocations: 5170)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <%= form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:28:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 172.4ms | Allocations: 29864)
+  Rendered layout layouts/application.html.erb (Duration: 173.3ms | Allocations: 29974)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 7.5ms | Allocations: 36308)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:33:15 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 132.0ms | Allocations: 6087)
+  Rendered orders/new.html.erb within layouts/application (Duration: 138.8ms | Allocations: 6457)
+  Rendered home/_header.html.erb (Duration: 9.4ms | Allocations: 2760)
+  Rendered layout layouts/application.html.erb (Duration: 884.8ms | Allocations: 48926)
+Completed 200 OK in 896ms (Views: 889.9ms | ActiveRecord: 0.9ms | Allocations: 49876)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:34:45 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 4243)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4329)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.7ms | Allocations: 5217)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.number_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity , in: 1.0..20.0 %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:35:02 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 71.9ms | Allocations: 14541)
+  Rendered home/_header.html.erb (Duration: 14.3ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 20551)
+Completed 200 OK in 119ms (Views: 117.0ms | ActiveRecord: 0.7ms | Allocations: 21451)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:35:28 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>""}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 3.1ms | Allocations: 1275)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1607)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 5.7ms | Allocations: 1821)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 7536)
+Completed 422 Unprocessable Entity in 48ms (Views: 23.6ms | ActiveRecord: 0.7ms | Allocations: 14719)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:35:33 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4270)
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 822)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 9022)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.6ms | Allocations: 9319)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:36:10 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1375)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1464)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 2324)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+   
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="card-text"><%= product.description %></p>
+          <p class="card-text"><%= product.price %></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+          
+            <!-- Add form to add product to order -->
+            <%= form_for OrderProduct.new do |form| %>
+            <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+            <% :product_id,product.id %>
+            <%= form.number_field :quantity , in: 1.0..20.0 %>
+            <%= form.submit %>
+            <%end%>
+            
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+<% if current_user.user_type == "Proveedor"%>
+  <%= link_to "New product", new_product_path %>
+<%end%>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <div id="products">
+6:      <% @products.each do |product| %>
+7:       
+8:        <div class="col-md-4 mb-3">
+9:          <div class="card shadow-sm">
+10:            <div class="card-body">
+11:              <p class="card-text"><%= product.description %></p>
+12:              <p class="card-text"><%= product.price %></p>
+13:              <div class="d-flex justify-content-between align-items-center">
+14:                <div class="btn-group">
+15:                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "View", product %></button>
+16:              
+17:                <!-- Add form to add product to order -->
+18:                <%= form_for OrderProduct.new do |form| %>
+19:                <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+20:                <% :product_id,product.id %>
+21:                <%= form.number_field :quantity , in: 1.0..20.0 %>
+22:                <%= form.submit %>
+23:                <%end%>
+24:                
+25:                
+26:                </div>
+27:              </div>
+28:            </div>
+29:          </div>
+30:        </div>
+31:    
+32:      <% end %>
+33:    </div>
+34:    
+35:    <% if current_user.user_type == "Proveedor"%>
+36:      <%= link_to "New product", new_product_path %>
+37:    <%end%>
+  
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected ',', expecting `end'
+app/views/products/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:37:08 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 46.3ms | Allocations: 5158)
+  Rendered home/_header.html.erb (Duration: 7.4ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 11076)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.6ms | Allocations: 11970)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:37:12 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"2"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 4.6ms | Allocations: 1157)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1489)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 7.8ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 7381)
+Completed 422 Unprocessable Entity in 62ms (Views: 31.1ms | ActiveRecord: 0.8ms | Allocations: 10952)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:37:14 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 39.5ms | Allocations: 4330)
+  Rendered orders/new.html.erb within layouts/application (Duration: 42.1ms | Allocations: 4676)
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 9666)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.6ms | Allocations: 10351)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:37:42 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 39.9ms | Allocations: 4348)
+  Rendered orders/new.html.erb within layouts/application (Duration: 45.3ms | Allocations: 4679)
+  Rendered home/_header.html.erb (Duration: 4.1ms | Allocations: 1464)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 10568)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.7ms | Allocations: 11452)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:37:43 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 4245)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4330)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms | Allocations: 4998)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into Hash):
+    17:             <!-- Add form to add product to order -->
+    18:             <%= form_for OrderProduct.new do |form| %>
+    19:             <%= form.collection_select :order_id, Order.where(buyer_id:current_user.id), :id, :delivery_key %>
+    20:             <% form.hidden_field :product_id, product.id %>
+    21:             <%= form.number_field :quantity , in: 1.0..20.0 %>
+    22:             <%= form.submit %>
+    23:             <%end%>
+  
+app/views/products/index.html.erb:20
+app/views/products/index.html.erb:18
+app/views/products/index.html.erb:6
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:38:25 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 35.7ms | Allocations: 5191)
+  Rendered home/_header.html.erb (Duration: 12.6ms | Allocations: 1460)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 11115)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.6ms | Allocations: 12019)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:38:32 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"2", "quantity"=>"3"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 4.6ms | Allocations: 1157)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1484)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 10.1ms | Allocations: 1789)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 7380)
+Completed 422 Unprocessable Entity in 52ms (Views: 35.0ms | ActiveRecord: 0.6ms | Allocations: 10966)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:38:34 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 18.6ms | Allocations: 4333)
+  Rendered orders/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4679)
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 9669)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.6ms | Allocations: 10356)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:38:42 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 31.6ms | Allocations: 4342)
+  Rendered orders/new.html.erb within layouts/application (Duration: 34.0ms | Allocations: 4673)
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 10569)
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.6ms | Allocations: 11454)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:38:43 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 5148)
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 10148)
+Completed 200 OK in 53ms (Views: 46.9ms | ActiveRecord: 1.4ms | Allocations: 10848)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:38:46 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"1"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 4.4ms | Allocations: 1157)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1485)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 9.4ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7384)
+Completed 422 Unprocessable Entity in 44ms (Views: 28.4ms | ActiveRecord: 0.7ms | Allocations: 10935)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:39:28 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 5149)
+  Rendered home/_header.html.erb (Duration: 4.1ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 11053)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.5ms | Allocations: 11951)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:39:30 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>""}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 3.4ms | Allocations: 1157)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1484)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 9.7ms | Allocations: 1787)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 7376)
+Completed 422 Unprocessable Entity in 44ms (Views: 27.7ms | ActiveRecord: 0.6ms | Allocations: 10936)
+
+
+Started GET "/users/1/orders/new" for 127.0.0.1 at 2022-11-06 16:39:33 -0300
+Processing by OrdersController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ?[0m  [["user_type", "Proveedor"]]
+  ↳ app/views/orders/_form.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_type" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["user_type", "Proveedor"], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/_form.html.erb:25
+  Rendered orders/_form.html.erb (Duration: 24.5ms | Allocations: 4330)
+  Rendered orders/new.html.erb within layouts/application (Duration: 31.9ms | Allocations: 4676)
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 9666)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.6ms | Allocations: 10353)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:39:35 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 145.6ms | Allocations: 4388)
+  Rendered home/_header.html.erb (Duration: 14.7ms | Allocations: 825)
+  Rendered layout layouts/application.html.erb (Duration: 221.0ms | Allocations: 9174)
+Completed 200 OK in 232ms (Views: 222.7ms | ActiveRecord: 0.6ms | Allocations: 9470)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:39:37 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "quantity"=>"1"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/new.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 7.7ms | Allocations: 763)
+  Rendered order_products/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 850)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 14.1ms | Allocations: 1584)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 6369)
+Completed 422 Unprocessable Entity in 55ms (Views: 45.8ms | ActiveRecord: 0.5ms | Allocations: 9532)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:39:55 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 44.6ms | Allocations: 5184)
+  Rendered home/_header.html.erb (Duration: 3.6ms | Allocations: 1456)
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 11083)
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.6ms | Allocations: 11959)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:39:57 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"2", "product_id"=>"1", "quantity"=>""}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (3.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrderProduct Create (47.0ms)[0m  [1m[32mINSERT INTO "order_products" ("quantity", "order_id", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["quantity", nil], ["order_id", 2], ["product_id", 1], ["created_at", "2022-11-06 19:39:57.904834"], ["updated_at", "2022-11-06 19:39:57.904834"]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/order_products/1
+Completed 302 Found in 83ms (ActiveRecord: 60.5ms | Allocations: 5967)
+
+
+Started GET "/order_products/1" for 127.0.0.1 at 2022-11-06 16:39:57 -0300
+Processing by OrderProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mOrderProduct Load (0.3ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/show.html.erb within layouts/application
+  Rendered order_products/_order_product.html.erb (Duration: 0.8ms | Allocations: 172)
+  Rendered order_products/show.html.erb within layouts/application (Duration: 41.2ms | Allocations: 10166)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 4.9ms | Allocations: 1797)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 16092)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.5ms | Allocations: 18014)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:40:01 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 44.8ms | Allocations: 4450)
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 825)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 9246)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.6ms | Allocations: 9555)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:40:19 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"2", "product_id"=>"1", "quantity"=>"3"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrderProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "order_products" ("quantity", "order_id", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["quantity", 3], ["order_id", 2], ["product_id", 1], ["created_at", "2022-11-06 19:40:19.206180"], ["updated_at", "2022-11-06 19:40:19.206180"]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/order_products/2
+Completed 302 Found in 28ms (ActiveRecord: 7.9ms | Allocations: 4175)
+
+
+Started GET "/order_products/2" for 127.0.0.1 at 2022-11-06 16:40:19 -0300
+Processing by OrderProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/show.html.erb within layouts/application
+  Rendered order_products/_order_product.html.erb (Duration: 0.8ms | Allocations: 131)
+  Rendered order_products/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1202)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 7.1ms | Allocations: 2393)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 8040)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.4ms | Allocations: 9435)
+
+
+Started GET "/order_products/2/edit" for 127.0.0.1 at 2022-11-06 16:40:22 -0300
+Processing by OrderProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrderProduct Load (0.1ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/edit.html.erb within layouts/application
+  Rendered order_products/_form.html.erb (Duration: 2.8ms | Allocations: 939)
+  Rendered order_products/edit.html.erb within layouts/application (Duration: 54.4ms | Allocations: 1272)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 6796)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.3ms | Allocations: 7620)
+
+
+Started GET "/order_products" for 127.0.0.1 at 2022-11-06 16:40:31 -0300
+Processing by OrderProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/index.html.erb within layouts/application
+  [1m[36mOrderProduct Load (0.4ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products"[0m
+  ↳ app/views/order_products/index.html.erb:6
+  Rendered order_products/_order_product.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered order_products/_order_product.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered order_products/index.html.erb within layouts/application (Duration: 40.2ms | Allocations: 1271)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 8.3ms | Allocations: 1582)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 6782)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.6ms | Allocations: 7136)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:40:33 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 5162)
+  Rendered home/_header.html.erb (Duration: 5.4ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 10148)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.7ms | Allocations: 10827)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2022-11-06 16:40:35 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:20
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  Rendered orders/index.html.erb within layouts/application (Duration: 117.8ms | Allocations: 7471)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 172.4ms | Allocations: 12528)
+Completed 200 OK in 179ms (Views: 176.6ms | ActiveRecord: 1.4ms | Allocations: 13247)
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2022-11-06 16:40:42 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.3ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 83.6ms | Allocations: 19835)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 94.7ms | Allocations: 24790)
+Completed 200 OK in 100ms (Views: 93.8ms | ActiveRecord: 2.0ms | Allocations: 26226)
+
+
+Started GET "/orders/2" for 127.0.0.1 at 2022-11-06 16:40:46 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 29.6ms | Allocations: 6899)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 11663)
+Completed 200 OK in 45ms (Views: 38.8ms | ActiveRecord: 4.3ms | Allocations: 12450)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2022-11-06 16:42:06 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  Rendered orders/index.html.erb within layouts/application (Duration: 65.2ms | Allocations: 6595)
+  Rendered home/_header.html.erb (Duration: 4.8ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 89.0ms | Allocations: 12516)
+Completed 200 OK in 98ms (Views: 92.5ms | ActiveRecord: 1.5ms | Allocations: 13412)
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2022-11-06 16:42:09 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 44.7ms | Allocations: 6289)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 11077)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 1.2ms | Allocations: 11915)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:42:16 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 5185)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 10176)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.7ms | Allocations: 10856)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:42:19 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"1", "product_id"=>"1", "quantity"=>"2"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrderProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "order_products" ("quantity", "order_id", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["quantity", 2], ["order_id", 1], ["product_id", 1], ["created_at", "2022-11-06 19:42:19.568160"], ["updated_at", "2022-11-06 19:42:19.568160"]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/order_products/3
+Completed 302 Found in 43ms (ActiveRecord: 12.1ms | Allocations: 4199)
+
+
+Started GET "/order_products/3" for 127.0.0.1 at 2022-11-06 16:42:19 -0300
+Processing by OrderProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/show.html.erb within layouts/application
+  Rendered order_products/_order_product.html.erb (Duration: 0.7ms | Allocations: 131)
+  Rendered order_products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1214)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 5.3ms | Allocations: 1799)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 7149)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 8376)
+
+
+Started GET "/order_products/3" for 127.0.0.1 at 2022-11-06 16:43:08 -0300
+Processing by OrderProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/show.html.erb within layouts/application
+  Rendered order_products/_order_product.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered order_products/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 815)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 19.3ms | Allocations: 2393)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 7645)
+Completed 200 OK in 66ms (Views: 53.9ms | ActiveRecord: 0.4ms | Allocations: 9016)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:43:10 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 5197)
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 868)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 10183)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.6ms | Allocations: 10882)
+
+
+Started POST "/order_products" for 127.0.0.1 at 2022-11-06 16:43:16 -0300
+Processing by OrderProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order_product"=>{"order_id"=>"2", "product_id"=>"1", "quantity"=>"5"}, "commit"=>"Create Order product"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mOrderProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "order_products" ("quantity", "order_id", "product_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["quantity", 5], ["order_id", 2], ["product_id", 1], ["created_at", "2022-11-06 19:43:16.775669"], ["updated_at", "2022-11-06 19:43:16.775669"]]
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (58.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/order_products_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/order_products/4
+Completed 302 Found in 87ms (ActiveRecord: 59.9ms | Allocations: 4176)
+
+
+Started GET "/order_products/4" for 127.0.0.1 at 2022-11-06 16:43:16 -0300
+Processing by OrderProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/order_products_controller.rb:63:in `set_order_product'
+  Rendering layout layouts/application.html.erb
+  Rendering order_products/show.html.erb within layouts/application
+  Rendered order_products/_order_product.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered order_products/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 379)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 8.0ms | Allocations: 1592)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5892)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 6698)
+
+
+Started GET "/users/1/orders" for 127.0.0.1 at 2022-11-06 16:43:20 -0300
+Processing by OrdersController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:4
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:25
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:27
+  Rendered orders/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 6616)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 886)
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 11638)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.9ms | Allocations: 12333)
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2022-11-06 16:43:22 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.2ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6986)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 832)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 11739)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 1.4ms | Allocations: 12592)
+
+
+Started GET "/orders/2" for 127.0.0.1 at 2022-11-06 16:43:41 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.3ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mComment Load (3.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 46.0ms | Allocations: 7359)
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 832)
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 12112)
+Completed 200 OK in 64ms (Views: 52.1ms | ActiveRecord: 9.4ms | Allocations: 12850)
+
+
