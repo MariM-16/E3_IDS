@@ -31783,3 +31783,385 @@ Processing by OrdersController#show as HTML
 Completed 200 OK in 64ms (Views: 52.1ms | ActiveRecord: 9.4ms | Allocations: 12850)
 
 
+Started GET "/orders/1" for 127.0.0.1 at 2022-11-06 16:48:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:63:in `set_order'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:18
+  [1m[36mOrderProduct Load (0.3ms)[0m  [1m[34mSELECT "order_products".* FROM "order_products" WHERE "order_products"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:45
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:48
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."order_id" = ?[0m  [["order_id", 1]]
+  ↳ app/views/orders/show.html.erb:71
+  Rendered orders/show.html.erb within layouts/application (Duration: 218.3ms | Allocations: 32440)
+  Rendered home/_header.html.erb (Duration: 7.2ms | Allocations: 2806)
+  Rendered layout layouts/application.html.erb (Duration: 340.2ms | Allocations: 74302)
+Completed 200 OK in 466ms (Views: 340.0ms | ActiveRecord: 8.9ms | Allocations: 89978)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:48:06 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 117.3ms | Allocations: 5976)
+  Rendered home/_header.html.erb (Duration: 3.9ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 129.5ms | Allocations: 10756)
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 0.3ms | Allocations: 11610)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-11-06 16:48:08 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mOrder Load (3.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  [1m[36mCACHE Order Load (0.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = ?[0m  [["buyer_id", 1]]
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 7360)
+  Rendered home/_header.html.erb (Duration: 13.5ms | Allocations: 885)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 12376)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 4.2ms | Allocations: 13284)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2022-11-06 16:48:14 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 0.2ms | Allocations: 3415)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:48:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 4294)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 720)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 8883)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 9192)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-11-06 16:48:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 729)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 63.4ms | Allocations: 3322)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 8234)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.0ms | Allocations: 9476)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-11-06 16:48:20 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"despachador@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "despachador@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 391ms (ActiveRecord: 0.4ms | Allocations: 4281)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:48:21 -0300
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5055)
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 9731)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.3ms | Allocations: 10091)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:48:22 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 4727)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 772)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 9305)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.2ms | Allocations: 9573)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:49:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 5629)
+  Rendered home/_header.html.erb (Duration: 53.0ms | Allocations: 7469)
+  Rendered layout layouts/application.html.erb (Duration: 115.1ms | Allocations: 17299)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.2ms | Allocations: 18147)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_vehicles_path' for #<ActionView::Base:0x00000000013308>
+Did you mean?  new_vehicle_path):
+    37:               <%= link_to "Encargos", orders_path, class: "nav-link" %>
+    38:             </li>
+    39:             <li class="nav-item">
+    40:               <%= link_to "Vehículo", user_vehicles_path, class: "nav-link" %>
+    41:             </li>
+    42:             <%end%> 
+    43:           <%end%>
+  
+app/views/home/_header.html.erb:40
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:49:40 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 36.2ms | Allocations: 5650)
+  Rendered home/_header.html.erb (Duration: 57.0ms | Allocations: 7158)
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 17032)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.2ms | Allocations: 17866)
+
+
+  
+ActionView::Template::Error (undefined method `user_vehicles_path' for #<ActionView::Base:0x000000000136a0>
+Did you mean?  new_vehicle_path):
+    37:               <%= link_to "Encargos", orders_path, class: "nav-link" %>
+    38:             </li>
+    39:             <li class="nav-item">
+    40:               <%= link_to "Vehículo", user_vehicles_path(current_user.id), class: "nav-link" %>
+    41:             </li>
+    42:             <%end%> 
+    43:           <%end%>
+  
+app/views/home/_header.html.erb:40
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2022-11-06 16:50:32 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:80
+  Rendered home/index.html.erb within layouts/application (Duration: 40.7ms | Allocations: 9112)
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 2081)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 26695)
+Completed 200 OK in 83ms (Views: 79.7ms | ActiveRecord: 2.2ms | Allocations: 28109)
+
+
+Started GET "/users/3/vehicles" for 127.0.0.1 at 2022-11-06 16:50:35 -0300
+Processing by VehiclesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:6
+  Rendered vehicles/_vehicle.html.erb (Duration: 1.7ms | Allocations: 177)
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 5313)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 1751)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 11212)
+Completed 200 OK in 107ms (Views: 54.4ms | ActiveRecord: 1.2ms | Allocations: 12916)
+
+
+Started GET "/users/3/vehicles" for 127.0.0.1 at 2022-11-06 16:56:14 -0300
+Processing by VehiclesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 74.2ms | Allocations: 2149)
+  Rendered home/_header.html.erb (Duration: 14.8ms | Allocations: 1434)
+  Rendered layout layouts/application.html.erb (Duration: 244.7ms | Allocations: 8044)
+Completed 200 OK in 253ms (Views: 248.4ms | ActiveRecord: 0.4ms | Allocations: 8944)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2022-11-06 16:56:20 -0300
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:63:in `set_vehicle'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/_vehicle.html.erb (Duration: 0.7ms | Allocations: 129)
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 19.4ms | Allocations: 969)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 5.0ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 6442)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 0.5ms | Allocations: 7928)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2022-11-06 16:56:30 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  Rendered vehicles/_form.html.erb (Duration: 15.0ms | Allocations: 911)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 36.6ms | Allocations: 1189)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 8.4ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 6670)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.2ms | Allocations: 7016)
+
+
+Started GET "/users/3/vehicles" for 127.0.0.1 at 2022-11-06 17:01:24 -0300
+Processing by VehiclesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 2141)
+  Rendered home/_header.html.erb (Duration: 11.1ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 8017)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.4ms | Allocations: 8893)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2022-11-06 17:01:25 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/_form.html.erb:14
+  Rendered vehicles/_form.html.erb (Duration: 28.3ms | Allocations: 12192)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 29.8ms | Allocations: 12488)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 17344)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.2ms | Allocations: 17728)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2022-11-06 17:03:16 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/_form.html.erb:14
+  Rendered vehicles/_form.html.erb (Duration: 29.9ms | Allocations: 2435)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 2757)
+  Rendered home/_header.html.erb (Duration: 4.9ms | Allocations: 1417)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 8599)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.2ms | Allocations: 9507)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2022-11-06 17:03:35 -0300
+Processing by VehiclesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"dispatcher_id"=>"3", "patente"=>"AH5576", "information"=>"Vrooom!!", "vehicle_type"=>"bicicleta"}, "commit"=>"Create Vehicle"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 806)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/vehicles_controller.rb:24:in `create'
+Started GET "/vehicles/new" for 127.0.0.1 at 2022-11-06 17:04:34 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/_form.html.erb:14
+  Rendered vehicles/_form.html.erb (Duration: 29.4ms | Allocations: 5768)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 30.1ms | Allocations: 5878)
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 2092)
+  Rendered layout layouts/application.html.erb (Duration: 230.1ms | Allocations: 23696)
+Completed 200 OK in 265ms (Views: 231.4ms | ActiveRecord: 2.7ms | Allocations: 28095)
+
+
+Started POST "/vehicles" for 127.0.0.1 at 2022-11-06 17:04:37 -0300
+Processing by VehiclesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "vehicle"=>{"dispatcher_id"=>"3", "patente"=>"AH5576", "information"=>"Vrooom!!", "vehicle_type"=>"bicicleta"}, "commit"=>"Create Vehicle"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:27:in `block in create'
+  [1m[36mVehicle Create (0.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("patente", "information", "vehicle_type", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["patente", "AH5576"], ["information", "Vrooom!!"], ["vehicle_type", "bicicleta"], ["dispatcher_id", 3], ["created_at", "2022-11-06 20:04:37.435288"], ["updated_at", "2022-11-06 20:04:37.435288"]]
+  ↳ app/controllers/vehicles_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (67.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/vehicles_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/vehicles/2
+Completed 302 Found in 96ms (ActiveRecord: 68.6ms | Allocations: 5693)
+
+
+Started GET "/vehicles/2" for 127.0.0.1 at 2022-11-06 17:04:37 -0300
+Processing by VehiclesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:63:in `set_vehicle'
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/show.html.erb within layouts/application
+  Rendered vehicles/_vehicle.html.erb (Duration: 1.2ms | Allocations: 128)
+  Rendered vehicles/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1098)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:10
+  Rendered home/_header.html.erb (Duration: 8.3ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 6574)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 0.4ms | Allocations: 8160)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2022-11-06 17:04:39 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1937)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 6648)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 7001)
+
+
+Started GET "/vehicles/new" for 127.0.0.1 at 2022-11-06 17:04:45 -0300
+Processing by VehiclesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/_form.html.erb:14
+  Rendered vehicles/_form.html.erb (Duration: 12.3ms | Allocations: 1715)
+  Rendered vehicles/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1802)
+  Rendered home/_header.html.erb (Duration: 9.8ms | Allocations: 781)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 6512)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms | Allocations: 6790)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2022-11-06 17:04:48 -0300
+Processing by VehiclesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (10.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/vehicles/index.html.erb:16
+  Rendered vehicles/index.html.erb within layouts/application (Duration: 52.0ms | Allocations: 1608)
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 782)
+  Rendered layout layouts/application.html.erb (Duration: 131.0ms | Allocations: 6319)
+Completed 200 OK in 136ms (Views: 125.4ms | ActiveRecord: 10.4ms | Allocations: 6592)
+
+

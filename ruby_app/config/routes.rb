@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'     
   end
 
-    resources :users
+  resources :users
   
 
   root "home#index"
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :addresses
+    resources :vehicles
   end
 
   resources :users do
