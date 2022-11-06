@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <%= form.hidden_field :dispatcher_id, value: current_user.id %>
+  
+  <div>
+    Patente:<%= form.text_field :patente %>
+  </div>
+
+  <div>
+    Info:<%= form.text_field :information %>
+  </div>
+
+  <div>
+    Medio de transporte: <%= form.select :vehicle_type, [["auto","auto"],["bicicleta","bicicleta"],["caminar","caminar"],["moto","moto"]] %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

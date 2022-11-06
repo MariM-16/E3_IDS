@@ -2,30 +2,35 @@
 <div class="container-fluid" style="margin:2rem">
 <div class="row">
 <div class="col-6">
-        <h5><strong>Encargo id: </strong><%=@order.id%></h5>
-        <h5><strong>Comprador: </strong><%=User.where(id:@order.buyer_id).first.first_name%><%=" "%><%=User.where(id:@order.buyer_id).first.last_name%></h5>        
-        <h5><strong>Proveedor: </strong><%=User.where(id:@order.provider_id).first.first_name%><%=" "%><%=User.where(id:@order.provider_id).first.last_name%></h5>        
-        <h5><strong>Despachador: </strong><%="-"%></h5>        
-
-        <ul class="list-unstyled">
+        <h5><strong>Encargo: </strong><%=@order.id%></h5>
+        <h5><strong>Comprador: </strong><%=User.find(@order.buyer_id).first_name%><%=" "%><%=User.find(@order.buyer_id).last_name%></h5>        
+        <h5><strong>Proveedor: </strong><%=User.find(@order.provider_id).first_name%><%=" "%><%=User.find(@order.provider_id).last_name%></h5>        
+        <h5><strong>Despachador: </strong><%=User.find(@order.dispatcher_id).first_name%><%=" "%><%=User.find(@order.dispatcher_id).last_name%></h5>       
         <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
         <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
         <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
         <h5><strong>Fecha de entrega de pedido: </strong><%="-"%></h5>
 
-        <div>
+        <hr>
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
-        <hr>
-        <%= form_with(model: @order) do |form| %>
-        <%= form.select :status_order, [['En proceso','En proceso'], ['Aceptado','Aceptado'], ['Pagado','Pagado'],['Enviado','Enviado'],['Entregado','Entregado']] %>
-        <%= form.submit%>
-        <%end%>
-        <hr>
-        <%= button_to "Destroy this order", @order, method: :delete %> 
         
-        </div>
+        <% if current_user.user_type == "Proveedor" || current_user.user_type == "Despachador"%>
+                <hr>
+                <%= form_with(model: @order) do |form| %>
+                <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>
+                <%= form.submit%>
+                <%end%>
+        <%end%>
+        
+        <% if current_user.id == @order.buyer_id %>
+                <hr>
+                <%= button_to "Destroy this order", @order, method: :delete %> 
+        <%end%>
+        
 </div>
+
+<!-- Tabla 1 -->
 <div class="col-6" style="padding-right:5rem;">
         <div id='columna5'>
         <body>
@@ -43,14 +48,16 @@
                                 <td><%=resp.product.description%></td>
                                 <td><%=resp.product.price%></td>
                                 <td><%=resp.quantity%></td>
-
                         <tr>
-                </tbody>
                         <%end%>
+                </tbody>
         </table>
         </body>
         </div>
   <hr>
+
+<!-- Tabla 2 -->
+
         <div>
         <body>
         <table class="table">
@@ -67,11 +74,10 @@
                         <td><%=comment.message%></td>
                         <td><%=comment.buyer.first_name%><%=" "%><%=comment.buyer.last_name%></td>
                         <td><%=comment.created_at%></td>
-                        <tr>
+                </tr>
+                <%end%>
                 </tbody>
         </table>        
-        <%end%>
-  
         </body>
         </div>
 
