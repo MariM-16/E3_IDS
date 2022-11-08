@@ -8,7 +8,9 @@
         <%if @order.dispatcher_id==4%>
         <h5><strong>Despachador: </strong></h5>
         <%end%>
+        <%if @order.dispatcher_id!=4%>
         <h5><strong>Despachador: </strong><%=User.find(@order.dispatcher_id).first_name%><%=" "%><%=User.find(@order.dispatcher_id).last_name%></h5>       
+        <%end%>
         <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
         <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
         <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
@@ -18,14 +20,28 @@
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
         <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
         
-        <% if current_user.user_type == "Proveedor" || current_user.user_type == "Despachador"%>
+        <% if current_user.user_type == "Proveedor"%>
                 <hr>
                 <%= form_with(model: @order) do |form| %>
                 <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>
-                <%= form.submit%>
+                <%= form.submit "Actualizar estado"%>
                 <%end%>
         <%end%>
-        
+        <% if current_user.id==@order.dispatcher_id%>
+                <hr>
+                <%= form_with(model: @order) do |form| %>
+                <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>
+                <%= form.submit "Actualizar estado"%>
+                <%end%>
+        <%end%>
+        <% if 4==@order.dispatcher_id%>
+                <hr>
+                <p>¿Desea tomar este pedido?</p>
+                <%= form_with(model: @order) do |form| %>
+                <%= form.select :dispatcher_id, [['Sí',current_user.id],['No',4]] %>
+                <%= form.submit "Actualizar despachador"%>
+                <%end%>
+        <%end%>
         <% if current_user.id == @order.buyer_id %>
                 <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "Crear Comentario", new_order_comment_path(@order,@comment) %></button>
                 <hr>
