@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
-
-<h1> Welcome </h1>
+<div style="margin:30px; width:20rem">
+<h1> Bienvenido </h1>
 
 <div>
 <%= current_user.email %>
@@ -14,8 +14,9 @@
 <%= current_user.last_name %>
 </div>
 
-----------------------
+<hr>
 
 <div>
-  <%= link_to "Edit account", edit_user_path(@user) %> 
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Editar Cuenta", edit_user_path(@user) %></button> 
+</div>
 </div>

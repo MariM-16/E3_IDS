@@ -20,8 +20,11 @@
   <%= form.label :description, "Write a brief description of the product:" %>
   </div>
   <%= form.text_area :description %>
-
+  <div class="mb-3">
+    <h5><strong>Imagen </strong></h5>
+    <%= form.file_field :image_product, class: "form-control-file" %>
+  </div>  
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear Producto" %>
   </div>
 <% end %>

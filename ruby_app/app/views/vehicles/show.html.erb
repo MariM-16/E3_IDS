@@ -3,8 +3,8 @@
 <%= render @vehicle %>
 
 <div>
-  <%= link_to "Edit this vehicle", edit_vehicle_path(@vehicle) %> |
-  <%= link_to "Back to vehicles", vehicles_path %>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Edit this vehicle", edit_vehicle_path(@vehicle) %></button> |
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Back to vehicles", vehicles_path %></button>
 
   <%= button_to "Destroy this vehicle", @vehicle, method: :delete %>
 </div>

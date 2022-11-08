@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+    @order = Order.find(params[:order_id])
     @comment = Comment.new
   end
 
@@ -25,7 +26,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to comment_url(@comment), notice: "Comment was successfully created." }
+        format.html { redirect_to order_url(@comment.order_id), notice: "Comment was successfully created." }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +66,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.fetch(:comment, {})
+      params.fetch(:comment, {}).permit(:buyer_id, :message, :order_id)
     end
 end
