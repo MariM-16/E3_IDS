@@ -9,9 +9,21 @@
         <% end %>
       </ul>
     </div>
-  <% end %>
+       <%else%>
+    <form>
+      <h5><strong><%="oorder ID:"%></strong><%=" "%><%=@order.id%></h5>
+        <%=form.hidden_field :buyer_id, value: @order.buyer_id%>
+        <%=form.hidden_field :ticket_id, value: @order.id%>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+        <div class="form-group">
+        <h5><strong> Comentario </strong></h5>
+        <%=@ticket_id%>
+        <div id="colp"><%= form.text_area :message, class: "form-control"%></div>
+        </div>
+        <div>
+          <%= form.submit "Crear Comentario"%>
+        </div>
+      </form>
+      <% end %>
+    <% end %>
+    <br>

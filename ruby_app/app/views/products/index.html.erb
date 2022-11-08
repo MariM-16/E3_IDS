@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Products</h1>
+<div style="margin:30px">
+<h1>Productos</h1>
 
 <div id="products">
   <% @products.each do |product| %>
@@ -33,5 +33,6 @@
 </div>
 
 <% if current_user.user_type == "Proveedor"%>
-  <%= link_to "New product", new_product_path %>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Nuevo Producto", new_product_path %></button>
 <%end%>
+</div>
