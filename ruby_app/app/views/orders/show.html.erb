@@ -34,12 +34,14 @@
                 <%= form.submit "Actualizar estado"%>
                 <%end%>
         <%end%>
-        <% if 4==@order.dispatcher_id%>
-                <hr>
-                <p>¿Desea tomar este pedido?</p>
-                <%= form_with(model: @order) do |form| %>
-                <%= form.select :dispatcher_id, [['Sí',current_user.id],['No',4]] %>
-                <%= form.submit "Actualizar despachador"%>
+        <% if 4==@order.dispatcher_id %>
+                <%if current_user.user_type == "Despachador" %>
+                        <hr>
+                        <p>¿Desea tomar este pedido?</p>
+                        <%= form_with(model: @order) do |form| %>
+                        <%= form.select :dispatcher_id, [['Sí',current_user.id],['No',4]] %>
+                        <%= form.submit "Actualizar despachador"%>
+                        <%end%>
                 <%end%>
         <%end%>
         <% if current_user.id == @order.buyer_id %>

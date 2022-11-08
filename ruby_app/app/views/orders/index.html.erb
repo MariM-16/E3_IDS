@@ -15,6 +15,7 @@
       <th>Compradores</th>
       <th>Proveedores</th>
       <th>Despachadores</th>
+      <th>Estado</th>
       <th></th>
     </tr>
   </thead>
@@ -25,7 +26,13 @@
           <td><%= order.delivery_key %></td>
           <td><%= User.find(order.buyer_id).email%></td>
           <td><%= User.find(order.provider_id).email%></td>
+          <% if order.dispatcher_id==4%>
+          <td><%="Sin despachador"%></td>
+          <%end%>
+          <% if order.dispatcher_id!=4%>
           <td><%= User.find(order.dispatcher_id).email%></td>
+          <%end%>
+          <td><%= order.status_order%></td>
           <td><%= link_to "Check", order_path(order)%></td>
         </tr>
       <% end %>
