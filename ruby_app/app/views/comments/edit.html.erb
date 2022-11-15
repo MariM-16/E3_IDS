@@ -1,0 +1,10 @@
+<h1>Editar Comentario</h1>
+
+<%= render "form", comment: @comment %>
+
+<br>
+
+<div>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Ver Comentario", @comment %></button> |
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Regresar", comments_path %></button>
+</div>

@@ -1,25 +1,37 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :order_products
+  resources :comments
+  resources :products
+  resources :vehicles
+  
   devise_for :users
-  #resources :users, only: [:show]
 
   devise_scope :user do  
-      get '/users/sign_out' => 'devise/sessions#destroy'     
+    get '/users/sign_out' => 'devise/sessions#destroy'     
   end
+
+  resources :users
   
-  # Defines the root path route ("/")
-  # root "articles#index"
 
   root "home#index"
 
   resources :addresses
   resources :orders
 
+  resources :products do
+    resource :order_product
+  end
+
   resources :users do
     resources :addresses
+    resources :vehicles
   end
 
   resources :users do
     resources :orders
+  end
+
+  resources :orders do 
+    resources :comments
   end
 end

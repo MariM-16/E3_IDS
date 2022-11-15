@@ -10,6 +10,7 @@
 u1 = User.create(email:"comprador@gmail.com", first_name:"Comprador", last_name: "C", phone_number:"99999",RUT:"12121-comprador", user_type:'Comprador', password:'12345678')
 u2 = User.create(email:"proveedor@gmail.com", first_name:"Proveedor", last_name: "P", phone_number:"99999",RUT:"2313-proveedor", user_type:'Proveedor', password:'12345678')
 u3 = User.create(email:"despachador@gmail.com", first_name:"Despachador", last_name: "D", phone_number:"99999",RUT:"11-despachador", user_type:'Despachador', password:'12345678')
+u4 = User.create(email:"vacio@gmail.com", first_name:"vacio", last_name: "vacio", phone_number:"99999",RUT:"11-achador", user_type:'Despachador', password:'12345678')
 
 
 o1 = Order.create(status_order: "En transito", order_delivery_date: '1998-10-04 10:10:10', order_date: '1998-09-04 10:10:10', buyer_id: u1.id, provider_id: 2, dispatcher_id: 3)
@@ -26,3 +27,11 @@ o5 = Order.create(status_order: "En transito", order_delivery_date: '1998-10-04 
 o6 = Order.create(status_order: "Completada", order_delivery_date: '1998-10-04 10:10:10', order_date: '1998-09-04 10:10:10', buyer_id: u1.id, provider_id: u2.id, dispatcher_id: u3.id)
 o7 = Order.create(status_order: "Recepción en sistema de logistica", order_delivery_date: '1998-10-04 10:10:10', order_date: '1998-09-04 10:10:10', buyer_id: u1.id, provider_id: u2.id, dispatcher_id: u3.id)
 
+co1= Comment.create(message:"Todo llegó en buen estado",order_id:o1.id, buyer_id:u1.id)
+co2= Comment.create(message:"Tardó mucho el delivery",order_id:o2.id, buyer_id:u1.id)
+
+p1= Product.create(price:200.00, description:"Estuche 50x50")
+
+op1= OrderProduct.create(quantity:2,order_id:o1.id, product_id:p1.id)
+
+v1= Vehicle.create(patente:"AB32-32",information:"Gris, dos puertas", vehicle_type:"BMW",dispatcher_id:u3.id)

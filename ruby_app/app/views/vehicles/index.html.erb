@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+<div style="margin:30px">
+
+<h1>Vehicles</h1>
+
+<table class="table table-dark table-striped" id="vehicle-table">
+  <thead>
+    <tr>
+      <th>Patente</th>
+      <th>Info</th>
+      <th>Tipo Vehículo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vehicles.each do |vehicle| %>
+      <% if vehicle.dispatcher_id == current_user.id %>
+        <tr>
+          <td><%= vehicle.patente %></td>
+          <td><%= vehicle.information %></td>
+          <td><%= vehicle.vehicle_type %></td>
+          <td><%= link_to "Check", vehicle_path(vehicle)%></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+  </table>
+
+<button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Nuevo Vehículo", new_vehicle_path %></button>
+</div>

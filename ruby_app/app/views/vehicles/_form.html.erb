@@ -1,0 +1,31 @@
+<%= form_with(model: vehicle) do |form| %>
+  <% if vehicle.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+        <% vehicle.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :dispatcher_id, value: current_user.id %>
+  
+  <div>
+    Patente:<%= form.text_field :patente %>
+  </div>
+
+  <div>
+    Info:<%= form.text_field :information %>
+  </div>
+
+  <div>
+    Medio de transporte: <%= form.select :vehicle_type, [["auto","auto"],["bicicleta","bicicleta"],["caminar","caminar"],["moto","moto"]] %>
+  </div>
+
+  <div>
+    <%= form.submit "Crear Vehículo" %>
+  </div>
+<% end %>

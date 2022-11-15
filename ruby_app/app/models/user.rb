@@ -13,4 +13,6 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :RUT, presence: true
   validates :RUT, uniqueness: true
+  has_many :vehicles
+  has_many :comments
 end

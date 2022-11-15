@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+<div style="margin:30px;width:40rem">
+<%= render @product %>
+<h3>Producto</h3>
+<hr>
+<h5>Descripción: <%=@product.description%></h5>
+<h5>Precio: <%=@product.price%></h5>
+
+<div id="image"> 
+<% if @product.image_product.attached? %>
+<h3>Imagen Producto</h3>
+  <%= link_to image_tag(@product.image_product, class: "card-img-top", width: "200px", background: "#55595c", color: "#eceeef"), url_for(@ticket) %>
+  <%else %>
+  <p></p>
+  <%end%>
+</div>
+
+<div>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Editar Product", edit_product_path(@product) %></button> |
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Back to products", products_path %></button>
+
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Destroy this product", @product, method: :delete %></button>
+</div>
+</div>

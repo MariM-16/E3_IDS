@@ -10,32 +10,37 @@
       </ul>
     </div>
   <% end %>
-
   <div class="card-body">
     <ul>
-      <li>
-        <%= form.collection_select :user_id, @users, :id, :email, include_blank: false %>
-      </li>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+      <p></p>
       <li> 
-        <%= form.label :commune, "Commune:" %>
-        <%= form.text_field :commune %>
+        <%= form.label :commune, "Comuna:" %>
+        <%= form.select :commune, [['Cerrillos','Cerrillos'],['Cerro Navia','Cerro Navia'],['Conchalí','Conchalí'],['El Bosque','El Bosque'],['Estación Central','Estación Central'],
+        ['Huechuraba','Huechuraba'],['Independencia','Independencia'],['La Cisterna','La Cisterna'],['La Florida','La Florida'],['La Granja','La Granja'],['La Pintana','La Pintana'],
+        ['La Reina','La Reina'],['Las Condes','Las Condes'],['Lo Barnechea','Lo Barnechea'],['Lo Espejo','Lo Espejo'],['Lo Prado','Lo Prado'],['Macul','Macul'],['Maipú','Maipú'],
+        ['Ñuñoa','Ñuñoa'],['Pedro Aguirre Cerda','Pedro Aguirre Cerda'],['Peñalolén','Peñalolén'],['Providencia','Providencia'],['Pudahuel','Pudahuel'],['Quilicura','Quilicura'],
+        ['Quinta Normal','Quinta Normal'],['Recoleta','Recoleta'],['Renca','Renca'],['San Joaquín','San Joaquín'],['San Miguel','San Miguel'],['San Ramón','San Ramón'],['Santiago','Santiago'],['Vitacura','Vitacura']] %>
       </li>
+      <p></p>
       <li> 
-        <%= form.label :street, "Street:" %>
+        <%= form.label :street, "Calle:" %>
         <%= form.text_field :street %>
       </li>
+      <p></p>
       <li> 
-        <%= form.label :number_address, "Number address:" %>
+        <%= form.label :number_address, "Número:" %>
         <%= form.text_field :number_address %>
       </li>
+      <p></p>
       <li> 
-        <%= form.label :extra_information, "Extra information:" %>
+        <%= form.label :extra_information, "Información extra:" %>
         <%= form.text_field :extra_information %>
       </li>
     </ul>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear Dirección" %>
   </div>
 <% end %>

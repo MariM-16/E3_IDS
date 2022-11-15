@@ -13,17 +13,38 @@
 
 <div class="card-body">
 
-    <%= form.hidden_field :status_order, value: "In Progress" %>
-    <%= form.hidden_field :order_delivery_date, value: DateTime.now() + 1.day %>
-    <%= form.hidden_field :order_date, value: DateTime.now() %>
-    <%= form.hidden_field :delivery_key, value: "TO DO" %>
-    <%= form.hidden_field :buyer_id, value: current_user.id %>
-    <%= form.hidden_field :provider_id, value: 2 %>
-    <%= form.hidden_field :dispatcher_id, value: 3 %>
+  <h1>Nueva Orden</h1>
+
+  <div class="col">
+    
+    <div class="col" style="width:400px">
+      <%if current_user.user_type == "Proveedor"%>
+      <h5><strong> Compradores Disponibles </strong></h5>
+      <%= form.collection_select :buyer_id, User.where(user_type:"Comprador"), :id, :email %>
+      <%= form.hidden_field :provider_id, value: current_user.id %> 
+      <%end%>
+      <%if current_user.user_type == "Comprador"%>
+      <h5><strong> Proveedores Disponibles </strong></h5>
+      <%= form.collection_select :provider_id, User.where(user_type:"Proveedor"), :id, :email %>
+      <%= form.hidden_field :buyer_id, value: current_user.id %>
+      <%end%>
+      <%= form.hidden_field :dispatcher_id, value: 4 %>
+      <h5><strong>Fecha de pedido: </strong><%=Date.today%></h5>
+      <%= form.hidden_field :order_delivery_date, value: DateTime.now() %>
+      <h5><strong>Clave de entrega: </strong></h5>
+      <div><%= form.text_field :delivery_key, class: "form-control" %></div>
+
+    </div>
+
+  <div class="input-group py-2">
+    <h5><strong> Estado de la orden: </strong><%="En proceso"%></h5>
+    <%= form.hidden_field :status_order, value: "En proceso" %>
+    <!--<%= form.select :status_order, ['En proceso', 'Aceptado', 'Pagado','Enviado','Entregado'] %>-->
+  </div>
 
 </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Crear Orden"%>
   </div>
 <% end %>

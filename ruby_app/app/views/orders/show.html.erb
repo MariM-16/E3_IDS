@@ -1,18 +1,107 @@
 <p style="color: green"><%= notice %></p>
-
-        <h5><strong>Encargo id: </strong><%=@order.id%></h5>
-        <h5><strong>Comprador: </strong><%=User.where(id:@order.buyer_id).first.first_name%><%=" "%><%=User.where(id:@order.buyer_id).first.last_name%></h5>        
-        <h5><strong>Proveedor: </strong><%=User.where(id:@order.provider_id).first.first_name%><%=" "%><%=User.where(id:@order.provider_id).first.last_name%></h5>        
-        <h5><strong>Despachador: </strong><%="-"%></h5>        
-
-        <ul class="list-unstyled">
+<div class="container-fluid" style="margin:2rem">
+<div class="row">
+<div class="col-6">
+        <h5><strong>Encargo: </strong><%=@order.id%></h5>
+        <h5><strong>Comprador: </strong><%=User.find(@order.buyer_id).first_name%><%=" "%><%=User.find(@order.buyer_id).last_name%></h5>        
+        <h5><strong>Proveedor: </strong><%=User.find(@order.provider_id).first_name%><%=" "%><%=User.find(@order.provider_id).last_name%></h5>        
+        <%if @order.dispatcher_id==4%>
+        <h5><strong>Despachador: </strong></h5>
+        <%end%>
+        <%if @order.dispatcher_id!=4%>
+        <h5><strong>Despachador: </strong><%=User.find(@order.dispatcher_id).first_name%><%=" "%><%=User.find(@order.dispatcher_id).last_name%></h5>       
+        <%end%>
         <h5><strong>Fecha de pedido: </strong><%=@order.order_delivery_date%></h5>
         <h5><strong>Clave de entrega: </strong><%=@order.delivery_key%></h5>
         <h5><strong>Estado del pedido: </strong><%=@order.status_order%></h5>
+        <h5><strong>Fecha de entrega de pedido: </strong><%="-"%></h5>
 
-<div>
-  <%= link_to "Edit this order", edit_order_path(@order) %> |
-  <%= link_to "Back to orders", orders_path %>
+        <hr>
+        <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Edit this order", edit_order_path(@order) %>  </button>|
+        <button type="button" class="btn btn-outline-info btn-m " > <%= link_to "Back to orders", orders_path %> </button>
+        
+        <% if current_user.user_type == "Proveedor"%>
+                <hr>
+                <%= form_with(model: @order) do |form| %>
+                <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>
+                <%= form.submit "Actualizar estado"%>
+                <%end%>
+        <%end%>
+        <% if current_user.id==@order.dispatcher_id%>
+                <hr>
+                <%= form_with(model: @order) do |form| %>
+                <%= form.select :status_order, [['Aceptado','Aceptado'],['En proceso','En proceso'],['Entregado','Entregado']] %>
+                <%= form.submit "Actualizar estado"%>
+                <%end%>
+        <%end%>
+        <% if 4==@order.dispatcher_id %>
+                <%if current_user.user_type == "Despachador" %>
+                        <hr>
+                        <p>¿Desea tomar este pedido?</p>
+                        <%= form_with(model: @order) do |form| %>
+                        <%= form.select :dispatcher_id, [['Sí',current_user.id],['No',4]] %>
+                        <%= form.submit "Actualizar despachador"%>
+                        <%end%>
+                <%end%>
+        <%end%>
+        <% if current_user.id == @order.buyer_id %>
+                <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to "Crear Comentario", new_order_comment_path(@order,@comment) %></button>
+                <hr>
+                <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Destroy this order", @order, method: :delete %> </button>
+        <%end%>
+        
+</div>
 
-  <%= button_to "Destroy this order", @order, method: :delete %>
+<!-- Tabla 1 -->
+<div class="col-6" style="padding-right:5rem;">
+        <div id='columna5'>
+        <body>
+        <table class="table">
+                <thead class="bg-info">
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                </thead>
+                <tbody>
+                        <% @order.order_products.each do |resp| %>
+                        <tr>
+                                <td><%=resp.id%></td>
+                                <td><%=resp.product.description%></td>
+                                <td><%=resp.product.price%></td>
+                                <td><%=resp.quantity%></td>
+                        <tr>
+                        <%end%>
+                </tbody>
+        </table>
+        </body>
+        </div>
+  <hr>
+
+<!-- Tabla 2 -->
+
+        <div>
+        <body>
+        <table class="table">
+                <thead class="bg-info">
+                        <th>ID</th>
+                        <th>Comentario</th>
+                        <th>Comprador</th>
+                        <th>Fecha</th>
+                </thead>
+                <tbody>
+                <% @order.comments.each do |comment| %>
+                <tr>
+                        <td><%=comment.id%></td>
+                        <td><%=comment.message%></td>
+                        <td><%=comment.buyer.first_name%><%=" "%><%=comment.buyer.last_name%></td>
+                        <td><%=comment.created_at%></td>
+                </tr>
+                <%end%>
+                </tbody>
+        </table>        
+        </body>
+        </div>
+
+</div>
 </div>

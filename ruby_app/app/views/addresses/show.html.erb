@@ -4,8 +4,8 @@
 <%= render @address %>
 
 <div>
-  <%= link_to "Edit this address", edit_address_path(@address) %> |
-  <%= link_to "Back to addresses", addresses_path %>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Editar Dirección", edit_address_path(@address) %></button> |
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Regresar", addresses_path %></button>
 
-  <%= button_to "Destroy this address", @address, method: :delete %>
+  <button type="button" class="btn btn-outline-info btn-m " style="margin-left:20px" ><%= link_to "Eliminar Dirección", @address, method: :delete %></button>
 </div>
