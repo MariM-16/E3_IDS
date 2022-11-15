@@ -33,6 +33,10 @@ services:
     build: ./nginx
     volumes: 
      - ./ruby_app:/ruby_app
+     - ./nginx/conf:/etc/nginx/conf.d
+     - ./certbot/conf:/etc/nginx/ssl
+     - ./certbot/www:/var/www/certbot
+     - ./certificates:/etc/letsencrypt/live
     image: nginx:nginx_app
     container_name: nginx_ruby_web_app
     depends_on:
@@ -44,6 +48,6 @@ services:
     volumes:
      - ./certbot/conf:/etc/letsencrypt
      - ./certbot/www:/var/www/certbot
-    command: certonly --webroot --webroot-path /var/www/certbot/ --email jmfernandez1@miuandes.cl --dry-run -d pds.developmentcl.xyz
-    #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d pds.developmentcl.xyz --renew-by-default --agree-tos
-    #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d pds.developmentcl.xyz --force-renewal --agree-tos
+    command: certonly --webroot --webroot-path /var/www/certbot/ --email jmfernandez1@miuandes.cl --dry-run -d ids.developmentcl.xyz
+    #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d ids.developmentcl.xyz --renew-by-default --agree-tos
+    #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d ids.developmentcl.xyz --force-renewal --agree-tos
