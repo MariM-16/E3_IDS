@@ -8,12 +8,16 @@ services:
     image: webapp:ruby_app
     container_name: ruby_web_app
     environment:
-      - ENV_TEST_VAR=${ENV_TEST}
+      - RAILS_ENV=production
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWD}
     depends_on:
       - db
     ports: 
      - 3000:3000
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    #command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: bundle exec puma -C config/puma.rb
   db:
     image: postgres
     container_name: postgres_db
@@ -25,3 +29,13 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWD}
     ports:
       - 5432:5432
+  nginx:
+    build: ./nginx
+    volumes: 
+     - ./ruby_app:/ruby_app
+    image: nginx:nginx_app
+    container_name: nginx_ruby_web_app
+    depends_on:
+      - webapp
+    ports:
+     - 80:80
