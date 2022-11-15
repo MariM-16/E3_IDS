@@ -43,11 +43,11 @@ services:
       - webapp
     ports:
      - 80:80
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-     - ./certbot/conf:/etc/letsencrypt
-     - ./certbot/www:/var/www/certbot
-    command: certonly --webroot --webroot-path /var/www/certbot/ --email jmfernandez1@miuandes.cl --dry-run -d ids.developmentcl.xyz
+  #certbot:
+    #image: certbot/certbot:latest
+    #volumes:
+    # - ./certbot/conf:/etc/letsencrypt
+    # - ./certbot/www:/var/www/certbot
+    #command: certonly --webroot --webroot-path /var/www/certbot/ --email jmfernandez1@miuandes.cl --dry-run -d ids.developmentcl.xyz
     #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d ids.developmentcl.xyz --renew-by-default --agree-tos
     #command: certonly --webroot -w /var/www/certbot --email jmfernandez1@miuandes.cl -d ids.developmentcl.xyz --force-renewal --agree-tos
